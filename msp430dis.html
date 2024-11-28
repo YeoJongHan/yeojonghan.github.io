@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>MSP430 Disassembler/Assembler</h1>
+    <h3 style="color:red">Note that this project is in progress, many of the instructions may be incorrect/invalid!<br>Use at your own risk!</h3>
+
+    <hr>
+    <div id="asmdiv">
+        <p><label for="assembly">Assembly:</label></p>
+        <textarea id="assembly" name="assembly" rows="4"
+            cols="50">mov.w #1234h, R1</textarea>
+        <br>
+        <input type="submit" value="Submit" onclick="compile()">
+    </div>
+
+    <hr>
+
+    <div id="bcdiv">
+        <p><label for="bytecode">Bytecode:</label></p>
+        <textarea id="bytecode" name="assembly" rows="4" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Submit" onclick="disass()">
+    </div>
+    <hr>
+
+</body>
+
+<script>
+let opcodeBCMap = new Map();
+    opcodeBCMap.rrc     = "000100000";
+    opcodeBCMap.swpb    = "000100001";
+    opcodeBCMap.rra     = "000100010";
+    opcodeBCMap.sxt     = "000100011";
+    opcodeBCMap.push    = "000100100";
+    opcodeBCMap.call    = "000100101";
+    opcodeBCMap.reti    = "0001001100000000";
+    
+    opcodeBCMap.jne     = "001000";
+    opcodeBCMap.jnz     = "001000";
+    opcodeBCMap.jeq     = "001001";
+    opcodeBCMap.jz      = "001001";
+    opcodeBCMap.jnc     = "001010";
+    opcodeBCMap.jlo     = "001010";
+    opcodeBCMap.jc      = "001011";
+    opcodeBCMap.jhs     = "001011";
+    opcodeBCMap.jn      = "001100";
+    opcodeBCMap.jge     = "001101";
+    opcodeBCMap.jl      = "001110";
+    opcodeBCMap.jmp     = "001111";
+
+    opcodeBCMap.mov     = "0100";
+    opcodeBCMap.add     = "0101";
+    opcodeBCMap.addc    = "0110";
+    opcodeBCMap.subc    = "0111";
+    opcodeBCMap.sub     = "1000";
+    opcodeBCMap.cmp     = "1001";
+    opcodeBCMap.dadd    = "1010";
+    opcodeBCMap.bit     = "1011";
+    opcodeBCMap.bic     = "1100";
+    opcodeBCMap.bis     = "1101";
+    opcodeBCMap.xor     = "1110";
+    opcodeBCMap.and     = "1111";
+
+function onlyDigits(str) {
+    return /^\d+$/.test(str);
+}
+
+function onlyHex(str) {
+    return /^[0-9a-fA-F]+$/.test(str);
+}
+
+function toBinary(asm) {
+    let instructions = asm.replace(asm.includes(', ') ? ', ' : ',', ' ').replace(/\s+/g, ' ').split(' ');
+    let binarr = [];
+    let opcode = instructions[0].includes('.') ? instructions[0].split('.')[0].toLowerCase() : instructions[0].toLowerCase();
+    if (opcode == "reti") return opcodeBCMap[opcode];
+    binarr.push(opcodeBCMap[opcode]);
+
+    // code jmp instructions here:
+    // ...
+
+    let Ad = '0';
+    let As = '00';
+    let src = '0000';
+    let dst = '0000';
+    const isByte = instructions[0].includes('.b')? '1' : '0';
+
+    for (let i = 1; i < instructions.length; i++) {
+        let reg = instructions[i];
+        console.log(reg);
+        if (!reg.includes('#') && reg.toLowerCase().startsWith('r')) {
+            // didnt check for n≠ 3
+            if (i == 1) {
+                src = ('0000' + parseInt(reg.slice(1), 10).toString(2)).slice(-4);
+            } else if (i == 2) {
+                dst = ('0000' + parseInt(reg.slice(1), 10).toString(2)).slice(-4);
+            }
+        }
+        if (/^[\d]+\([rR][\d]+\)/.test(reg)) {
+            if (i == 1) {
+                As = '01';
+            } else if (i == 2) {
+                Ad = '1';
+            }
+        }
+        if (reg.startsWith('@') && i == 1) {
+            if (reg.endsWith('+')) {
+                As = '11';
+            } else {
+                As = '10';
+            }
+        }
+        if (reg.startsWith('#')) {
+            if (reg.slice(1) == '4' && index == 1) {As = '10'; src = '0010';}
+            else if (reg.slice(1) == '8' && index == 1) { As = '11'; src = '0010'; }
+            else if (reg.slice(1) == '0' && index == 1) { As = '00'; src = '0011'; }
+            else if (reg.slice(1) == '1' && index == 1) { As = '01'; src = '0011'; }
+            else if (reg.slice(1) == '2' && index == 1) { As = '10'; src = '0011'; }
+            else if (reg.slice(1) == '-1' && index == 1) { As = '11'; src = '0011'; }
+            else {
+                if (onlyDigits(reg.slice(1)) && i == 1) {
+                    As = '11';
+                } else if (onlyHex(reg.slice(1,-1)) && reg.endsWith('h') && i == 1) {
+                    As = '11';
+                } else {
+                    // to implement #var reference
+                    if (i == 1) {
+                        As = '01';
+                    } else if (i == 2) {
+                        Ad = '1';
+                    }
+                }
+            }
+        }
+        if (reg.startsWith('&')) {
+            // to implement absolute addressing
+            if (i == 1) {
+                As = '01';
+                src = '0010';
+            } else if (i == 2) {
+                Ad = '1';
+                dst = '0010';
+            }
+        }
+    }
+
+    if (instructions.length == 2) {
+        binarr.push(...[isByte, As, src]);
+    } else if (instructions.length == 3) {
+        binarr.push(...[src, Ad, isByte, As, dst]);
+    }
+
+    let valArr = [];
+    if ((As == '11' && src == '0000') || (As == '01' && src == '0010')) {
+        if (instructions[1].slice(1).endsWith('h')) {
+            valArr.push(instructions[1].slice(1, -1));
+        } else {
+            valArr.push(parseInt(instructions[1].slice(1), 10).toString(16));
+        }
+    }
+
+    if (Ad == '1') {
+        // implement x(Rn)
+        if (instructions[2].slice(1).endsWith('h')) {
+            valArr.push(instructions[2].slice(1, -1));
+        } else {
+            valArr.push(parseInt(instructions[2].slice(1), 10).toString(16));
+        }
+    }
+
+    console.log(binarr);
+    return [binarr.join(''), valArr];
+}
+
+function parseAsm(asm) {
+    const [binVal, valArr] = toBinary(asm);
+    let hexcode = parseInt(binVal, 2).toString(16);
+    let result = hexcode.length % 2 ? '0' + hexcode : hexcode;
+    return result.match(/.{1,2}/g).join(' ') + ' ' + valArr.join(' ');
+}
+
+function compile() {
+    const asm_field = this.parent.document.querySelector('#assembly');
+    let asm = asm_field.value;
+    const bytecodearray = [];
+    let lines = asm.split('\n');
+    for (let i = 0; i < lines.length; i++) {
+        bytecodearray.push(parseAsm(lines[i]) + '       // ' + lines[i]);
+    }
+    document.getElementById("bytecode").value = bytecodearray.join('\n');
+}
+</script>
+
+</html>
