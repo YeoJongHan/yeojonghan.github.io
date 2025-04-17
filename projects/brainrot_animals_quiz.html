@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Guessing Game</title>
+    <!-- Pico CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <!-- Custom styles -->
+    <style>
+        #game-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        .correct {
+            color: var(--h1-color);
+        }
+
+        .incorrect {
+            color: var(--del-color);
+        }
+
+        progress {
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+                .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #animal-image {
+            max-width: 300px;
+            max-height: 200px;
+            margin: 1rem auto;
+            border-radius: 8px;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="game-container" class="container">
+        <h1>🐾 Name that Brainrot Animal</h1>
+        <div id="score">Score: 0</div>
+        <div id="message" role="alert"></div>
+        <div id="image-container" class="image-container ">
+            <img id="animal-image" src="" alt="Guess the animal" class="contrast">
+        </div>
+
+        <input type="text" id="guess-input" placeholder="Enter name" aria-label="name">
+        <button id="guess-button" type="button">Guess</button>
+
+        <progress id="progress" value="0" max="100"></progress>
+    </main>
+
+    <script>
+        // Configuration
+        const config = {
+            imageFolder: 'animals/',
+            imageExtension: '.webp',
+            animals: ['tralalero tralala', 'bombini gusini', 'bombardiro crocodilo', 'trippi troppi', 'burbaloni luliloli', 'capuchino assassino', 'lirili larila', 'brr brr patapim', 'frulli frulla', 'la vaca saturno saturnita']
+        };
+
+        const spellings = {
+            'capuchino assassino': ['cappuccino assassino', 'assassini cappuchini']
+        };
+
+        // Game state
+        let score = 0;
+        let currentAnimal = '';
+        let shuffledAnimals = [];
+        let currentIndex = 0;
+
+        // DOM elements
+        const elements = {
+            image: document.getElementById('animal-image'),
+            input: document.getElementById('guess-input'),
+            guessBtn: document.getElementById('guess-button'),
+            score: document.getElementById('score'),
+            message: document.getElementById('message'),
+            progress: document.getElementById('progress')
+        };
+
+        // Initialize game
+        function initGame() {
+            score = 0;
+            currentIndex = 0;
+            elements.score.textContent = `Score: ${score}`;
+            elements.message.textContent = '';
+            elements.guessBtn.textContent = 'Guess';
+
+            elements.input.disabled = false;
+            shuffledAnimals = [...config.animals];
+            elements.guessBtn.addEventListener('click', checkGuess);
+            shuffleArray(shuffledAnimals);
+            loadNextAnimal();
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        function loadNextAnimal() {
+            if (currentIndex < shuffledAnimals.length) {
+                currentAnimal = shuffledAnimals[currentIndex];
+                elements.image.src = config.imageFolder + currentAnimal.replaceAll(" ", "_") + config.imageExtension;
+                elements.input.value = '';
+                elements.input.focus();
+                elements.progress.value = (currentIndex / shuffledAnimals.length) * 100;
+            } else {
+                endGame();
+            }
+        }
+
+        function checkGuess() {
+            const guess = elements.input.value.trim().toLowerCase();
+            if (!guess) return;
+
+            if (guess === currentAnimal || (spellings[currentAnimal] && spellings[currentAnimal].includes(guess))) {
+                score++;
+                elements.score.textContent = `Score: ${score}`;
+                showMessage('Correct!', 'correct');
+                setTimeout(() => {
+                    currentIndex++;
+                    loadNextAnimal();
+                }, 800);
+            } else {
+                showMessage('Incorrect!', 'incorrect');
+                setTimeout(() => {
+                    currentIndex++;
+                    loadNextAnimal();
+                }, 800);
+            }
+        }
+
+        function showMessage(text, type) {
+            elements.message.textContent = text;
+            elements.message.className = type;
+        }
+
+        function endGame() {
+            // elements.image.src = '';
+            showMessage(`Game Over! Final score: ${score}/${shuffledAnimals.length}`, 'correct');
+            elements.input.disabled = true;
+
+            // Add restart button
+            elements.guessBtn.textContent = 'Play Again';
+            elements.guessBtn.onclick = initGame;
+            elements.progress.value = 100;
+            elements.guessBtn.disabled = false;
+            elements.guessBtn.removeEventListener('click', checkGuess);
+        }
+
+        // Event listeners
+        elements.input.addEventListener('keypress', (e) => e.key === 'Enter' && checkGuess());
+
+        // Start game
+        initGame();
+    </script>
+</body>
+
+</html>

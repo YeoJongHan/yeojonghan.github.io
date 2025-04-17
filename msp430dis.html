@@ -63,6 +63,18 @@ let opcodeBCMap = new Map();
     opcodeBCMap.xor     = "1110";
     opcodeBCMap.and     = "1111";
 
+    opcodeBCMap.dint    = "1100001000110010";
+    opcodeBCMap.eint    = "1101001000110010";
+    opcodeBCMap.nop     = "0100001100000011";
+    opcodeBCMap.ret     = "0100000100110000";
+    opcodeBCMap.clrc    = "1100001100010010";
+    opcodeBCMap.clrn    = "1100001000100010";
+    opcodeBCMap.clrz    = "1100001100100010";
+    opcodeBCMap.setc    = "1101001100010010";
+    opcodeBCMap.setn    = "1101001000100010";
+    opcodeBCMap.setz    = "1101001100100010";
+
+
 function onlyDigits(str) {
     return /^\d+$/.test(str);
 }
