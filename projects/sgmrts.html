@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Singapore MRT Stations Quiz</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <style>
+    html,body,#map{height:100%;margin:0;padding:0}
+    body{font-family:system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    .controls{position: absolute;right:10px;top:10px;z-index:1000;background:rgba(255,255,255,0.95);padding:12px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.12);width:320px}
+    .controls h2{margin:0 0 8px;font-size:16px}
+    .station-input{display:flex;gap:8px;margin-top:8px}
+    .station-input input{flex:1;padding:6px;border-radius:6px;border:1px solid #ddd}
+    .station-input button{padding:6px 10px;border-radius:6px;border:0;background:#1976d2;color:white}
+    .score{margin-top:8px}
+    .hint{color:#666;font-size:12px;margin-top:6px}
+    .legend{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+    .legend .item{padding:6px;border-radius:6px;background:#f3f3f3;font-size:12px}
+    .popup-input{display:flex;gap:6px}
+    .small{font-size:12px;color:#444}
+    .btn{background:#1976d2;color:white;padding:6px 8px;border-radius:6px;border:0}
+    #input-field{height:20px; width:50%;margin-top:6px;z-index:1000;position: absolute;left:50%;bottom:10px;transform: translate(-70%, 0);}
+    .station-icon {background: transparent !important;border: none;width: 100px;height: 16px;display: flex;align-items: center;justify-content: center;}
+    .station-img {width: 100%;height: 100%;}
+    .pointer {cursor: pointer;}
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <div class="controls" id="controls">
+    <h2>Singapore MRT Stations Quiz</h2>
+    <div class="small">Click any station on the map and type its name. Use the map controls to zoom / pan.</div>
+    <div class="score">
+      <div>Correct: <span id="correct">0</span> / <span id="total">0</span></div>
+      <div>Remaining: <span id="remaining">0</span></div>
+    </div>
+    <div style="margin-top:8px;display:flex;gap:8px">
+    <button id="reset" class="btn pointer">Reset</button>
+    <button id="reveal" class="btn pointer" style="background:#6b6b6b">Reveal All</button>
+    <button id="display_station_code" class="btn pointer">View Station Codes</button>
+    </div>
+    <div class="legend" id="legend"></div>
+  </div>
+
+  <div>
+    <input id="input-field" placeholder="Type station name...">
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    // Basic Leaflet map centered on Singapore
+    const map = L.map('map').setView([1.3521, 103.8198], 11);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // UI references
+    const correctEl = document.getElementById('correct');
+    const totalEl = document.getElementById('total');
+    const remainingEl = document.getElementById('remaining');
+    const resetBtn = document.getElementById('reset');
+    const revealBtn = document.getElementById('reveal');
+    const legendEl = document.getElementById('legend');
+    const line_colors = {
+        "gray": "#718472",
+        "orange": "#FF9E18",
+        "darkslateblue": "#005DA6",
+        "mediumseagreen": "#00953B",
+        "darkmagenta": "#9E28B5",
+        "orangered": "#E1251B",
+        "saddlebrown": "#9D5918"
+    };
+    const station_colors = {
+        "green": "#00953B",
+        "red": "#E1251B",
+        "purple": "#9E28B5",
+        "blue": "#005DA6",
+        "yellow": "#FF9E18",
+        "brown": "#9D5918",
+        "gray": "#718472"
+    }
+
+    // const DATA_SOURCES = [
+    //   'https://api-open.data.gov.sg/v1/public/api/datasets/d_b39d3a0871985372d7e1637193335da5/poll-download',
+    //   'https://raw.githubusercontent.com/cheeaun/sgraildata/refs/heads/master/data/raw/LTA%20MRT%20Station%20Exit%20(GEOJSON).geojson'
+    // ];
+
+    var DATA_SOURCE = 'https://api-open.data.gov.sg/v1/public/api/datasets/d_b39d3a0871985372d7e1637193335da5/poll-download';
+
+    let stations = []; // {id, name, lat, lng, codes:[],layer}
+    let lines = {}; // lineName -> {color, polyline}
+    let stationLayers = L.layerGroup().addTo(map);
+    var display_station_code = true;
+
+    function normalizeName(s){
+      return s.toLowerCase();
+    }
+
+    function updateScore(){
+      const total = stations.length;
+      const correct = stations.filter(s=>s.answered).length;
+      totalEl.textContent = total;
+      correctEl.textContent = correct;
+      remainingEl.textContent = total - correct;
+    }
+
+    function addLegend(){
+      legendEl.innerHTML = '';
+      Object.keys(lines).slice(0,8).forEach(name=>{
+        const item = document.createElement('div');
+        item.className = 'item';
+        item.textContent = name;
+        legendEl.appendChild(item);
+      });
+    }
+
+    function makeStationMarker(s) {
+        if (display_station_code) {
+            const stationIcon = L.divIcon({
+                className: 'station-icon', // CSS class
+                html: `<img src="https://mrt-badges.joulev.dev/${s.lines.replace("-",":")}" class="station-img">`,
+                iconSize: [100, 16],
+                iconAnchor: [50, 8],
+                popupAnchor: [0, 0]
+            });
+
+            const marker = L.marker([s.lat, s.lng], { icon: stationIcon }).addTo(stationLayers);
+            marker.on('click', () => onStationClick(s));
+            s.layer = marker;
+        } else {
+            const outer = L.circleMarker([s.lat, s.lng], {
+                radius: 6,
+                fillColor: station_colors[s.colors] || "#000000",  // MRT line color
+                color: station_colors[s.colors] || "#000000",      // border color
+                weight: 2,
+                fillOpacity: 1
+            }).addTo(stationLayers);
+
+            // Inner white circle (smaller radius)
+            const inner = L.circleMarker([s.lat, s.lng], {
+                radius: 3,          // smaller than outer
+                fillColor: 'white',
+                color: 'white',
+                weight: 0,
+                fillOpacity: 1
+            }).addTo(stationLayers);
+
+            outer.on('click', () => onStationClick(s));
+            inner.on('click', () => onStationClick(s));
+
+            // Store the outer marker reference
+            s.layer = outer;
+        }
+    }
+
+    const input_field = document.getElementById("input-field");
+
+    function onStationClick(s){
+      if(s.answered){
+        L.popup().setLatLng([s.lat,s.lng]).setContent(`<div><strong>${s.id}</strong><div class='small'>Already answered</div></div>`).openOn(map);
+        return;
+      }
+      input_field.focus();
+
+      input_field.onclick = ()=>{
+        const guess = normalizeName(input_field.value || '');
+        if(!guess) return;
+        input_field.value = "";
+        const correct = normalizeName(s.id);
+        const aliases = (s.aliases||[]).map(a=>normalizeName(a));
+        const ok = correct === guess || aliases.some(a=>a.includes(guess) || guess.includes(a));
+        if(ok){
+          s.answered = true;
+          if (display_station_code) {
+            s.layer._icon.querySelector("img").style.border = "5px solid green";
+            s.layer._icon.querySelector("img").style.borderRadius = "5px";
+          } else {
+            s.layer.setStyle({fillColor:'#2e7d32', radius:8});
+          }
+        //   map.closePopup(popup);
+          updateScore();
+          L.popup().setLatLng([s.lat,s.lng]).setContent(`<div><strong>Correct!</strong><div class='small'>${s.id}</div></div>`).openOn(map);
+        } else {
+          s.answered = true;
+          if (display_station_code) {
+            s.layer._icon.querySelector("img").style.border = "5px solid red";
+            s.layer._icon.querySelector("img").style.borderRadius = "5px";
+          } else {
+            s.layer.setStyle({fillColor:'#e30000', radius:8});
+          }
+          L.popup().setLatLng([s.lat,s.lng]).setContent(`<div><strong>Incorrect</strong><div class='small'>You typed: ${input_field.value}</div></div>`).openOn(map);
+        }
+      };
+
+      input_field.addEventListener('keydown', (e)=>{ if(e.key==='Enter') input_field.click(); });
+    }
+
+    function exactTokenMatch(a,b){
+      const at = a.split(' ').filter(Boolean);
+      const bt = b.split(' ').filter(Boolean);
+      return at.some(t=>bt.includes(t)) || bt.some(t=>at.includes(t));
+    }
+
+    function drawMRTLine(map, geojson, color, lineName = '') {
+        if (!geojson || !geojson.type || !geojson.coordinates) return;
+
+        let lineLayers = [];
+
+        if (geojson.type === "LineString") {
+            const leafletCoords = geojson.coordinates.map(([lon, lat]) => [lat, lon]);
+            const line = L.polyline(leafletCoords, {
+                color: color,
+                weight: 5,
+                opacity: 0.9,
+                smoothFactor: 1
+            }).addTo(map);
+
+            lineLayers.push(line);
+
+        } else if (geojson.type === "MultiLineString") {
+            geojson.coordinates.forEach(segment => {
+                const leafletCoords = segment.map(([lon, lat]) => [lat, lon]);
+                const line = L.polyline(leafletCoords, {
+                    color: color,
+                    weight: 5,
+                    opacity: 0.9,
+                    smoothFactor: 1
+                }).addTo(map);
+
+                lineLayers.push(line);
+            });
+        }
+
+        if (lineLayers.length > 0) {
+            const group = L.featureGroup(lineLayers);
+            map.fitBounds(group.getBounds());
+        }
+
+        return lineLayers;
+    }
+
+    var geodata = null;
+
+    fetch("sgmrt.geojson").then(r=>r.json()).then(data=>{
+        geodata = data;
+        if(data.features){
+            stations = data.features.filter(f=>f.geometry&&f.geometry.type==='Point'&&f.properties.name.length>2).map((f,i)=>({id:f.properties.name, lat:f.geometry.coordinates[1], lng:f.geometry.coordinates[0], aliases:[], answered:false, lines: f.properties.station_codes, colors: f.properties.station_colors}));
+        }
+
+        if(data.features){
+            data.features.filter(f=>f.geometry && (f.geometry.type==='LineString'||f.geometry.type==='MultiLineString')).forEach((f)=>{
+            console.log(f);
+            const name = f.properties.name;
+            const color = f.properties.line_color;
+            drawMRTLine(map, f.geometry, line_colors[color], name);
+            });
+        }
+
+        stations.forEach(s=>{
+            if(!s.lat || !s.lng) return;
+            makeStationMarker(s);
+        });
+
+        addLegend();
+        updateScore();
+    }).catch(err=>{
+      console.error('Failed to load primary dataset',err);
+    });
+
+    document.getElementById("display_station_code").addEventListener("click", function() {
+        display_station_code = !display_station_code;
+        this.textContent = display_station_code ? "View Nodes" : "View Station Codes";
+        this.style.background = display_station_code ? "#28a745" : "#6b6b6b";
+        onFlipToggle(flipOn);
+    });
+
+    // Controls
+    resetBtn.onclick = ()=>{
+      stations.forEach(s=>{ s.answered = false; if(s.layer && s.layer.setStyle) s.layer.setStyle({fillColor:'#3388ff', radius:6}); });
+      updateScore();
+    };
+
+    revealBtn.onclick = ()=>{
+      stations.forEach(s=>{ if(!s.answered){ s.answered=true; if(s.layer && s.layer.setStyle) s.layer.setStyle({fillColor:'#2e7d32', radius:8}); }}); updateScore();
+    };
+
+    // Accessibility: show instructions when map loads
+    map.whenReady(()=>{
+      L.control.scale().addTo(map);
+    });
+  </script>
+</body>
+</html>
