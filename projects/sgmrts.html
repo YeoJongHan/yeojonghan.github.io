@@ -37,9 +37,34 @@
     input:checked + .slider {background-color: #2196F3;}
     input:focus + .slider {box-shadow: 0 0 1px #2196F3;}
     input:checked + .slider:before {-webkit-transform: translateX(1.5em);-ms-transform: translateX(1.5em);transform: translateX(1.5em);}
-    .slider.round {border-radius: 2.125em;}
-    .slider.round:before {border-radius: 50%;}
-    .selected-station-img {
+     .slider.round {border-radius: 2.125em;}
+     .slider.round:before {border-radius: 50%;}
+     .station-label {
+       background: rgba(255, 255, 255, 0.9);
+       border: 0.0625em solid #333;
+       border-radius: 0.25em;
+       padding: 0.125em 0.25em;
+       font-size: 0.6875em;
+       font-weight: bold;
+       color: #333;
+       white-space: nowrap;
+       pointer-events: none;
+       z-index: 1000;
+       box-shadow: 0 0.0625em 0.1875em rgba(0,0,0,0.2);
+       transform: translateX(-50%);
+       text-align: center;
+     }
+     .station-label.correct {
+       background: rgba(46, 125, 50, 0.9);
+       color: white;
+       border-color: #2e7d32;
+     }
+     .station-label.incorrect {
+       background: rgba(227, 18, 27, 0.9);
+       color: white;
+       border-color: #e30000;
+     }
+     .selected-station-img {
       transform: scale(1.2);
       animation: pulse-img 1.5s infinite;
     }
@@ -77,7 +102,7 @@
 
   <div class="controls" id="controls">
     <h2>Singapore MRT Stations Quiz</h2>
-    <div class="small">Click any station on the map and type its name. Use the map controls to zoom / pan.</div>
+    <div class="small">Click any station on the map and type its name.</div>
     <div class="score">
       <div>Correct: <span id="correct">0</span> / <span id="total">0</span></div>
       <div>Remaining: <span id="remaining">0</span></div>
@@ -138,7 +163,7 @@
     //   'https://raw.githubusercontent.com/cheeaun/sgraildata/refs/heads/master/data/raw/LTA%20MRT%20Station%20Exit%20(GEOJSON).geojson'
     // ];
 
-    var DATA_SOURCE = 'https://api-open.data.gov.sg/v1/public/api/datasets/d_b39d3a0871985372d7e1637193335da5/poll-download';
+    // var DATA_SOURCE = 'https://api-open.data.gov.sg/v1/public/api/datasets/d_b39d3a0871985372d7e1637193335da5/poll-download';
 
     let stations = [];
     let lines = {};
@@ -195,7 +220,8 @@
         if (display_station_code) {
             const stationIcon = L.divIcon({
                 className: 'station-icon',
-                html: `<img src="https://mrt-badges.joulev.dev/${s.lines.replace("-",":")}" class="station-img">`,
+                // html: `<img src="https://mrt-badges.joulev.dev/${s.lines.replace("-", ":")}" class="station-img">`,
+                html: `<img src="static/mrt_station_codes/${s.lines}" class="station-img">`,
                 iconSize: [30, 16],
                 iconAnchor: [15, 8],
                 popupAnchor: [0, 0]
@@ -284,6 +310,7 @@
         stations.forEach(s => {
             s.layer = null;
             s.innerLayer = null;
+            s.labelLayer = null;
         });
     }
 
@@ -291,6 +318,44 @@
         stations.forEach(s => {
             if (!s.lat || !s.lng) return;
             makeStationMarker(s);
+        });
+        updateStationLabels();
+    }
+
+    function addStationLabel(station) {
+        if (!station.answered || station.labelLayer) return;
+        
+        const labelClass = station.correct ? 'correct' : 'incorrect';
+        const labelIcon = L.divIcon({
+            className: `station-label ${labelClass}`,
+            html: station.id,
+            iconSize: [null, null],
+            iconAnchor: [null, null],
+            popupAnchor: [0, 0]
+        });
+
+        const labelMarker = L.marker([station.lat, station.lng], { 
+            icon: labelIcon,
+            interactive: false
+        }).addTo(stationLayers);
+        
+        station.labelLayer = labelMarker;
+    }
+
+    function removeStationLabel(station) {
+        if (station.labelLayer) {
+            stationLayers.removeLayer(station.labelLayer);
+            station.labelLayer = null;
+        }
+    }
+
+    function updateStationLabels() {
+        stations.forEach(station => {
+            if (station.answered) {
+                addStationLabel(station);
+            } else {
+                removeStationLabel(station);
+            }
         });
     }
 
@@ -396,8 +461,6 @@
             s.layer.setStyle({radius: 6});
             s.innerLayer.setStyle({ fillColor: '#2e7d32', radius:5});
           }
-          updateScore();
-          L.popup().setLatLng([s.lat,s.lng]).setContent(`<div><strong>Correct!</strong><div class='small'>${s.id}</div></div>`).openOn(map);
         } else {
           s.correct = false;
           if (display_station_code) {
@@ -407,9 +470,9 @@
             s.layer.setStyle({radius: 6 });
             s.innerLayer.setStyle({fillColor:'#e30000', radius:5});
           }
-          updateScore();
-          L.popup().setLatLng([s.lat,s.lng]).setContent(`<div><strong>Incorrect</strong><div class='small'>You typed: ${guessValue}</div></div>`).openOn(map);
         }
+        addStationLabel(s);
+        updateScore();
       };
 
       input_field.addEventListener('keydown', (e)=>{ if(e.key==='Enter') input_field.click(); });
@@ -461,10 +524,10 @@
 
     var geodata = null;
 
-    fetch("sgmrt.geojson").then(r=>r.json()).then(data=>{
+    fetch("http://127.0.0.1:8888/sgmrt.geojson").then(r=>r.json()).then(data=>{
         geodata = data;
         if(data.features){
-            stations = data.features.filter(f=>f.geometry&&f.geometry.type==='Point'&&f.properties.name.length>2).map((f,i)=>({id:f.properties.name, lat:f.geometry.coordinates[1], lng:f.geometry.coordinates[0], aliases:[], answered:false, correct:false, selected:false, lines: f.properties.station_codes, colors: f.properties.station_colors}));
+            stations = data.features.filter(f=>f.geometry&&f.geometry.type==='Point'&&f.properties.name.length>2).map((f,i)=>({id:f.properties.name, lat:f.geometry.coordinates[1], lng:f.geometry.coordinates[0], aliases:[], answered:false, correct:false, selected:false, labelLayer:null, lines: f.properties.station_codes, colors: f.properties.station_colors}));
         }
 
         if(data.features){
@@ -487,8 +550,16 @@
       console.error('Failed to load primary dataset',err);
     });
 
-    document.getElementById("display_station_code").addEventListener("click", function() {
-        display_station_code = !display_station_code;
+    document.getElementById("display_station_code").addEventListener("change", function() {
+        display_station_code = this.checked;
+        const toggleText = document.getElementById('toggle-text');
+        
+        if (display_station_code) {
+            toggleText.textContent = "View Nodes";
+        } else {
+            toggleText.textContent = "View Station Codes";
+        }
+        
         clearAllMarkers();
         recreateAllMarkers();
     });
@@ -512,7 +583,7 @@
       stations.forEach(s=>{ 
         if(!s.answered){ 
           s.answered=true; 
-          s.correct=true;
+          s.correct=false;
         }
       }); 
       clearAllMarkers();
