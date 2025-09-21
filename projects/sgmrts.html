@@ -8,22 +8,68 @@
   <style>
     html,body,#map{height:100%;margin:0;padding:0}
     body{font-family:system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
-    .controls{position: absolute;right:10px;top:10px;z-index:1000;background:rgba(255,255,255,0.95);padding:12px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.12);width:320px}
-    .controls h2{margin:0 0 8px;font-size:16px}
-    .station-input{display:flex;gap:8px;margin-top:8px}
-    .station-input input{flex:1;padding:6px;border-radius:6px;border:1px solid #ddd}
-    .station-input button{padding:6px 10px;border-radius:6px;border:0;background:#1976d2;color:white}
-    .score{margin-top:8px}
-    .hint{color:#666;font-size:12px;margin-top:6px}
-    .legend{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
-    .legend .item{padding:6px;border-radius:6px;background:#f3f3f3;font-size:12px}
-    .popup-input{display:flex;gap:6px}
-    .small{font-size:12px;color:#444}
-    .btn{background:#1976d2;color:white;padding:6px 8px;border-radius:6px;border:0}
-    #input-field{height:20px; width:50%;margin-top:6px;z-index:1000;position: absolute;left:50%;bottom:10px;transform: translate(-70%, 0);}
-    .station-icon {background: transparent !important;border: none;width: 100px;height: 16px;display: flex;align-items: center;justify-content: center;}
+    .controls{position: absolute;right:0.625em;top:0.625em;z-index:1000;background:rgba(255,255,255,0.95);padding:0.75em;border-radius:0.5em;box-shadow:0 0.375em 1.125em rgba(0,0,0,0.12);width:20em}
+    .controls h2{margin:0 0 0.5em;font-size:1em}
+    .station-input{display:flex;gap:0.5em;margin-top:0.5em}
+    .station-input input{flex:1;padding:0.375em;border-radius:0.375em;border:1px solid #ddd}
+    .station-input button{padding:0.375em 0.625em;border-radius:0.375em;border:0;background:#1976d2;color:white}
+    .score{margin-top:0.5em}
+    .hint{color:#666;font-size:0.75em;margin-top:0.375em}
+    .legend{display:flex;flex-wrap:wrap;gap:0.375em;margin-top:0.5em}
+    .legend .item{padding:0.375em;border-radius:0.375em;background:#f3f3f3;font-size:0.75em}
+    .popup-input{display:flex;gap:0.375em}
+    .small{font-size:0.75em;color:#444}
+    .btn{background:#1976d2;color:white;padding:0.375em 0.5em;border-radius:0.375em;border:0;cursor:pointer;transition:background-color 0.3s ease}
+    .btn:hover{background:#1565c0}
+    .btn.disabled{background:#6b6b6b;cursor:not-allowed}
+    .btn.disabled:hover{background:#5a5a5a}
+    .btn.active{background:#28a745}
+    .btn.active:hover{background:#218838}
+    .btn-text{font-size:0.625em;color:#666;margin-top:0.125em}
+    #input-field{height:1.25em; width:50%;margin-top:0.375em;z-index:1000;position: absolute;left:50%;bottom:0.625em;transform: translate(-70%, 0);}
+    .station-icon {background: transparent !important;border: none;width: 6.25em;height: 1em;display: flex;align-items: center;justify-content: center;}
     .station-img {width: 100%;height: 100%;}
     .pointer {cursor: pointer;}
+    .switch {position: relative;display: inline-block;width: 3em;height: 1.5em;}
+    .switch input {opacity: 0;width: 0;height: 0;}
+    .slider {position: absolute;cursor: pointer;top: 0;left: 0;right: 0;bottom: 0;background-color: #ccc;-webkit-transition: .4s;transition: .4s;}
+    .slider:before {position: absolute;content: "";height: 1em;width: 1em;left: 0.25em;bottom: 0.25em;background-color: white;-webkit-transition: .4s;transition: .4s;}
+    input:checked + .slider {background-color: #2196F3;}
+    input:focus + .slider {box-shadow: 0 0 1px #2196F3;}
+    input:checked + .slider:before {-webkit-transform: translateX(1.5em);-ms-transform: translateX(1.5em);transform: translateX(1.5em);}
+    .slider.round {border-radius: 2.125em;}
+    .slider.round:before {border-radius: 50%;}
+    .selected-station-img {
+      transform: scale(1.2);
+      animation: pulse-img 1.5s infinite;
+    }
+    .selected-station-circle {
+      animation: pulse-circle 1.5s infinite;
+      z-index: 1000;
+      stroke: #007bff !important;
+    }
+    @keyframes pulse-img {
+      0% { box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3); border-radius: 0.375em; }
+      50% { box-shadow: 0 0 0 0.375em rgba(0, 123, 255, 0.6); border-radius: 0.375em; }
+      100% { box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3); border-radius: 0.375em; }
+    }
+    @keyframes pulse-circle {
+      0% { 
+        stroke-width: 0.125em;
+        stroke-opacity: 1;
+        filter: brightness(1.2);
+      }
+      50% { 
+        stroke-width: 0.25em;
+        stroke-opacity: 0.7;
+        filter: brightness(1.5);
+      }
+      100% { 
+        stroke-width: 0.125em;
+        stroke-opacity: 1;
+        filter: brightness(1);
+      }
+    }
   </style>
 </head>
 <body>
@@ -36,10 +82,16 @@
       <div>Correct: <span id="correct">0</span> / <span id="total">0</span></div>
       <div>Remaining: <span id="remaining">0</span></div>
     </div>
-    <div style="margin-top:8px;display:flex;gap:8px">
-    <button id="reset" class="btn pointer">Reset</button>
-    <button id="reveal" class="btn pointer" style="background:#6b6b6b">Reveal All</button>
-    <button id="display_station_code" class="btn pointer">View Station Codes</button>
+    <div style="margin-top:0.5em;display:flex;gap:0.5em">
+    <button id="reset" class="btn disabled">Reset</button>
+    <button id="reveal" class="btn">Reveal All</button>
+    <div style="display:flex;flex-direction:column;align-items:center">
+      <div id="toggle-text" class="btn-text">View Station Codes</div>
+      <label class="switch">
+        <input type="checkbox" id="display_station_code">
+        <span class="slider round"></span>
+      </label>
+    </div>
     </div>
     <div class="legend" id="legend"></div>
   </div>
@@ -50,14 +102,12 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    // Basic Leaflet map centered on Singapore
     const map = L.map('map').setView([1.3521, 103.8198], 11);
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    // UI references
     const correctEl = document.getElementById('correct');
     const totalEl = document.getElementById('total');
     const remainingEl = document.getElementById('remaining');
@@ -90,10 +140,11 @@
 
     var DATA_SOURCE = 'https://api-open.data.gov.sg/v1/public/api/datasets/d_b39d3a0871985372d7e1637193335da5/poll-download';
 
-    let stations = []; // {id, name, lat, lng, codes:[],layer}
-    let lines = {}; // lineName -> {color, polyline}
+    let stations = [];
+    let lines = {};
     let stationLayers = L.layerGroup().addTo(map);
-    var display_station_code = true;
+    var display_station_code = false;
+    let selectedStation = null;
 
     function normalizeName(s){
       return s.toLowerCase();
@@ -101,10 +152,33 @@
 
     function updateScore(){
       const total = stations.length;
-      const correct = stations.filter(s=>s.answered).length;
+      const correct = stations.filter(s=>s.correct).length;
+      const answered = stations.filter(s=>s.answered).length;
       totalEl.textContent = total;
       correctEl.textContent = correct;
       remainingEl.textContent = total - correct;
+      updateButtonStates(answered, total);
+    }
+
+    function updateButtonStates(answered, total) {
+      const resetBtn = document.getElementById('reset');
+      const revealBtn = document.getElementById('reveal');
+      
+      if (answered === 0) {
+        resetBtn.classList.add('disabled');
+        resetBtn.classList.remove('active');
+      } else {
+        resetBtn.classList.remove('disabled');
+        resetBtn.classList.add('active');
+      }
+      
+      if (answered === total && total > 0) {
+        revealBtn.classList.add('disabled');
+        revealBtn.classList.remove('active');
+      } else {
+        revealBtn.classList.remove('disabled');
+        revealBtn.classList.remove('active');
+      }
     }
 
     function addLegend(){
@@ -120,45 +194,184 @@
     function makeStationMarker(s) {
         if (display_station_code) {
             const stationIcon = L.divIcon({
-                className: 'station-icon', // CSS class
+                className: 'station-icon',
                 html: `<img src="https://mrt-badges.joulev.dev/${s.lines.replace("-",":")}" class="station-img">`,
-                iconSize: [100, 16],
-                iconAnchor: [50, 8],
+                iconSize: [30, 16],
+                iconAnchor: [15, 8],
                 popupAnchor: [0, 0]
             });
 
             const marker = L.marker([s.lat, s.lng], { icon: stationIcon }).addTo(stationLayers);
             marker.on('click', () => onStationClick(s));
             s.layer = marker;
+            s.innerLayer = null;
+            
+            if (s.answered) {
+                const borderColor = s.correct ? "green" : "red";
+                setTimeout(() => {
+                    if (s.layer._icon && s.layer._icon.querySelector("img")) {
+                        s.layer._icon.querySelector("img").style.border = `5px solid ${borderColor}`;
+                        s.layer._icon.querySelector("img").style.borderRadius = "5px";
+                    }
+                }, 10);
+            }
+            
+            if (s.selected) {
+                setTimeout(() => {
+                    if (s.layer._icon) {
+                        s.layer._icon.classList.add('selected-station');
+                        const img = s.layer._icon.querySelector('.station-img');
+                        if (img) {
+                            img.classList.add('selected-station-img');
+                        }
+                    }
+                }, 10);
+            }
         } else {
+            const radius = s.answered ? 6 : 8;
+            let fillColor = station_colors[s.colors] || "#000000";
+            if (s.answered) {
+                fillColor = s.correct ? '#2e7d32' : '#e30000';
+            }
+            
             const outer = L.circleMarker([s.lat, s.lng], {
-                radius: 6,
-                fillColor: station_colors[s.colors] || "#000000",  // MRT line color
-                color: station_colors[s.colors] || "#000000",      // border color
+                radius: radius,
+                fillColor: fillColor,
+                color: station_colors[s.colors] || "#000000",
                 weight: 2,
                 fillOpacity: 1
             }).addTo(stationLayers);
 
-            // Inner white circle (smaller radius)
-            const inner = L.circleMarker([s.lat, s.lng], {
-                radius: 3,          // smaller than outer
-                fillColor: 'white',
-                color: 'white',
-                weight: 0,
-                fillOpacity: 1
-            }).addTo(stationLayers);
+            let inner = null;
+            if (!s.answered) {
+                inner = L.circleMarker([s.lat, s.lng], {
+                    radius: 4,
+                    fillColor: 'white',
+                    color: 'white',
+                    weight: 0,
+                    fillOpacity: 1
+                }).addTo(stationLayers);
+                inner.on('click', () => onStationClick(s));
+            }
 
             outer.on('click', () => onStationClick(s));
-            inner.on('click', () => onStationClick(s));
-
-            // Store the outer marker reference
             s.layer = outer;
+            s.innerLayer = inner;
+            
+            if (s.selected) {
+                setTimeout(() => {
+                    if (s.layer.setRadius) {
+                        const currentRadius = s.layer.options.radius;
+                        s.layer.setRadius(currentRadius + 2);
+                    }
+                    if (s.innerLayer && s.innerLayer.setRadius) {
+                        const currentRadius = s.innerLayer.options.radius;
+                        s.innerLayer.setRadius(currentRadius + 1);
+                    }
+                    if (s.layer._path) {
+                        s.layer._path.classList.add('selected-station-circle');
+                    }
+                    if (s.innerLayer && s.innerLayer._path) {
+                        s.innerLayer._path.classList.add('selected-station-circle');
+                    }
+                }, 10);
+            }
+        }
+    }
+
+    function clearAllMarkers() {
+        stationLayers.clearLayers();
+        stations.forEach(s => {
+            s.layer = null;
+            s.innerLayer = null;
+        });
+    }
+
+    function recreateAllMarkers() {
+        stations.forEach(s => {
+            if (!s.lat || !s.lng) return;
+            makeStationMarker(s);
+        });
+    }
+
+    function selectStation(station) {
+        if (selectedStation && selectedStation !== station) {
+            deselectStation(selectedStation);
+        }
+        
+        selectedStation = station;
+        station.selected = true;
+        
+        if (display_station_code) {
+            if (station.layer._icon) {
+                station.layer._icon.classList.add('selected-station');
+                const img = station.layer._icon.querySelector('.station-img');
+                if (img) {
+                    img.classList.add('selected-station-img');
+                }
+            }
+        } else {
+            if (station.layer.setRadius) {
+                const currentRadius = station.layer.options.radius;
+                station.layer.setRadius(currentRadius + 2);
+            }
+            if (station.innerLayer && station.innerLayer.setRadius) {
+                const currentRadius = station.innerLayer.options.radius;
+                station.innerLayer.setRadius(currentRadius + 1);
+            }
+            if (station.layer._path) {
+                station.layer._path.classList.add('selected-station-circle');
+            }
+            if (station.innerLayer && station.innerLayer._path) {
+                station.innerLayer._path.classList.add('selected-station-circle');
+            }
+        }
+    }
+
+    function deselectStation(station) {
+        if (!station) return;
+        
+        station.selected = false;
+        
+        if (display_station_code) {
+            if (station.layer._icon) {
+                station.layer._icon.classList.remove('selected-station');
+                const img = station.layer._icon.querySelector('.station-img');
+                if (img) {
+                    img.classList.remove('selected-station-img');
+                }
+            }
+        } else {
+            if (station.layer.setRadius) {
+                const currentRadius = station.layer.options.radius;
+                station.layer.setRadius(Math.max(6, currentRadius - 2));
+            }
+            if (station.innerLayer && station.innerLayer.setRadius) {
+                const currentRadius = station.innerLayer.options.radius;
+                station.innerLayer.setRadius(Math.max(3, currentRadius - 1));
+            }
+            if (station.layer._path) {
+                station.layer._path.classList.remove('selected-station-circle');
+            }
+            if (station.innerLayer && station.innerLayer._path) {
+                station.innerLayer._path.classList.remove('selected-station-circle');
+            }
+        }
+    }
+
+    function deselectAllStations() {
+        if (selectedStation) {
+            deselectStation(selectedStation);
+            selectedStation = null;
         }
     }
 
     const input_field = document.getElementById("input-field");
 
     function onStationClick(s){
+      clickedOnStation = true;
+      selectStation(s);
+      
       if(s.answered){
         L.popup().setLatLng([s.lat,s.lng]).setContent(`<div><strong>${s.id}</strong><div class='small'>Already answered</div></div>`).openOn(map);
         return;
@@ -168,30 +381,34 @@
       input_field.onclick = ()=>{
         const guess = normalizeName(input_field.value || '');
         if(!guess) return;
+        const guessValue = input_field.value;
         input_field.value = "";
         const correct = normalizeName(s.id);
         const aliases = (s.aliases||[]).map(a=>normalizeName(a));
         const ok = correct === guess || aliases.some(a=>a.includes(guess) || guess.includes(a));
+        s.answered = true;
         if(ok){
-          s.answered = true;
+          s.correct = true;
           if (display_station_code) {
             s.layer._icon.querySelector("img").style.border = "5px solid green";
             s.layer._icon.querySelector("img").style.borderRadius = "5px";
           } else {
-            s.layer.setStyle({fillColor:'#2e7d32', radius:8});
+            s.layer.setStyle({radius: 6});
+            s.innerLayer.setStyle({ fillColor: '#2e7d32', radius:5});
           }
-        //   map.closePopup(popup);
           updateScore();
           L.popup().setLatLng([s.lat,s.lng]).setContent(`<div><strong>Correct!</strong><div class='small'>${s.id}</div></div>`).openOn(map);
         } else {
-          s.answered = true;
+          s.correct = false;
           if (display_station_code) {
             s.layer._icon.querySelector("img").style.border = "5px solid red";
             s.layer._icon.querySelector("img").style.borderRadius = "5px";
           } else {
-            s.layer.setStyle({fillColor:'#e30000', radius:8});
+            s.layer.setStyle({radius: 6 });
+            s.innerLayer.setStyle({fillColor:'#e30000', radius:5});
           }
-          L.popup().setLatLng([s.lat,s.lng]).setContent(`<div><strong>Incorrect</strong><div class='small'>You typed: ${input_field.value}</div></div>`).openOn(map);
+          updateScore();
+          L.popup().setLatLng([s.lat,s.lng]).setContent(`<div><strong>Incorrect</strong><div class='small'>You typed: ${guessValue}</div></div>`).openOn(map);
         }
       };
 
@@ -247,7 +464,7 @@
     fetch("sgmrt.geojson").then(r=>r.json()).then(data=>{
         geodata = data;
         if(data.features){
-            stations = data.features.filter(f=>f.geometry&&f.geometry.type==='Point'&&f.properties.name.length>2).map((f,i)=>({id:f.properties.name, lat:f.geometry.coordinates[1], lng:f.geometry.coordinates[0], aliases:[], answered:false, lines: f.properties.station_codes, colors: f.properties.station_colors}));
+            stations = data.features.filter(f=>f.geometry&&f.geometry.type==='Point'&&f.properties.name.length>2).map((f,i)=>({id:f.properties.name, lat:f.geometry.coordinates[1], lng:f.geometry.coordinates[0], aliases:[], answered:false, correct:false, selected:false, lines: f.properties.station_codes, colors: f.properties.station_colors}));
         }
 
         if(data.features){
@@ -272,22 +489,48 @@
 
     document.getElementById("display_station_code").addEventListener("click", function() {
         display_station_code = !display_station_code;
-        this.textContent = display_station_code ? "View Nodes" : "View Station Codes";
-        this.style.background = display_station_code ? "#28a745" : "#6b6b6b";
-        onFlipToggle(flipOn);
+        clearAllMarkers();
+        recreateAllMarkers();
     });
 
-    // Controls
     resetBtn.onclick = ()=>{
-      stations.forEach(s=>{ s.answered = false; if(s.layer && s.layer.setStyle) s.layer.setStyle({fillColor:'#3388ff', radius:6}); });
+      if (resetBtn.classList.contains('disabled')) return;
+      stations.forEach(s=>{ 
+        s.answered = false; 
+        s.correct = false;
+        s.selected = false;
+      });
+      selectedStation = null;
+      clearAllMarkers();
+      recreateAllMarkers();
       updateScore();
     };
 
     revealBtn.onclick = ()=>{
-      stations.forEach(s=>{ if(!s.answered){ s.answered=true; if(s.layer && s.layer.setStyle) s.layer.setStyle({fillColor:'#2e7d32', radius:8}); }}); updateScore();
+      if (revealBtn.classList.contains('disabled')) return;
+      
+      stations.forEach(s=>{ 
+        if(!s.answered){ 
+          s.answered=true; 
+          s.correct=true;
+        }
+      }); 
+      clearAllMarkers();
+      recreateAllMarkers();
+      updateScore();
     };
 
-    // Accessibility: show instructions when map loads
+    let clickedOnStation = false;
+    
+    map.on('click', function(e) {
+        setTimeout(() => {
+            if (!clickedOnStation) {
+                deselectAllStations();
+            }
+            clickedOnStation = false;
+        }, 10);
+    });
+
     map.whenReady(()=>{
       L.control.scale().addTo(map);
     });
