@@ -178,6 +178,7 @@
     var display_station_code = false;
     var randomization_mode = false;
     let selectedStation = null;
+    let station_direction = "forward";
 
     function normalizeName(s){
       return s.toLowerCase().replace('-',' ');
@@ -546,7 +547,7 @@
         }
         addStationLabel(s);
         updateScore();
-        selectNextStation("forward");
+        selectNextStation(station_direction);
       };
 
       input_field.addEventListener('keydown', (e)=>{ if(e.key==='Enter') input_field.click(); });
@@ -717,11 +718,8 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Tab') {
         e.preventDefault();
-        if (e.shiftKey) {
-          selectNextStation('backward');
-        } else {
-          selectNextStation('forward');
-        }
+        station_direction = e.shiftKey ? 'backward' : 'forward';
+        selectNextStation(station_direction);
         ensureInputFocus();
         return;
       }
