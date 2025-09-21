@@ -552,13 +552,6 @@
 
     document.getElementById("display_station_code").addEventListener("change", function() {
         display_station_code = this.checked;
-        const toggleText = document.getElementById('toggle-text');
-        
-        if (display_station_code) {
-            toggleText.textContent = "View Nodes";
-        } else {
-            toggleText.textContent = "View Station Codes";
-        }
         
         clearAllMarkers();
         recreateAllMarkers();
