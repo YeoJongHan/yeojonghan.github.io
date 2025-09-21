@@ -102,7 +102,7 @@
 
   <div class="controls" id="controls">
     <h2>Singapore MRT Stations Quiz</h2>
-    <div class="small">Click any station on the map and type its name.</div>
+     <div class="small">Click any station on the map and type its name.<br>Press <code>TAB</code> to navigate to the next station, <code>Shift+TAB</code> for previous.<br><i>Random Mode</i> is for the <code>TAB</code> navigation.</div>
     <div class="score">
       <div>Correct: <span id="correct">0</span> / <span id="total">0</span></div>
       <div>Remaining: <span id="remaining">0</span></div>
@@ -114,6 +114,13 @@
       <div id="toggle-text" class="btn-text">View Station Codes</div>
       <label class="switch">
         <input type="checkbox" id="display_station_code">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center">
+      <div id="randomization-text" class="btn-text">Random Mode</div>
+      <label class="switch">
+        <input type="checkbox" id="randomization_mode">
         <span class="slider round"></span>
       </label>
     </div>
@@ -169,10 +176,69 @@
     let lines = {};
     let stationLayers = L.layerGroup().addTo(map);
     var display_station_code = false;
+    var randomization_mode = false;
     let selectedStation = null;
 
     function normalizeName(s){
       return s.toLowerCase().replace('-',' ');
+    }
+
+    function ensureInputFocus() {
+      const inputField = document.getElementById("input-field");
+      if (document.activeElement !== inputField) {
+        inputField.focus();
+      }
+    }
+
+    function selectNextStation(direction = 'forward') {
+      if (stations.length === 0) return;
+      const unansweredStations = stations.filter(s => !s.answered);
+      if (unansweredStations.length === 0) return;
+      
+      let targetStation;
+      
+      if (randomization_mode) {
+        const randomIndex = Math.floor(Math.random() * unansweredStations.length);
+        targetStation = unansweredStations[randomIndex];
+      } else {
+        if (!selectedStation) {
+          if (direction === 'forward') {
+            targetStation = unansweredStations[0];
+          } else {
+            targetStation = unansweredStations[unansweredStations.length - 1];
+          }
+        } else {
+          const currentMainIndex = stations.findIndex(s => s === selectedStation);
+          let foundStation = false;
+          
+          if (direction === 'forward') {
+            for (let i = currentMainIndex + 1; i < stations.length; i++) {
+              if (!stations[i].answered) {
+                targetStation = stations[i];
+                foundStation = true;
+                break;
+              }
+            }
+            if (!foundStation) {
+              targetStation = unansweredStations[0];
+            }
+          } else {
+            for (let i = currentMainIndex - 1; i >= 0; i--) {
+              if (!stations[i].answered) {
+                targetStation = stations[i];
+                foundStation = true;
+                break;
+              }
+            }
+            if (!foundStation) {
+              targetStation = unansweredStations[unansweredStations.length - 1];
+            }
+          }
+        }
+      }
+      
+      onStationClick(targetStation);
+      map.panTo([targetStation.lat, targetStation.lng]);
     }
 
     function updateScore(){
@@ -213,6 +279,13 @@
         item.className = 'item';
         item.textContent = name;
         legendEl.appendChild(item);
+      });
+    }
+
+    function parseStationCode(code) {
+      return code.split('-').map(part => {
+        const [, prefix, num] = part.match(/^([A-Z]+)(\d*)$/) || [];
+        return [prefix, parseInt(num, 10)];
       });
     }
 
@@ -528,11 +601,29 @@
         geodata = data;
         if(data.features){
             stations = data.features.filter(f=>f.geometry&&f.geometry.type==='Point'&&f.properties.name.length>2).map((f,i)=>({id:f.properties.name, lat:f.geometry.coordinates[1], lng:f.geometry.coordinates[0], aliases:[], answered:false, correct:false, selected:false, labelLayer:null, lines: f.properties.station_codes, colors: f.properties.station_colors}));
+            stations.sort((a, b) => {
+              var partsA = parseStationCode(a.lines);
+              var partsB = parseStationCode(b.lines);
+              partsA.sort();
+              partsB.sort();
+
+              for (let i = 0; i < Math.max(partsA.length, partsB.length); i++) {
+                if (!partsA[i]) return -1;
+                if (!partsB[i]) return 1;
+
+                const [prefA, numA] = partsA[i];
+                const [prefB, numB] = partsB[i];
+
+                if (prefA !== prefB) return prefA.localeCompare(prefB);
+                if (numA !== numB) return numA - numB;
+              }
+              return 0;
+            });
+            console.log(stations);
         }
 
         if(data.features){
             data.features.filter(f=>f.geometry && (f.geometry.type==='LineString'||f.geometry.type==='MultiLineString')).forEach((f)=>{
-            console.log(f);
             const name = f.properties.name;
             const color = f.properties.line_color;
             drawMRTLine(map, f.geometry, line_colors[color], name);
@@ -557,6 +648,10 @@
         recreateAllMarkers();
     });
 
+    document.getElementById("randomization_mode").addEventListener("change", function() {
+        randomization_mode = this.checked;
+    });
+
     resetBtn.onclick = ()=>{
       if (resetBtn.classList.contains('disabled')) return;
       stations.forEach(s=>{ 
@@ -568,6 +663,7 @@
       clearAllMarkers();
       recreateAllMarkers();
       updateScore();
+      ensureInputFocus();
     };
 
     revealBtn.onclick = ()=>{
@@ -579,9 +675,11 @@
           s.correct=false;
         }
       }); 
+      selectedStation = null;
       clearAllMarkers();
       recreateAllMarkers();
       updateScore();
+      ensureInputFocus();
     };
 
     let clickedOnStation = false;
@@ -597,6 +695,56 @@
 
     map.whenReady(()=>{
       L.control.scale().addTo(map);
+      ensureInputFocus();
+    });
+
+    document.addEventListener('click', function(e) {
+      if (e.target.closest('.controls') || e.target.closest('#input-field')) {
+        return;
+      }
+      setTimeout(ensureInputFocus, 10);
+    });
+
+    document.addEventListener('focusin', function(e) {
+      if (e.target.closest('.controls')) {
+        return;
+      }
+      if (e.target.id !== 'input-field') {
+        setTimeout(ensureInputFocus, 10);
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Tab') {
+        e.preventDefault();
+        if (e.shiftKey) {
+          selectNextStation('backward');
+        } else {
+          selectNextStation('forward');
+        }
+        ensureInputFocus();
+        return;
+      }
+      
+      const inputField = document.getElementById("input-field");
+      if (document.activeElement !== inputField && !e.target.closest('.controls')) {
+        inputField.focus();
+        if (e.key.length === 1 || e.key === 'Backspace' || e.key === 'Delete') {
+          const newEvent = new KeyboardEvent('keydown', {
+            key: e.key,
+            code: e.code,
+            keyCode: e.keyCode,
+            which: e.which,
+            ctrlKey: e.ctrlKey,
+            altKey: e.altKey,
+            shiftKey: e.shiftKey,
+            metaKey: e.metaKey,
+            bubbles: true,
+            cancelable: true
+          });
+          inputField.dispatchEvent(newEvent);
+        }
+      }
     });
   </script>
 </body>
