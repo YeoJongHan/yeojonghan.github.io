@@ -524,7 +524,7 @@
 
     var geodata = null;
 
-    fetch("http://127.0.0.1:8888/sgmrt.geojson").then(r=>r.json()).then(data=>{
+    fetch("sgmrt.geojson").then(r=>r.json()).then(data=>{
         geodata = data;
         if(data.features){
             stations = data.features.filter(f=>f.geometry&&f.geometry.type==='Point'&&f.properties.name.length>2).map((f,i)=>({id:f.properties.name, lat:f.geometry.coordinates[1], lng:f.geometry.coordinates[0], aliases:[], answered:false, correct:false, selected:false, labelLayer:null, lines: f.properties.station_codes, colors: f.properties.station_colors}));
