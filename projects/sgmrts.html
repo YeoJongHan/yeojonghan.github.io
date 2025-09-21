@@ -546,6 +546,7 @@
         }
         addStationLabel(s);
         updateScore();
+        selectNextStation("forward");
       };
 
       input_field.addEventListener('keydown', (e)=>{ if(e.key==='Enter') input_field.click(); });
