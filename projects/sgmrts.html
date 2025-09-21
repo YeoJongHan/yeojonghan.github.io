@@ -172,7 +172,7 @@
     let selectedStation = null;
 
     function normalizeName(s){
-      return s.toLowerCase();
+      return s.toLowerCase().replace('-',' ');
     }
 
     function updateScore(){
