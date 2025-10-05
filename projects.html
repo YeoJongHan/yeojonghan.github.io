@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Jong Han's Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/include.js"></script>
+    <style>
+        .projects-hero {
+            padding-top: 6rem;
+            padding-bottom: 2rem;
+            background: linear-gradient(135deg, rgba(0,0,0,0.05), rgba(0,0,0,0));
+            min-height: 100vh;
+        }
+
+        .projects-title {
+            font-weight: 800;
+            letter-spacing: 0.3px;
+        }
+
+        .projects-subtitle {
+            opacity: 0.85;
+        }
+
+        .projects-grid .project-card {
+            aspect-ratio: 1 / 1;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: .6rem;
+            color: inherit;
+            transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+        }
+
+        .projects-grid .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 35px rgba(61,126,255,0.25);
+            border-color: rgba(61,126,255,0.5);
+        }
+
+        .projects-grid .project-card:focus { outline: 3px solid rgba(61,126,255,0.6); outline-offset: 2px; }
+
+        .projects-grid .project-icon {
+            font-size: 2.2rem;
+            color: #3d7eff;
+        }
+
+        .projects-grid .project-name {
+            font-weight: 700;
+            letter-spacing: .2px;
+        }
+
+        .reveal-up { opacity: 0; transform: translateY(14px); }
+        .reveal-up.revealed { opacity: 1; transform: translateY(0); transition: opacity 380ms ease, transform 380ms ease; }
+
+        @media (max-width: 576px) {
+            .projects-hero { padding-top: 5rem; }
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+    <div data-include="header.html"></div>
+
+
+
+    <article id="top" class="wrapper style1 projects-hero">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="mb-4 text-center reveal-up">
+                        <h1 class="projects-title">Projects</h1>
+                        <p class="projects-subtitle">Some side quests completed on my free time - games, tools, and fun builds</p>
+                    </div>
+
+                    <div class="reveal-up">
+                        <div id="projectsGrid" class="projects-grid row g-3" role="list" aria-label="Projects grid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+    </footer>
+
+    <script>
+        const PROJECTS = [
+            {
+                id: 'sgmrts',
+                title: 'SG MRT Stations Quiz',
+                href: 'projects/sgmrts.html',
+                icon: 'fa fa-subway'
+            },
+            {
+                id: 'msp430dis',
+                title: 'MSP430 Disassembler/Assembler',
+                href: 'projects/msp430dis.html',
+                icon: 'fa fa-desktop'
+            }
+        ];
+
+        const grid = document.getElementById('projectsGrid');
+
+        function renderGrid(items) {
+            grid.innerHTML = '';
+            items.forEach((p, i) => {
+                const col = document.createElement('div');
+                col.className = 'col-6 col-lg-3';
+
+                const a = document.createElement('a');
+                a.href = p.href;
+                a.className = 'project-card text-decoration-none d-flex flex-column justify-content-center align-items-center reveal-up';
+                a.style.transitionDelay = (i * 40) + 'ms';
+                a.setAttribute('role', 'link');
+                a.setAttribute('aria-label', `${p.title} - open project`);
+
+                a.innerHTML = `
+                    <div class="project-icon"><i class="${p.icon}" aria-hidden="true"></i></div>
+                    <div class="project-name">${p.title}</div>
+                `;
+
+                col.appendChild(a);
+                grid.appendChild(col);
+            });
+            reveal();
+        }
+
+        function reveal() {
+            const io = new IntersectionObserver((entries, obs) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('revealed');
+                        obs.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+            document.querySelectorAll('.reveal-up').forEach(el => io.observe(el));
+        }
+
+        renderGrid(PROJECTS);
+    </script>
+
+
+</body>
+
+</html>

@@ -24,11 +24,11 @@
 						<a class="nav-link active" aria-current="page" href="index.html">Home</a>
 					  </li>
 					  <li class="nav-item">
-						<a class="nav-link" href="msp430dis.html">MSP430 Disasm</a>
-					  </li>
-					  <li class="nav-item">
 						<a class="nav-link" href="https://jonghan.gitbook.io/ctf-writeups">CTF Writeups</a>
 					  </li>
+					<li class="nav-item">
+						<a class="nav-link" href="projects.html">Projects</a>
+					</li>
 					  <li class="nav-item">
 						<a class="nav-link" href="QnJvd25pZSAg.html" id="shhhhhh">Meanwhile...</a>
 					  </li>
@@ -38,57 +38,55 @@
 			</nav>
 		</header>
 		
+		<article id="top" class="wrapper style1">
+			<div class="container">
+				<div class="row d-flex justify-content-center">
+					<div class="col-lg-auto col-md-6 col-sm-12">
+
+					</div>
+					
+					<div class="col-lg-6 col-md-6 col-sm-12 brief_me">
+						<header>
+							<h1>Hi! I'm <span><strong>Yeo Jong Han</strong></span>.<h1>
+						</header>
+						<p>Currently a student studying in <b>Cybersecurity &amp; Digital Forensics</b> in Singapore.</p>
+						<div>
+							<a style="text-decoration:none;" target="_blank" class="icon brands" href="assets/misc/YeoJongHan_Resume.pdf" download="YeoJongHan_Resume.pdf"><button type="button" class="btn btn-dark">Download Resume</button></a>
+							<br><br>
+							<a href="https://github.com/YeoJongHan" target="_blank"><i class="fab fa-github" style='font-size:50px;color:black;'></i></a>&nbsp;&nbsp;&nbsp;
+							<a href="https://www.linkedin.com/in/yeo-jong-han-7010311b2/" target="_blank"><i class="fab fa-linkedin-square" style='font-size:50px;color:black;'></i></a>&nbsp;&nbsp;&nbsp;
+							<a href="mailto:yeojonghan@hotmail.com" target="_blank"><i class="fa fa-envelope" style='font-size:50px;color:black;'></i></a>&nbsp;&nbsp;&nbsp;
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
 		
-			
-			<article id="top" class="wrapper style1">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="col-lg-auto col-md-6 col-sm-12">
-							<span"><img class="image_boy" src="images/boy.png" alt="Credits to this site https://www.peakpx.com/en/hd-wallpaper-desktop-vntjm" /></span> <!--Credits to this site for the image https://www.peakpx.com/en/hd-wallpaper-desktop-vntjm-->
-						</div>
-						
-						<div class="col-lg-6 col-md-6 col-sm-12 brief_me">
-							<header>
-								<h1>Hi! I'm <span><strong>Yeo Jong Han</strong></span>.<h1>
-							</header>
-							<p>Currently a student studying in <b>Cybersecurity &amp; Digital Forensics</b> in Singapore.</p>
-							<div>
-								<a style="text-decoration:none;" target="_blank" class="icon brands" href="assets/misc/YeoJongHan_Resume.pdf" download="YeoJongHan_Resume.pdf"><button type="button" class="btn btn-dark">Download Resume</button></a>
-								<br><br>
-								<a href="https://github.com/YeoJongHan" target="_blank"><i class="fab fa-github" style='font-size:50px;color:black;'></i></a>&nbsp;&nbsp;&nbsp;
-								<a href="https://www.linkedin.com/in/yeo-jong-han-7010311b2/" target="_blank"><i class="fab fa-linkedin-square" style='font-size:50px;color:black;'></i></a>&nbsp;&nbsp;&nbsp;
-								<a href="mailto:yeojonghan@hotmail.com" target="_blank"><i class="fa fa-envelope" style='font-size:50px;color:black;'></i></a>&nbsp;&nbsp;&nbsp;
-							</div>
-						</div>
-					</div>
+		<article id="aboutme">
+			<div class="container">
+				<div class="row d-flex justify-content-center">
+					<img id="worker" src="images/wip/dig1.png">
+					<h3 style="text-align: center;" id="workinprogress">Work In Progress.</h3>
 				</div>
-			</article>
-			
-			<article id="aboutme">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<img id="worker" src="images/wip/dig1.png">
-						<h3 style="text-align: center;" id="workinprogress">Work In Progress.</h3>
-					</div>
-				</div>
-			</article>
-			
-			<footer>
-			</footer>
-			
-		<script>
-			var i = 2;
-			
-			var t = setInterval(function(){
-				document.getElementById('workinprogress').innerHTML = 'Work In Progress'+'.'.repeat(i);
-				document.getElementById('worker').src = 'images/wip/dig'+i.toString()+'.png';
-				if (i >=3){
-					i=1;
-				}else{
-					i+=1;
-				}
-			},1000);
-		</script>
+			</div>
+		</article>
+		
+		<footer>
+		</footer>
+		
+	<script>
+		var i = 2;
+		
+		var t = setInterval(function(){
+			document.getElementById('workinprogress').innerHTML = 'Work In Progress'+'.'.repeat(i);
+			document.getElementById('worker').src = 'images/wip/dig'+i.toString()+'.png';
+			if (i >=3){
+				i=1;
+			}else{
+				i+=1;
+			}
+		},1000);
+	</script>
 
 	</body>
 </html>
