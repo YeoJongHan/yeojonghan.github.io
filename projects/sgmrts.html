@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <title>Singapore MRT Stations Quiz</title>
   <link rel="stylesheet" href="../assets/css/main.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -27,7 +27,7 @@
     .btn.active{background:#28a745}
     .btn.active:hover{background:#218838}
     .btn-text{font-size:0.625em;color:#666;margin-top:0.125em}
-    #input-field{height:1.25em; width:50%;margin-top:0.375em;z-index:1000;position: absolute;left:50%;bottom:0.625em;transform: translate(-70%, 0);}
+    #input-field{height:1.25em; width:50%;margin-top:0.375em;z-index:1000;position: absolute;left:50%;bottom:0.625em;transform: translate(-70%, 0); font-size: 16px;}
     .station-icon {background: transparent !important;border: none;width: 6.25em;height: 1em;display: flex;align-items: center;justify-content: center;}
     .station-img {width: 100%;height: 100%;}
     .pointer {cursor: pointer;}
@@ -510,6 +510,7 @@
     }
 
     const input_field = document.getElementById("input-field");
+    var ss = null;
 
     function onStationClick(s){
       clickedOnStation = true;
@@ -520,42 +521,45 @@
         return;
       }
       input_field.focus();
-
-      input_field.onclick = ()=>{
-        const guess = normalizeName(input_field.value || '');
-        if(!guess) return;
-        const guessValue = input_field.value;
-        input_field.value = "";
-        const correct = normalizeName(s.id);
-        const aliases = (s.aliases||[]).map(a=>normalizeName(a));
-        const ok = correct === guess || aliases.some(a=>a.includes(guess) || guess.includes(a));
-        s.answered = true;
-        if(ok){
-          s.correct = true;
-          if (display_station_code) {
-            s.layer._icon.querySelector("img").style.border = "5px solid green";
-            s.layer._icon.querySelector("img").style.borderRadius = "5px";
-          } else {
-            s.layer.setStyle({radius: 6});
-            s.innerLayer.setStyle({ fillColor: '#2e7d32', radius:5});
-          }
-        } else {
-          s.correct = false;
-          if (display_station_code) {
-            s.layer._icon.querySelector("img").style.border = "5px solid red";
-            s.layer._icon.querySelector("img").style.borderRadius = "5px";
-          } else {
-            s.layer.setStyle({radius: 6 });
-            s.innerLayer.setStyle({fillColor:'#e30000', radius:5});
-          }
-        }
-        addStationLabel(s);
-        updateScore();
-        // selectNextStation(station_direction);
-      };
-
-      input_field.addEventListener('keydown', (e)=>{ if(e.key==='Enter') input_field.click(); });
+      ss = s;
     }
+
+    function submit() {
+      const guess = normalizeName(input_field.value || '');
+      if(!guess) return;
+      const guessValue = input_field.value;
+      input_field.value = "";
+      if (ss === null) return;
+      if (ss.answered) return;
+      const correct = normalizeName(ss.id);
+      const aliases = (ss.aliases||[]).map(a=>normalizeName(a));
+      const ok = correct === guess || aliases.some(a=>a.includes(guess) || guess.includes(a));
+      ss.answered = true;
+      if(ok){
+        ss.correct = true;
+        if (display_station_code) {
+          ss.layer._icon.querySelector("img").style.border = "5px solid green";
+          ss.layer._icon.querySelector("img").style.borderRadius = "5px";
+        } else {
+          ss.layer.setStyle({radius: 6});
+          ss.innerLayer.setStyle({ fillColor: '#2e7d32', radius:5});
+        }
+      } else {
+        ss.correct = false;
+        if (display_station_code) {
+          ss.layer._icon.querySelector("img").style.border = "5px solid red";
+          ss.layer._icon.querySelector("img").style.borderRadius = "5px";
+        } else {
+          ss.layer.setStyle({radius: 6 });
+          ss.innerLayer.setStyle({fillColor:'#e30000', radius:5});
+        }
+      }
+      addStationLabel(ss);
+      updateScore();
+      // selectNextStation(station_direction);
+    };
+
+    input_field.addEventListener('keydown', (e)=>{ if(e.key==='Enter') submit(); });
 
     function exactTokenMatch(a,b){
       const at = a.split(' ').filter(Boolean);
@@ -668,7 +672,7 @@
       clearAllMarkers();
       recreateAllMarkers();
       updateScore();
-      ensureInputFocus();
+      // ensureInputFocus();
     };
 
     revealBtn.onclick = ()=>{
@@ -684,7 +688,7 @@
       clearAllMarkers();
       recreateAllMarkers();
       updateScore();
-      ensureInputFocus();
+      // ensureInputFocus();
     };
 
     let clickedOnStation = false;
