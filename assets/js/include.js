@@ -31,7 +31,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://jonghan.gitbook.io/ctf-writeups">CTF Writeups</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://ctf.jonghan.xyz">CTF Writeups</a></li>
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="QnJvd25pZSAg.html" id="shhhhhh">Meanwhile...</a></li>
         </ul>
