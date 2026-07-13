@@ -3,6 +3,54 @@
 	"features": [
 		{
 			"type": "Feature",
+			"properties": {
+				"name": "Cantonment",
+				"network": "singapore-mrt",
+				"network_count": 1,
+				"station_codes": "CC31",
+				"station_colors": "yellow",
+				"stop_type": "station",
+				"mode": "metro_rail"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [103.837028, 1.273115]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Prince Edward Road",
+				"network": "singapore-mrt",
+				"network_count": 1,
+				"station_codes": "CC32",
+				"station_colors": "yellow",
+				"stop_type": "station",
+				"mode": "metro_rail"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [103.847408, 1.273316]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Keppel",
+				"network": "singapore-mrt",
+				"network_count": 1,
+				"station_codes": "CC30",
+				"station_colors": "yellow",
+				"stop_type": "station",
+				"mode": "metro_rail"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [103.830693, 1.27043]
+			}
+		},
+		{
+			"type": "Feature",
 			"id": 2085848057,
 			"properties": {
 				"name": "Admiralty",
@@ -17593,6 +17641,100 @@
 						[
 							103.875422,
 							1.302875
+						]
+					],
+					[
+						[
+							103.854746,
+							1.275174
+						],
+						[
+							103.854071,
+							1.274245
+						],
+						[
+							103.853524,
+							1.273998
+						],
+						[
+							103.852751,
+							1.27373
+						],
+						[
+							103.852065,
+							1.273816
+						],
+						[
+							103.851367,
+							1.274116
+						],
+						[
+							103.850766,
+							1.27418
+						],
+						[
+							103.849887,
+							1.274073
+						],
+						[
+							103.847408,
+							1.273322
+						],
+						[
+							103.84596,
+							1.272861
+						],
+						[
+							103.840821,
+							1.272754
+						],
+						[
+							103.839909,
+							1.272764
+						],
+						[
+							103.83875,
+							1.273022
+						],
+						[
+							103.837066,
+							1.273075
+						],
+						[
+							103.834265,
+							1.272947
+						],
+						[
+							103.833622,
+							1.27285
+						],
+						[
+							103.833225,
+							1.272571
+						],
+						[
+							103.830736,
+							1.270405
+						],
+						[
+							103.828311,
+							1.268324
+						],
+						[
+							103.827109,
+							1.267101
+						],
+						[
+							103.825672,
+							1.266007
+						],
+						[
+							103.824048,
+							1.265376
+						],
+						[
+							103.822484,
+							1.265267
 						]
 					]
 				]
