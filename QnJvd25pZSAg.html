@@ -4,14 +4,14 @@
 		<title>QnJvd25pZSAg's Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	</head>
 	<body class="bstyle" style="background-image: url('images/backgroundbone.jpg');">
 		<nav id="nav" class="brown">
 			<ul class="container">
-				<li><a href="index.html">Back</a></li>
+				<li><a class="back-button" href="index.html">Back</a></li>
 			</ul>
 		</nav>
 		<div class="container">
@@ -23,7 +23,7 @@
 			<br>
 			<div class="row aln-center">
 				<div class="col-4 col-5-large col-12-medium content-center">
-					<span class="fit"><img height="450px" src="images/sleepo.jpg" alt="Image of QnJvd25pZSAg" /></span>
+					<span class="fit"><img height="450px" style="max-height: 40em;" src="images/sleepo.jpg" alt="Image of QnJvd25pZSAg" /></span>
 				</div>
 			</div>
 			<div class="row aln-center">
@@ -41,7 +41,7 @@
 					<h2><u>Skillset</u></h2>
 				</div>
 				<br>
-				<div class="row aln-center">
+				<div class="row aln-center skillset-grid">
 					<div class="col-4 col-6-medium col-12-small content-center">
 						<section class="">
 							<img class="img-thumbnail" src="images/bark.jpg" alt="Bark" />
@@ -83,7 +83,7 @@
 					</div>
 				</div>
 				<br>
-				<div class="row aln-center">
+				<div class="row aln-center skillset-grid">
 					<div class="col-4 col-6-medium col-12-small content-center">
 						<section class="">
 							<img class="img-thumbnail" src="images/sleepiness.jpg" alt="Sleep" />
@@ -115,7 +115,7 @@
 						<p><em>- Jordan, a human from Brownie's manifestations</em></p>
 					</div>
 					<div class="col-4 col-5-large col-12-medium">
-						<h2 class="content-center"><i class="fas fa-quote-left"></i><br>Might seem like a dumb dog, but she is very obedient when treats are involved.<br><i class="fas fa-quote-right"></i></h2>
+						<h2 class="content-center"><i class="fas fa-quote-left"></i><br>Might seem like a goofy dog, but she is very obedient when treats are involved.<br><i class="fas fa-quote-right"></i></h2>
 						<p><em>- Michelle, a satisfied customer</em></p>
 					</div>
 					<div class="col-4 col-5-large col-12-medium">
@@ -132,38 +132,164 @@
 			<div class="container">
 			<hr>
 				<h2 class="content-center"><u>Gallery</u></h2>
-				<div class="row aln-center">
+				<div class="row aln-center gallery-grid">
 					<div class="col-4 col-6-medium col-12-small">
 						<article class="content-center">
-							<img src="images/brown1.jpg" alt="Brown1" class="img-thumbnail"/>
+							<img src="images/brown1.jpg" alt="Brown1" class="img-thumbnail gallery-popup" data-caption="~Nice weather~"/>
 							<em>~Nice weather~</em>
 						</article>
 					</div>
 					<div class="col-4 col-6-medium col-12-small">
 						<article class="content-center">
-							<img src="images/brown2.jpg" alt="Brown2" class="img-thumbnail"/>
-							<em>Rib-bark</em>🐸
+							<img src="images/brown2.jpg" alt="Brown2" class="img-thumbnail gallery-popup" data-caption="Rib-bark"/>
+							<em>Rib-bark <span style="font-style:normal;">🐸</span></em>
 						</article>
 					</div>
 					<div class="col-4 col-6-medium col-12-small">
 						<article class="content-center">
-							<img src="images/brown3.jpg" alt="Brown3" class="img-thumbnail"/>
+							<img src="images/brown3.jpg" alt="Brown3" class="img-thumbnail gallery-popup" data-caption="Gimme food or I'm holding this hostage!"/>
 							<em>Gimme food or I'm holding this hostage!</em>
 						</article>
 					</div>
 				</div>
 				<br>
-				<div class="row aln-center">
+				<div class="row aln-center gallery-grid">
 					<div class="col-4 col-6-medium col-12-small">
 						<article class="content-center">
-							<img src="images/brown4.jpg" alt="Brown1" class="img-thumbnail"/>
+							<img src="images/brown4.jpg" alt="Brown1" class="img-thumbnail gallery-popup" data-caption="~Nice weather~"/>
 							<em>Entered Nirvana</em>
 						</article>
 					</div>
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="content-center">
+							<img src="images/brown5.jpg" alt="Brown2" class="img-thumbnail gallery-popup" data-caption="Bed time!"/>
+							<em>Bed time!</em>
+						</article>
+					</div>
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="content-center">
+							<img src="images/brown6.jpg" alt="Brown3" class="img-thumbnail gallery-popup" data-caption="Don't wake me..."/>
+							<em>Don't wake me...</em>
+						</article>
+					</div>
 				</div>
+				<br>
+				<div class="row aln-center gallery-grid">
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="content-center">
+							<img src="images/brown7.jpg" alt="Brown1" class="img-thumbnail gallery-popup" data-caption="Treats please!"/>
+							<em>Treats please!</em>
+						</article>
+					</div>
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="content-center">
+							<img src="images/brown8.jpg" alt="Brown2" class="img-thumbnail gallery-popup" data-caption="Couch hogger"/>
+							<em>Couch hogger</em>
+						</article>
+					</div>
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="content-center">
+							<img src="images/brown9.jpg" alt="Brown2" class="img-thumbnail gallery-popup" data-caption="Morning stretches"/>
+							<em>Morning stretches</em>
+						</article>
+					</div>
+				</div>
+				<br>
+				<div class="row aln-center gallery-grid">
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="content-center">
+							<img src="images/brown10.jpg" alt="Brown1" class="img-thumbnail gallery-popup" data-caption="Comfy~"/>
+							<em>Comfy~</em>
+						</article>
+					</div>
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="content-center">
+							<img src="images/brown11.jpg" alt="Brown2" class="img-thumbnail gallery-popup" data-caption="Stare off"/>
+							<em>Stare off</em>
+						</article>
+					</div>
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="content-center">
+							<video src="images/brown-loop1.mp4" class="img-thumbnail gallery-popup" data-caption="After every meal" muted autoplay loop playsinline preload="metadata"></video>
+							<em>After every meal</em>
+						</article>
+					</div>
+				</div>
+				<br>
 			</div>
 			<footer>
 			</footer>
 		</article>
+		<div id="galleryModal" class="gallery-modal" role="dialog" aria-modal="true" aria-label="Gallery image popup">
+			<div class="gallery-modal-content">
+				<button class="gallery-modal-close" aria-label="Close">✕</button>
+				<img src="" alt="" class="gallery-modal-image" />
+				<video class="gallery-modal-video" autoplay muted loop playsinline></video>
+				<div class="dog-theme-footer"><i class="fa fa-paw"></i> <span class="gallery-modal-footer-caption">Brownie says woof!</span></div>
+			</div>
+		</div>
+
+		<script>
+			const galleryImages = document.querySelectorAll('.gallery-popup');
+			const modal = document.getElementById('galleryModal');
+			const modalImage = modal.querySelector('.gallery-modal-image');
+			const modalVideo = modal.querySelector('.gallery-modal-video');
+			const modalFooterCaption = modal.querySelector('.gallery-modal-footer-caption');
+			const modalClose = modal.querySelector('.gallery-modal-close');
+
+			const openModal = () => {
+				modal.classList.add('open');
+				modal.style.display = 'flex';
+				modal.style.pointerEvents = 'auto';
+			};
+
+			const closeModal = () => {
+				modal.classList.remove('open');
+				modal.style.display = 'none';
+				modal.style.pointerEvents = 'none';
+				modalVideo.pause();
+				modalVideo.style.display = 'none';
+				modalImage.style.display = 'none';
+				modalVideo.src = '';
+				modalImage.src = '';
+			};
+
+			galleryImages.forEach(item => {
+				item.style.cursor = 'pointer';
+				item.addEventListener('click', () => {
+					const isVideo = item.tagName.toLowerCase() === 'video';
+					const caption = item.dataset.caption || item.alt || 'Brownie says woof!';
+					modalFooterCaption.textContent = caption;
+					if (isVideo) {
+						modalImage.style.display = 'none';
+						modalVideo.style.display = 'block';
+						modalVideo.src = item.currentSrc || item.src;
+						modalVideo.play().catch(() => {});
+					} else {
+						modalVideo.pause();
+						modalVideo.style.display = 'none';
+						modalImage.style.display = 'block';
+						modalImage.src = item.src;
+						modalImage.alt = item.alt;
+					}
+					openModal();
+				});
+			});
+
+			modalClose.addEventListener('click', e => {
+				e.stopPropagation();
+				closeModal();
+			});
+
+			modal.addEventListener('click', e => {
+				if (e.target === modal) closeModal();
+			});
+
+			document.addEventListener('keydown', e => {
+				if (e.key === 'Escape' && modal.classList.contains('open')) {
+					closeModal();
+				}
+			});
+		</script>
 	</body>
 </html>
