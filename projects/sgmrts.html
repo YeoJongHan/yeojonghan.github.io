@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <title>Singapore MRT Stations Quiz</title>
-  <link rel="stylesheet" href="../assets/css/main.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="static/vendor/leaflet/leaflet.css" />
+  <link rel="stylesheet" href="static/sgmrts.css" />
   <style>
     html,body,#map{height:100%;margin:0;padding:0}
     body{font-family:system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
@@ -130,19 +130,40 @@
     </div>
     </div>
     <div class="legend" id="legend"></div>
+    <div class="map-tools"><button id="fit-network" class="btn" type="button">Fit network</button><label><input id="map-details" type="checkbox" checked>Map details</label></div>
+    <p class="map-message" id="basemap-status" role="status">Loading map background… <button id="basemap-retry" class="map-retry" type="button" hidden>Retry</button></p>
+    <p class="map-message" id="stations-status" role="status" hidden></p>
   </div>
 
   <div>
-    <input id="input-field" placeholder="Type station name...">
+    <input id="input-field" placeholder="Type station name..." aria-label="Station name" autocomplete="off" spellcheck="false">
   </div>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="static/vendor/leaflet/leaflet.js"></script>
+  <script src="static/vendor/geojson-vt.js"></script>
+  <script src="static/sg-map-tiles.js"></script>
+  <script src="static/sg-basemap.js"></script>
   <script>
-    const map = L.map('map').setView([1.3521, 103.8198], 11);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
+    const map = L.map('map',{zoomSnap:.25,zoomDelta:.5}).setView([1.3521, 103.8198], 11);
+    const railPane = map.createPane('railways');
+    railPane.style.zIndex = '350';
+    railPane.style.pointerEvents = 'none';
+    const basemap = SingaporeBasemap.create(map,'static/basemap/singapore.geojson');
+    const basemapStatus = document.getElementById('basemap-status');
+    const basemapRetry = document.getElementById('basemap-retry');
+    function loadBasemap() {
+      basemapRetry.hidden = true;
+      basemapStatus.firstChild.textContent = 'Loading map background… ';
+      basemap.load().then(()=>{ basemapStatus.hidden = true; }).catch(error=>{
+        console.error('Unable to load the local basemap',error);
+        basemapStatus.hidden = false;
+        basemapStatus.firstChild.textContent = 'Map background unavailable. The rail quiz still works. ';
+        basemapRetry.hidden = false;
+      });
+    }
+    loadBasemap();
+    basemapRetry.addEventListener('click',loadBasemap);
+    document.getElementById('map-details').addEventListener('change',event=>basemap.setDetailsVisible(event.target.checked));
 
     const correctEl = document.getElementById('correct');
     const totalEl = document.getElementById('total');
@@ -185,7 +206,7 @@
     let station_direction = "forward";
 
     function normalizeName(s){
-      return s.toLowerCase().replace('-',' ');
+      return s.trim().toLowerCase().replace(/[-\s]+/g,' ');
     }
 
     function ensureInputFocus() {
@@ -279,10 +300,11 @@
 
     function addLegend(){
       legendEl.innerHTML = '';
-      Object.keys(lines).slice(0,8).forEach(name=>{
+      Object.keys(lines).forEach(name=>{
         const item = document.createElement('div');
         item.className = 'item';
         item.textContent = name;
+        item.style.borderLeft = `3px solid ${lines[name].color}`;
         legendEl.appendChild(item);
       });
     }
@@ -517,6 +539,7 @@
       selectStation(s);
       
       if(s.answered){
+        ss = null;
         L.popup().setLatLng([s.lat,s.lng]).setContent(`<div><strong>${s.id}</strong><div class='small'>Already answered</div></div>`).openOn(map);
         return;
       }
@@ -575,6 +598,8 @@
         if (geojson.type === "LineString") {
             const leafletCoords = geojson.coordinates.map(([lon, lat]) => [lat, lon]);
             const line = L.polyline(leafletCoords, {
+                pane: 'railways',
+                interactive: false,
                 color: color,
                 weight: 5,
                 opacity: 0.9,
@@ -587,6 +612,8 @@
             geojson.coordinates.forEach(segment => {
                 const leafletCoords = segment.map(([lon, lat]) => [lat, lon]);
                 const line = L.polyline(leafletCoords, {
+                    pane: 'railways',
+                    interactive: false,
                     color: color,
                     weight: 5,
                     opacity: 0.9,
@@ -597,17 +624,22 @@
             });
         }
 
-        if (lineLayers.length > 0) {
-            const group = L.featureGroup(lineLayers);
-            map.fitBounds(group.getBounds());
-        }
+        if (lineLayers.length > 0) lines[lineName] = {color,layers:lineLayers};
 
         return lineLayers;
     }
 
     var geodata = null;
 
-    fetch("sgmrt.geojson").then(r=>r.json()).then(data=>{
+    function fitNetwork() {
+      if (!stations.length) return;
+      const panelWidth = window.innerWidth > 768 ? document.getElementById('controls').getBoundingClientRect().width+24 : 24;
+      map.fitBounds(L.latLngBounds(stations.map(station=>[station.lat,station.lng])),{paddingTopLeft:[28,32],paddingBottomRight:[panelWidth,90],maxZoom:13});
+    }
+    document.getElementById('fit-network').addEventListener('click',fitNetwork);
+
+    fetch("sgmrt.geojson").then(r=>{if(!r.ok)throw new Error(`Stations HTTP ${r.status}`);return r.json();}).then(data=>{
+        if (!Array.isArray(data.features)) throw new Error('Invalid station data');
         geodata = data;
         if(data.features){
             stations = data.features.filter(f=>f.geometry&&f.geometry.type==='Point'&&f.properties.name.length>2).map((f,i)=>({id:f.properties.name, lat:f.geometry.coordinates[1], lng:f.geometry.coordinates[0], aliases:[], answered:false, correct:false, selected:false, labelLayer:null, lines: f.properties.station_codes, colors: f.properties.station_colors}));
@@ -646,8 +678,12 @@
 
         addLegend();
         updateScore();
+        fitNetwork();
     }).catch(err=>{
       console.error('Failed to load primary dataset',err);
+      const status = document.getElementById('stations-status');
+      status.hidden = false;
+      status.textContent = 'Stations could not load. Refresh this page to try again.';
     });
 
     document.getElementById("display_station_code").addEventListener("change", function() {
@@ -669,6 +705,8 @@
         s.selected = false;
       });
       selectedStation = null;
+      ss = null;
+      input_field.value = '';
       clearAllMarkers();
       recreateAllMarkers();
       updateScore();
@@ -685,6 +723,8 @@
         }
       }); 
       selectedStation = null;
+      ss = null;
+      input_field.value = '';
       clearAllMarkers();
       recreateAllMarkers();
       updateScore();

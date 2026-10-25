@@ -1,0 +1,59 @@
+SINGAPORE MRT QUIZ BASEMAP
+
+This is a locally rendered, label-free vector map of Singapore, not a copy of
+CARTO's tiles or cartographic assets. No live map API or map-service token is
+used. Geographic data is a static snapshot, simplified for a browser quiz.
+
+Contains information from National Map Polygon (Singapore Land Authority),
+accessed on 2026-10-25 from data.gov.sg:
+https://data.gov.sg/datasets/d_29f066d67df3eae91df8a42f443863c8/view
+Includes coastal outlines, parks/nature reserves, hydrography, and runways.
+
+Contains information from Road Section Line, September 2026 (Land Transport
+Authority), accessed on 2026-10-25 from LTA DataMall:
+https://datamall.lta.gov.sg/content/datamall/en/static-data.html
+https://datamall.lta.gov.sg/content/dam/datamall/datasets/Geospatial/RoadSectionLine_Sep2026.zip
+
+Both sources are made available under the Singapore Open Data Licence v1.0:
+https://data.gov.sg/open-data-licence
+Source attribution and this licence link are also displayed on the map.
+
+Surrounding land outside detailed Singapore coverage is from Natural Earth
+1:50m land polygons, accessed on 2026-10-25, in the public domain:
+https://www.naturalearthdata.com/downloads/50m-physical-vectors/50m-land/
+https://www.naturalearthdata.com/about/terms-of-use/
+This lower-resolution context is clipped to [102.0,-0.2,105.5,3.0]. Singapore
+is masked out; the Johor portion overlaps north of 1.49 degrees latitude to
+join the detailed land polygons without a seam. Merged land is simplified
+at 3 metres along with the SLA land.
+
+Processing: detailed coverage is clipped to [103.55,1.15,104.18,1.55].
+SLA polygons are repaired, merged by feature type, and simplified at 3 metres.
+LTA road lines are simplified at 2 metres in their supplied SVY21 projection,
+converted to WGS84, and grouped by road category. Coordinates are rounded to
+six decimal places. Feature names and road metadata are omitted so map labels
+cannot disclose quiz answers. No building footprints or live road updates are
+included. The existing sgmrt.geojson rail/station dataset is unchanged.
+
+REBUILDING
+python -m pip install -r scripts/map-data-requirements.txt
+python scripts/build-sg-basemap.py
+Use --refresh to redownload the configured sources. Change ROAD_URL in the
+builder to adopt a future road-data release. Python is only needed to rebuild
+the data; hosting the website requires only the checked-in static files.
+
+Leaflet 1.9.4 is bundled at projects/static/vendor/leaflet/ under its BSD-2-Clause
+licence; the original licence is included there. Leaflet provides panning,
+wheel/pinch zoom, markers, and canvas rendering. Geography is served from
+singapore.geojson next to this file. All quiz runtime assets are local.
+
+The background is rendered as viewport-clipped, cached 256px canvas tiles.
+A Web Worker owns the large GeoJSON index and renders with OffscreenCanvas;
+browsers without worker canvas support use the same clipped tiles in idle
+callbacks. Station markers remain interactive Leaflet layers above these tiles.
+geojson-vt 5.0.4 is bundled in projects/static/vendor/ under its ISC licence;
+geojson-vt.LICENSE is included beside it.
+
+The HTML, CSS, JavaScript, worker, libraries, and data all live within projects/.
+Both `python -m http.server` from the repository root (open projects/sgmrts.html)
+and from projects/ (open sgmrts.html) are supported, without parent-folder URLs.
