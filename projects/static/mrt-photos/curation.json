@@ -1,0 +1,2619 @@
+{
+  "notBefore": {
+    "bright-hill": "2021-08-28"
+  },
+  "notes": {
+    "bright-hill": "Use completed station views; the earlier preview photos show construction equipment and unfinished floors."
+  },
+  "excludedSources": {
+    "https://commons.wikimedia.org/wiki/File:Orchard_Heritage_Trail_board_01-12-2024.jpg": "A nearby heritage trail sign, rather than a view of the MRT station.",
+    "https://commons.wikimedia.org/wiki/File:Buddha_Tooth_Relic_Temple_%26_Museum_with_TE18_Maxwell_MRT_Exit_1_(nearing_completion)_20220223_182100.jpg": "Primarily the temple, with the unfinished station entrance obscured.",
+    "https://commons.wikimedia.org/wiki/File:TE18_Maxwell_MRT_entrance.jpg": "The entrance is still behind construction hoarding.",
+    "https://commons.wikimedia.org/wiki/File:TE18_Maxwell_MRT_entrance_with_MND.jpg": "Another view of the entrance before completion.",
+    "https://commons.wikimedia.org/wiki/File:Admiralty_Station_platform_14-05-2024.jpg": "Name/code text detected: Admiralty, NS10, 海军部",
+    "https://commons.wikimedia.org/wiki/File:NS10_Admiralty_Concourse.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW9_Aljunied_MRT_concourse_20200817_125548.jpg": "Name/code text detected: Ajunied",
+    "https://commons.wikimedia.org/wiki/File:Aljunied_Station_Platform_B.jpg": "Name/code text detected: Alunied",
+    "https://commons.wikimedia.org/wiki/File:Ang_Mo_Kio_Station_concourse_17-05-2024.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Ang_Mo_Kio_Station_platform_14-05-2024(1).jpg": "Name/code text detected: AngMoKio",
+    "https://commons.wikimedia.org/wiki/File:CC12_Bartley_Concourse.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Bartley_MRT_Station_Platforms_2026-01-05_-_1.jpg": "Name/code text detected: Bartey",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Bartley_MRT_Station_Exit_A_2026-01-05.jpg": "Name/code text detected: CC12, Bartley",
+    "https://commons.wikimedia.org/wiki/File:Bayfront_MRT_Station_-_Platform_Level.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CE1_DT16_Bayfront_MRT_Exit_C_20230108_171258.jpg": "Name/code text detected: Bayfront, CE1, DT16",
+    "https://commons.wikimedia.org/wiki/File:Bayshore_metro_station_view_from_concourse_to_platform_level.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Bayshore_MRT_Station_Exit_2_2024-06-23_-_1.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Bayshore_Station_concourse_01-12-2024(1).jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Beauty_World_MRT_Exit_B.JPG": "Name/code text detected: Beauty World ",
+    "https://commons.wikimedia.org/wiki/File:9010_SBS_Transit_Downtown_Line_at_Beauty_World_Station_platform_09-08-2025(3).jpg": "Name/code text detected: Beauty World, DT5, 美世界CnoL, BeautyWorld",
+    "https://commons.wikimedia.org/wiki/File:Bedok_Station_concourse_07-08-2025(2).jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Bedok_MRT_Station_platform_A.JPG": "Name/code text detected: Bedok, EW5勿洛",
+    "https://commons.wikimedia.org/wiki/File:DT29_Bedok_North_Concourse.jpg": "Name/code text detected: O9Bedok North",
+    "https://commons.wikimedia.org/wiki/File:Bedok_North_MRT_Station_DT29_Platform_202412.jpg": "Name/code text detected: Bedok North ",
+    "https://commons.wikimedia.org/wiki/File:DT29_Bedok_North_Exit_A.jpg": "Name/code text detected: DT29, Bedok North",
+    "https://commons.wikimedia.org/wiki/File:Bedok_Reservoir_Station_concourse_15-05-2024(1).jpg": "Name/code text detected: Bedok North Avenue3",
+    "https://commons.wikimedia.org/wiki/File:Bedok_Reservoir_Station_Exit_B_15-05-2024.jpg": "Name/code text detected: DT30, Bedok Reservoir",
+    "https://commons.wikimedia.org/wiki/File:9046_SBS_Transit_Downtown_Line_at_Bedok_Reservoir_Station_platform_15-05-2024(3).jpg": "Name/code text detected: Bedok, BedokReservoirDT30勿洛蓄水池, Bedok Reservoir勿洛蓄水池",
+    "https://commons.wikimedia.org/wiki/File:Bencoolen_Station_concourse_04-12-2024(1).jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Bencoolen_MRT_Station_Exit_B_2026-03-17.jpg": "Name/code text detected: Bencolen",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Bencoolen_MRT_Station_Platforms_2026-03-17_-_1.jpg": "Name/code text detected: Bencoolen, DT21",
+    "https://commons.wikimedia.org/wiki/File:Bendemeer_MRT_Concourse.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Bendemeer_MRT,_Singapore,_Exit_A_and_SingPost_Kalleng_Delivery_Base_-_20231209_-_RSKY.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC15_Bishan_MRT_Concourse_20260122_070305.jpg": "Name/code text detected: 个DBishan Place/ Bishan St 13",
+    "https://commons.wikimedia.org/wiki/File:Bishan_MRT_Station_(NSL)_-_Platform_B.jpg": "Name/code text detected: Bishan, NS17",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Boon_Keng_Station_Exit_A_2023-12-21.jpg": "Name/code text detected: BoonKeng",
+    "https://commons.wikimedia.org/wiki/File:NE9_Boon_Keng_MRT_Platform_A_20201002_170322.jpg": "Name/code text detected: NE9, Boon Keng",
+    "https://commons.wikimedia.org/wiki/File:NE9_Boon_Keng_MRT_Concourse_20220224_183144.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Boon_Lay_Station_concourse_10-11-2023(2).jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Boon_Lay_Station_Exterior_01.jpg": "Name/code text detected: Boon Lay MRT Station",
+    "https://commons.wikimedia.org/wiki/File:CC19_DT9_Botanic_Gardens_MRT_Exit_B_2.jpg": "Name/code text detected: CC19DT9, Botanic Gardens, 植物园",
+    "https://commons.wikimedia.org/wiki/File:Botanic_Gardens_MRT_Station_(DTL)_-_Platform_B.jpg": "Name/code text detected: Kebun Bunga BotanicGardensDT9",
+    "https://commons.wikimedia.org/wiki/File:Braddell_MRT_entrance.jpg": "Name/code text detected: NS18, Braddell",
+    "https://commons.wikimedia.org/wiki/File:NS18_Braddell_MRT_Platform_A_20201004_115124.jpg": "Name/code text detected: NS18, Braddell, 布莱德",
+    "https://commons.wikimedia.org/wiki/File:NS18_Braddell_Concourse_20200724_180549.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Bras_Basah_MRT_Station_Platforms_2026-03-17_-_1.jpg": "Name/code text detected: BrasBasah",
+    "https://commons.wikimedia.org/wiki/File:Bras_Basah_MRT_station_exit.jpg": "Name/code text detected: Bras Basah",
+    "https://commons.wikimedia.org/wiki/File:TE7_Bright_Hill_MRT_concourse_20210828_111623.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:TE7_Bright_Hill_MRT_Exit_1_20210828_115545.jpg": "Name/code text detected: @BnightHil",
+    "https://commons.wikimedia.org/wiki/File:NE15_Buangkok_Concourse_20200830_192133.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NE15_Buangkok_MRT_Platform_A_20260811_180525.jpg": "Name/code text detected: Buangkok, 万国4emo#",
+    "https://commons.wikimedia.org/wiki/File:Buangkok_MRT_exit_A,_1_August_2026.jpg": "Name/code text detected: NE15, Buangkok",
+    "https://commons.wikimedia.org/wiki/File:Bugis_DTL_MRT_Concourse.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW12_DT14_Bugis_Exit_A_Exterior.jpg": "Name/code text detected: Bugismurn",
+    "https://commons.wikimedia.org/wiki/File:DT14_Bugis_MRT_Platforms_20220605_150927.jpg": "Name/code text detected: 个Victoria St/Bugis Juntion, 武吉士, Bugiso",
+    "https://commons.wikimedia.org/wiki/File:Bukit_Batok_Station_platform_11-08-2025(1).jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Bukit_Batok_Station_concourse_11-08-2025(1).jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NS3_Bukit_Gombak_MRT_concourse_20210217_161209.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Bukit_Gombak_Station_platform_17-05-2024.jpg": "Name/code text detected: Bukit Gombak",
+    "https://commons.wikimedia.org/wiki/File:DT1_Bukit_Panjang_MRT_Concourse_20220503_131159.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT1_Bukit_Panjang_MRT_Exit_B_20220503_131353.jpg": "Name/code text detected: DT1, Bukit Panjang",
+    "https://commons.wikimedia.org/wiki/File:DT1_Bukit_Panjang_MRT_Platform_A_20240722_181746.jpg": "Name/code text detected: DT1, Bukit Panjang, 武吉班让46u面",
+    "https://commons.wikimedia.org/wiki/File:Buona_Vista_Station_Circle_Line_concourse_11-08-2025(1).jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW21CC22_Buona_Vista_Station_Exterior_202412.jpg": "Name/code text detected: Buona Vhgta",
+    "https://commons.wikimedia.org/wiki/File:CC22_Buona_Vista_MRT_Platform_A_20210426_154704.jpg": "Name/code text detected: Buona Vista",
+    "https://commons.wikimedia.org/wiki/File:CC17_Caldecott_MRT_concourse_(PSC_relocated).jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC17_Caldecott_MRT_Exit_A.jpg": "Name/code text detected: CC17, Caldecott",
+    "https://commons.wikimedia.org/wiki/File:CC17_Caldecott_MRT_Platform_A_20201126_132947.jpg": "Name/code text detected: Caldecotl",
+    "https://commons.wikimedia.org/wiki/File:Canberra_station_platforms.jpg": "Name/code text detected: ↑CanberraPlaza, s2Canberra",
+    "https://commons.wikimedia.org/wiki/File:CC31_Cantonment_MRT_Platform_A_20260712_124853.jpg": "Name/code text detected: Cantonment",
+    "https://commons.wikimedia.org/wiki/File:DT2_Cashew_MRT_Exit_A_20210118_141845.jpg": "Name/code text detected: Cashev, DT2",
+    "https://commons.wikimedia.org/wiki/File:DT2_Cashew_MRT_concourse_20210118_141532.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT2_Cashew_MRT_Platform_A_20210118_141200.jpg": "Name/code text detected: CashewDT2, 凯秀",
+    "https://commons.wikimedia.org/wiki/File:CG2_Changi_Airport_MRT_Platform_A_20200919_173128.jpg": "Replacement view with answer-bearing signs outside the crop",
+    "https://commons.wikimedia.org/wiki/File:Chinatown_MRT_Station_Exit_Pagoda_St.jpg": "Name/code text detected: NE4 Chinatown",
+    "https://commons.wikimedia.org/wiki/File:Chinatown_MRT_Station_Platform_201401.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Chinese_Garden_Station_platform_04-12-2024.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Chinese_Garden_Station_concourse_04-12-2024.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Choa_Chu_Kang_MRT_concourse.jpg": "Name/code text detected: NS4, Choa Chu Kang, 蔡厝港",
+    "https://commons.wikimedia.org/wiki/File:NS4_Choa_Chu_Kang_MRT_Platform_A_20210217_155015.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW13_NS25_City_Hall_MRT_concourse_20200918_153438.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:City_Hall_MRT-platform_A.JPG": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:City_Hall_MRT_Station_entrance_20161203.jpg": "Name/code text detected: NS25, EW13 City Hall",
+    "https://commons.wikimedia.org/wiki/File:Ne5_clarke_quay_exterior.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NE5_Clarke_Quay_MRT_Platform_A_20260824_175858.jpg": "Name/code text detected: NE5, Clarke Quay, 克拉码头omni品&",
+    "https://commons.wikimedia.org/wiki/File:Clarke_Quay_Station_concourse_09-11-2023(3).jpg": "Name/code text detected: 个EBoatQuay/ClarkeQuay",
+    "https://commons.wikimedia.org/wiki/File:Clementi_Station_Platform_01.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Commonwealth_MRT_Station_202407.jpg": "Name/code text detected: EW20, Commonweath, 联邦",
+    "https://commons.wikimedia.org/wiki/File:CC8_Dakota_MRT_Concourse_20201107_152912.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC8_Dakota_Exit_B.jpg": "Name/code text detected: Dakota, CC8",
+    "https://commons.wikimedia.org/wiki/File:CC8_Dakota_MRT_Platform_A.jpg": "Name/code text detected: CC8, Dakota, 达科达",
+    "https://commons.wikimedia.org/wiki/File:Dhoby_Ghaut_MRT_Station_202407.jpg": "Name/code text detected: Dhoby Ghaut, oby Ghaut, NS24, 多美歌GLm&nL",
+    "https://commons.wikimedia.org/wiki/File:CC1_Dhoby_Ghaut_MRT_Platform_A_20210618_180845.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Dover_MRT_Station_Concourse_2024-09-27_-_2.jpg": "Name/code text detected: EW22Dover",
+    "https://commons.wikimedia.org/wiki/File:Dover_Station_platform_11-08-2025.jpg": "Name/code text detected: Dover杜弗",
+    "https://commons.wikimedia.org/wiki/File:DT17_Downtown_MRT_Exit_A_20201201_155633.jpg": "Name/code text detected: Downlown",
+    "https://commons.wikimedia.org/wiki/File:DT17_Downtown_MRT_Concourse_20201201_153558.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT17_Downtown_MRT_Platform_A_20201201_155820.jpg": "Name/code text detected: 市中心",
+    "https://commons.wikimedia.org/wiki/File:CC3_Esplanade_MRT_Exit_C_20260314_161611.jpg": "Name/code text detected: Esplanade",
+    "https://commons.wikimedia.org/wiki/File:CC3_Esplanade_Concourse_20190315_183154.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW7_Eunos_Concourse_20200808_125416.jpg": "Name/code text detected: Eunos",
+    "https://commons.wikimedia.org/wiki/File:EW7_Eunos_MRT_Platform_A_Siemens_C651_20230514_082220.jpg": "Name/code text detected: EW7, Eunos, 友诺士",
+    "https://commons.wikimedia.org/wiki/File:CG1_Expo_MRT_concourse_20201128_182320.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CG1_Expo_EWL_MRT_Platforms.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NE8_Farrer_Park_MRT_Platform_A_20201002_165701.jpg": "Name/code text detected: Farrer Park, NE8",
+    "https://commons.wikimedia.org/wiki/File:Farrer_Park_MRT_entrance_building.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC20_Farrer_Road_MRT_Platform_A_20200918_124557.jpg": "Name/code text detected: CC20, Farrer Road, 花拉路",
+    "https://commons.wikimedia.org/wiki/File:CC20_Farrer_Road_Exit_A.jpg": "Name/code text detected: Farrer Road, CC20",
+    "https://commons.wikimedia.org/wiki/File:CC20_Farrer_Road_MRT_concourse_20210426_153538.jpg": "Name/code text detected: 个AFarrerRoad, 个AFarrer Drive",
+    "https://commons.wikimedia.org/wiki/File:DT20_Fort_Canning_MRT_concourse_20210228_163721.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT20_Fort_Canning_MRT_Platform_A_20201017_145245.jpg": "Name/code text detected: 福康宁, Fort Canning DT20",
+    "https://commons.wikimedia.org/wiki/File:DT20_Fort_Canning_MRT_Exit_A_20210228_164111.jpg": "Name/code text detected: Fort Canning , DT20, Fort Canning",
+    "https://commons.wikimedia.org/wiki/File:Gardens_by_the_Bay_Station_concourse_14-05-2024(1).jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Gardens_by_the_Bay_MRT_station_Exit_2_11Jul2026.jpg": "Name/code text detected: Gardens by the Bay",
+    "https://commons.wikimedia.org/wiki/File:DT24_Geylang_Bahru_Concourse.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT24_Geylang_Bahru_Exit_A.jpg": "Name/code text detected: Geylang Bahru O2",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Geylang_Bahru_MRT_Station_Platforms_2026-03-17_-_1.jpg": "Name/code text detected: Gertang Bahru",
+    "https://commons.wikimedia.org/wiki/File:TE15_Great_World_MRT_Concourse_20221117_154436.jpg": "Name/code text detected: GREAT TIMES, GREAT, GREATV, GREATWORLDARENA",
+    "https://commons.wikimedia.org/wiki/File:TE15_Great_World_MRT_Exit_1_20221221_122420.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW30_Gul_Circle_Concourse.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW30_Gul_Circle_MRT_lower_Platform_A_20210120_163324.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC29_HarbourFront_MRT_Platform_A_(Alstom_Metropolis_C851E)_20260417_175141.jpg": "Name/code text detected: HarbourFront, CC29, 港湾SnujalonL",
+    "https://commons.wikimedia.org/wiki/File:NE1_CC29_Harbourfront_MRT_Exit_E_and_Concourse_20211118_143336.jpg": "Name/code text detected: NE1, HarbourFront",
+    "https://commons.wikimedia.org/wiki/File:TE16_Havelock_MRT_Concourse_20230113_104157.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Havelock_MRT_Staion_Main_Exit.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC25_Haw_Par_Villa_Concourse.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC25_Haw_Par_Villa_MRT_Platform_A_(Alstom_Metropolis_C851E)_20260417_174143.jpg": "Name/code text detected: Haw Par Villa, CC25, 虎豹别墅gD6 ur alwor",
+    "https://commons.wikimedia.org/wiki/File:CC25_Haw_Par_Villa_Exit_A.jpg": "Name/code text detected: CC25, Haw Par Villa",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Hillview_MRT_Station_Exit_A_2024-04-07.jpg": "Name/code text detected: Hillview, DT3",
+    "https://commons.wikimedia.org/wiki/File:DT3_Hillview_MRT_Platform.jpg": "Name/code text detected: 山景, Hillview, Hilvew",
+    "https://commons.wikimedia.org/wiki/File:Hillview_MRT_Concourse.jpg": "Name/code text detected: Hiliview, Hillview, DT3, 山景",
+    "https://commons.wikimedia.org/wiki/File:CC21_Holland_Village_MRT_concourse_20201126_130314.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC21_Holland_Village_Artwork_and_Platform_B.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC21_Holland_Village_MRT_Exit_A_20201126_130455.jpg": "Name/code text detected: CC21, Holland Village",
+    "https://commons.wikimedia.org/wiki/File:Hougang_MRT_Station_(NEL)_-_Concourse.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NE14_Hougang_MRT_Exit_A.jpg": "Name/code text detected: NE14, Hougang",
+    "https://commons.wikimedia.org/wiki/File:Hougang_MRT_Station_(NEL)_-_Platform.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Hume_MRT_Station_Concourse_2025-02-28.jpg": "Name/code text detected: or4Hume",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Hume_MRT_Station_Platforms_2025-02-28_-_1.jpg": "Name/code text detected: DT4, Hume",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Hume_MRT_Station_Exit_1_2025-02-28_-_1.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT22_Jalan_Besar_MRT_concourse_20201209_132757.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT22_Jalan_Besar_MRT_Exit_A_20201209_133145.jpg": "Name/code text detected: JinBesar",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Jalan_Besar_MRT_Station_Platforms_2026-03-17_-_1.jpg": "Name/code text detected: Jalan Besu",
+    "https://commons.wikimedia.org/wiki/File:EW29_Joo_Koon_MRT_Platform_A_20210120_143456.jpg": "Name/code text detected: EW29, JooKoon",
+    "https://commons.wikimedia.org/wiki/File:Joo_Koon_MRT_Station_Concourse.JPG": "Name/code text detected: EW29Jo0Koon",
+    "https://commons.wikimedia.org/wiki/File:Jurong_East_Station_concourse_04-12-2024(1).jpg": "Name/code text detected: EW24 Jurong East, NS1",
+    "https://commons.wikimedia.org/wiki/File:EW24_Jurong_East_MRT_Platform_B_20210120_172948.jpg": "Name/code text detected: EW24, Jurong East",
+    "https://commons.wikimedia.org/wiki/File:DT28_Kaki_Bukit_MRT_Concourse_20230409_145249.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT28_Kaki_Bukit_Exit_B_20171211_211455_(1).jpg": "Name/code text detected: Kaki Bukit, DT28",
+    "https://commons.wikimedia.org/wiki/File:DT28_Kaki_Bukit_MRT_Platform_A_20220122_221532.jpg": "Name/code text detected: Bukit, 加基武吉",
+    "https://commons.wikimedia.org/wiki/File:EW10_Kallang_MRT_concourse_20210214_165440.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Kallang_MRT_Station_exterior_2024-05-10.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Katong_Park_metro_station_view_from_upper_platform_to_lower_platform_level.jpg": "Name/code text detected: TE24, KatongPark",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Katong_Park_MRT_Station_Concourse_2024-08-15.jpg": "Name/code text detected: Katong Pak",
+    "https://commons.wikimedia.org/wiki/File:EW6_Kembangan_MRT_Exterior_(night)_20211211_213936.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW6_Kembangan_MRT_Platform.jpg": "Replacement view with answer-bearing signs outside the crop",
+    "https://commons.wikimedia.org/wiki/File:CC23_Kent_Ridge_Concourse.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NUH_Main_Building_(2025)_-_img_02.jpg": "Name/code text detected: Kent Ridge",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Keppel_MRT_Station_Exit_2_2026-07-04_-_2.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Keppel_MRT_Station_Concourse_2026-07-04.jpg": "Name/code text detected: KEPPAE",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Keppel_MRT_Station_Platforms_2026-07-04_-_1.jpg": "Name/code text detected: Keppel",
+    "https://commons.wikimedia.org/wiki/File:Khatib_Station_concourse_02-12-2024(1).jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Khatib_Station_platform_02-12-2024.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT6_King_Albert_Park_MRT_Platform_B_20210118_143617.jpg": "Name/code text detected: DT6, King Albert Park, 阿尔柏王园",
+    "https://commons.wikimedia.org/wiki/File:DT6_King_Albert_Park_MRT_Concourse_20220926_110518.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Kovan_MRT_entrance_night.jpg": "Name/code text detected: NE13, Kovan",
+    "https://commons.wikimedia.org/wiki/File:Kovan_MRT_Station_platform_20161203.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NE13_Kovan_MRT_concourse_20201003_221115.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Kranji_Station_platform_09-08-2025(1).jpg": "Name/code text detected: Kranji, NS7",
+    "https://commons.wikimedia.org/wiki/File:Kranji_Station_concourse_09-08-2025(1).jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC27_Labrador_Park_Concourse.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC27_Labrador_Park_Exit_A.jpg": "Name/code text detected: LabradorPark, CC27",
+    "https://commons.wikimedia.org/wiki/File:EW26_Lakeside_MRT_Exterior_20230214_101355.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW26_Lakeside_Concourse.jpg": "Name/code text detected: Lakeside",
+    "https://commons.wikimedia.org/wiki/File:EW26_Lakeside_MRT_Platform_B_20210120_141251.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW11_Lavender_MRT_Concourse_20201017_153836.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW11_Lavender_Exit_A.jpg": "Name/code text detected: EW11 Lavender",
+    "https://commons.wikimedia.org/wiki/File:TE5_Lentor_MRT_concourse_20210727_100911.jpg": "Name/code text detected: Lentor",
+    "https://commons.wikimedia.org/wiki/File:TE5_Lentor_MRT_platforms_20210727_100333.jpg": "Name/code text detected: lentor, Lentor",
+    "https://commons.wikimedia.org/wiki/File:Little_India_Station_concourse_07-08-2025(1).jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT12_Little_India_MRT_Platform_A_20200906_131346.jpg": "Name/code text detected: 小印度",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Little_India_MRT_Station_Exit_A_2024-04-20.jpg": "Name/code text detected: NE7r12Little India",
+    "https://commons.wikimedia.org/wiki/File:CC14_Lorong_Chuan_MRT_Exit_A_20210309_181704.jpg": "Name/code text detected: Lorong Chuan@",
+    "https://commons.wikimedia.org/wiki/File:CC14_Lorong_Chuan_MRT_Platform_A.jpg": "Name/code text detected: Lorong Chuan, CC14",
+    "https://commons.wikimedia.org/wiki/File:CC10_MacPherson_station_concourse_20200911_171714.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC10_DT26_MacPherson_MRT_Exit_A_20210404_171022.jpg": "Name/code text detected: MacPherson ",
+    "https://commons.wikimedia.org/wiki/File:CE2_Marina_Bay_MRT_Concourse_20221122_124959.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC33_Marina_Bay_MRT_Platforms_20260819_073926.jpg": "Name/code text detected: MarinaBay, 滨海湾mu, 滨海湾oftarQu",
+    "https://commons.wikimedia.org/wiki/File:Entrance_to_Marina_South_Pier_MRT_Station.jpg": "Name/code text detected: NS28, Marina South Pier",
+    "https://commons.wikimedia.org/wiki/File:NS28_Marina_South_Pier_MRT_Platform_A_20210217_173835.jpg": "Name/code text detected: 滨海南码头, 滨海商码头MamiaSouthPierc",
+    "https://commons.wikimedia.org/wiki/File:TE26_Marine_Parade_MRT_Concourse_20240621_150936.jpg": "Name/code text detected: MarineParade",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Marine_Parade_MRT_Station_Exit_2_2024-06-23_-_1.jpg": "Name/code text detected: Marine Parade",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Marine_Terrace_MRT_Station_Exit_1_2024-06-23_-_2.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Marine_Terrace_Station_platform_01-12-2024(3).jpg": "Name/code text detected: MarineTerrace",
+    "https://commons.wikimedia.org/wiki/File:NS8_Marsiling_Exterior_20180810_101015.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NS8_Marsiling_MRT_concourse_20180810_100603.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC16_Marymount_MRT_concourse_20201119_184645.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC16_Marymount_MRT_Exit_A_20201119_184405.jpg": "Name/code text detected: Marymount, CC16",
+    "https://commons.wikimedia.org/wiki/File:DT25_Mattar_MRT_Concourse_20211122_131201.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT25_Mattar_MRT_Exit_A_20211122_131403.jpg": "Name/code text detected: Mattar@",
+    "https://commons.wikimedia.org/wiki/File:Maxwell_Station_Platform_cropped.jpg": "Name/code text detected: Maxwell, TE18, 麦士威sara",
+    "https://commons.wikimedia.org/wiki/File:Maxwell_MRT_Station.jpg": "Name/code text detected: Maxwell",
+    "https://commons.wikimedia.org/wiki/File:TE6_Mayflower_MRT_concourse_20210727_124738.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Mayflower_MRT_Station_Exit_2,_November_2020.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Mayflower_MRT_Station_Platforms_2026-05-10.jpg": "Name/code text detected: Mayfloner",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Mountbatten_MRT_Station_Exit_B_2026-04-03.jpg": "Name/code text detected: Mountbatten",
+    "https://commons.wikimedia.org/wiki/File:CC7_Mountbatten_MRT_stairs_and_escalators.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:TE12_Napier_MRT_Concourse_20221111_102206.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:TE12_Napier_MRT_Exit_1_20221215_113435.jpg": "Name/code text detected: Napier, TE12",
+    "https://commons.wikimedia.org/wiki/File:DT11_Newton_DTL_concourse.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NS21_Newton_MRT_Platform_A_20200908_212839.jpg": "Name/code text detected: NS21, Newton, 纽顿",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Newton_MRT_Station_Exit_C_2024-05-19.jpg": "Name/code text detected: Newton",
+    "https://commons.wikimedia.org/wiki/File:CC5_Nicoll_Highway_Concourse_20200907_175837.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC5_Nicoll_Highway_Exit_B_20200907_175902.jpg": "Name/code text detected: Nicoll Highway",
+    "https://commons.wikimedia.org/wiki/File:CC5_Nicoll_Highway_MRT_Platform_A_20200907_171544.jpg": "Name/code text detected: Nicoll Highway",
+    "https://commons.wikimedia.org/wiki/File:NS20_Novena_Concourse_20200825_182348.jpg": "Name/code text detected: Novena",
+    "https://commons.wikimedia.org/wiki/File:NS20_Novena_MRT_Platforms_20211007_182638.jpg": "Name/code text detected: Novena, NS20",
+    "https://commons.wikimedia.org/wiki/File:NS20_Novena_Exit_A_20200825_184440.jpg": "Name/code text detected: NS20, Novena",
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Exit_A_20201213_152442.jpg": "Name/code text detected: one-north",
+    "https://commons.wikimedia.org/wiki/File:NS22_Orchard_concourse_level.jpg": "Name/code text detected: Orchuard",
+    "https://commons.wikimedia.org/wiki/File:NS22_Orchard_MRT_Platform_A_20201011_153319.jpg": "Name/code text detected: NS22, Orchard, 乌节",
+    "https://commons.wikimedia.org/wiki/File:NS22_Orchard_MRT_Exit_A_20210331_142530.jpg": "Name/code text detected: Orchard, NS22",
+    "https://commons.wikimedia.org/wiki/File:TE13_Orchard_Boulevard_MRT_Platforms_20221111_104452.jpg": "Name/code text detected: OrchardBoulevard",
+    "https://commons.wikimedia.org/wiki/File:TE13_Orchard_Boulevard_MRT_Platforms_20221111_104502.jpg": "Name/code text detected: TE13",
+    "https://commons.wikimedia.org/wiki/File:EW16_NE3_Outram_Park_MRT_concourse_20201101_150220.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW16_Outram_Park_MRT_Platform_A_C151B_20201017_152550.jpg": "Name/code text detected: Outram Park, EW16, 欧南园2mLniDuni&",
+    "https://commons.wikimedia.org/wiki/File:Outram_Park_MRT_station_-_Exit_7.jpg": "Name/code text detected: EW16NE3TE17, Outram Park",
+    "https://commons.wikimedia.org/wiki/File:CC26_Pasir_Panjang_Concourse.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC26_Pasir_Panjang_MRT_Platform_A_20210426_171858.jpg": "Name/code text detected: PasirPanjiang",
+    "https://commons.wikimedia.org/wiki/File:EW1_Pasir_Ris_MRT_concourse_20201114_120952.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW1_Pasir_Ris_MRT_Platform_A_20211121_110725.jpg": "Name/code text detected: PasirRis",
+    "https://commons.wikimedia.org/wiki/File:CC9_Paya_Lebar_MRT_Concourse_20211106_095107.jpg": "Name/code text detected: EW8, Paya Lebar",
+    "https://commons.wikimedia.org/wiki/File:EW8_CC9_Paya_Lebar_MRT_entrance_20220115_143645.jpg": "Name/code text detected: EW8, CC9, PayaLebar",
+    "https://commons.wikimedia.org/wiki/File:CC9_Paya_Lebar_MRT_Platform_B_20210206.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW28_Pioneer_MRT_Platform_B_20-01-21.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW28_Pioneer_MRT_Exit_A_20260114_080134.jpg": "Name/code text detected: EW28, Pioneer",
+    "https://commons.wikimedia.org/wiki/File:Pioneer_MRT_Station_(EWL)_-_Concourse.jpg": "Name/code text detected: EW28 Pioneer",
+    "https://commons.wikimedia.org/wiki/File:NE10_Potong_Pasir_Concourse_20200830_170255.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:MRT_Potong_Pasir,_Exit_C.jpg": "Name/code text detected: NE10, Potong Pasir",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Prince_Edward_Road_MRT_Station_Exit_1_2026-07-04_-_1.jpg": "Name/code text detected: Prince Edard Road",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Prince_Edward_Road_MRT_Station_Concourse_2026-07-04_-_1.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC4_DT15_Promenade_MRT_concourse_20201026_152248.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NE17_PTC_Punggol_MRT_Concourse_20201223_130359.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NE17_PTC_Punggol_MRT_Exterior_20201223_130554.jpg": "Visual review: uncertain station label inside the shaded entrance",
+    "https://commons.wikimedia.org/wiki/File:NE17_Punggol_MRT_Platform_A_20200830_185552.jpg": "Name/code text detected: NE17",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Punggol_Coast_MRT_Station_Concourse_2024-12-19_-_1.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Punggol_Coast_MRT_Station_Exit_2_2024-12-19_-_3.jpg": "Name/code text detected: Punggol Coast",
+    "https://commons.wikimedia.org/wiki/File:EW19_Queenstown_concourse_20200805_201847.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW19_Queenstown_MRT_Platform_A_(September_disruption)_20240926_170144.jpg": "Name/code text detected: Queersown",
+    "https://commons.wikimedia.org/wiki/File:NS25_EW14_Raffles_Place_MRT_Concourse_20220708_133236.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NS26_EW14_Raffles_Place_MRT_Exit_A_20210409_141437.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW14_Raffles_Place_MRT_Platform_A_20200918_151950.jpg": "Name/code text detected: RafflesPlace, EW14",
+    "https://commons.wikimedia.org/wiki/File:NS18_Redhill_concourse_20200805_193511.jpg": "Name/code text detected: Redhil",
+    "https://commons.wikimedia.org/wiki/File:EW18_Redhill_MRT_Station_Platform_202411.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT13_Rochor_MRT_Platform_A_20201209_134512.jpg": "Name/code text detected: Rochor OTiB, 梧槽",
+    "https://commons.wikimedia.org/wiki/File:NS11_Sembawang_MRT_Platform.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NS11_Sembawang_Concourse_20200812_123522.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NE16_STC_Sengkang_MRT_station_concourse_level_20201020_075510.jpg": "Name/code text detected: Sengkan, SengkangEast WayD, Sengkang Square",
+    "https://commons.wikimedia.org/wiki/File:NE16_Sengkang_MRT_Platform_A.jpg": "Name/code text detected: Sengkang, NE16盛港",
+    "https://commons.wikimedia.org/wiki/File:CC13_Serangoon_MRT_Concourse_20211231_123752.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC13_Serangoon_MRT_Platform.jpg": "Name/code text detected: Serangoon",
+    "https://commons.wikimedia.org/wiki/File:TE19_Shenton_Way_MRT_Platform_A_20221215_120313.jpg": "Name/code text detected: TE19, Shenton Way, 珊顿道QagimLLinCciu",
+    "https://commons.wikimedia.org/wiki/File:TE19_Shenton_Way_MRT_Exit_1_(before_opening)_20211118_133206.jpg": "Name/code text detected: Shenton Way",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Siglap_MRT_Station_Exit_1_2024-03-23.jpg": "Name/code text detected: Eza Siglap",
+    "https://commons.wikimedia.org/wiki/File:TE28_Siglap_MRT_Concourse_20240627_142005.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Siglap_MRT_Station_Platforms_2024-06-23_-_2.jpg": "Name/code text detected: TE28, iglap",
+    "https://commons.wikimedia.org/wiki/File:EW3_Simei_MRT_Station_Platform_202411.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW3_Simei_Concourse_20200808_163049.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT7_Sixth_Avenue_MRT_Platform_A_20210118_132502.jpg": "Replacement station view reviewed with answer-bearing signs excluded",
+    "https://commons.wikimedia.org/wiki/File:DT7_Sixth_Avenue_Exit_A.jpg": "Name/code text detected: Sixth Avenue ",
+    "https://commons.wikimedia.org/wiki/File:NS23_Somerset_MRT_concourse_20201209_141009.jpg": "Name/code text detected: Somerset",
+    "https://commons.wikimedia.org/wiki/File:NS23_Somerset_MRT_Platform_A_20201209_140617.jpg": "Name/code text detected: NS23, Somerset, 索美塞",
+    "https://commons.wikimedia.org/wiki/File:NS23_Somerset_MRT_Exit_A_20201209_141428.jpg": "Name/code text detected: NS23Somerset, ml Somerset",
+    "https://commons.wikimedia.org/wiki/File:TE4_Springleaf_MRT_Platforms_and_Concourse_20210727_131949.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Springleaf_MRT_Station_Exit_1,_February_2021.jpg": "Name/code text detected: Springleaf",
+    "https://commons.wikimedia.org/wiki/File:TE4_Springleaf_MRT_Concourse_20210727_131045.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC6_Stadium_MRT_concourse_(evening)_20210102_190713.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC6_Stadium_MRT_Exit_A_concourse_20201007_160557.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC6_Stadium_MRT_Platform_A_20201007_142652.jpg": "Name/code text detected: Stadium, CC6, 体育场",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Stevens_MRT_Station_Platform_B_2025-02-28.jpg": "Name/code text detected: Stevens",
+    "https://commons.wikimedia.org/wiki/File:DT10_Stevens_Exit_B_exterior_20200910_144710.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC11_Tai_Seng_Concourse.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Tai_Seng_MRT_Station_Platforms_2026-01-05_-_1.jpg": "Name/code text detected: TaiSeng, 大成gane",
+    "https://commons.wikimedia.org/wiki/File:DT32_Tampines_MRT_Concourse_20220122_215744.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT32_Tampines_MRT_Platform_A_20200919_170850.jpg": "Name/code text detected: 淡滨尼, Tampinesor",
+    "https://commons.wikimedia.org/wiki/File:DT33_Tampines_East_MRT_concourse_20201128_180351.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT33_Tampines_East_MRT_Platform_A20260301_144440.jpg": "Name/code text detected: TampinesEast",
+    "https://commons.wikimedia.org/wiki/File:DT33_Tampines_East_MRT_Exit_A_20201128_180527.jpg": "Name/code text detected: DT33, Tampines East",
+    "https://commons.wikimedia.org/wiki/File:DT31_Tampines_West_MRT_Platform.jpg": "Name/code text detected: Tampines Wet 淡滨尼面, Tampines Wlet@ 淡滨",
+    "https://commons.wikimedia.org/wiki/File:DT31_Tampines_West_Exit_A.jpg": "Name/code text detected: Tampines West @aD",
+    "https://commons.wikimedia.org/wiki/File:DT8_Tan_Kah_Kee_MRT_Platform_A_20210118_132055.jpg": "Name/code text detected: 陈嘉庚",
+    "https://commons.wikimedia.org/wiki/File:DT8_Tan_Kah_Kee_MRT_Concourse_20210118_131617.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT8_Tan_Kah_Kee_Exit_A.jpg": "Name/code text detected: Tan Kah Kee, DT8, TanKahKee",
+    "https://commons.wikimedia.org/wiki/File:EW4_CG_Tanah_Merah_MRT_Concourse_20210306_201954.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW4_CG_Tanah_Merah_MRT_Platform_A_(new)_20260201_133409.jpg": "Name/code text detected: EW4, Tanah Merah, 丹那美拉5TTTCLOTT",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Tanjong_Katong_MRT_Station_Platform_A_2024-06-23.jpg": "Name/code text detected: TE25, Tanjong Katong",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Tanjong_Katong_MRT_Station_Concourse_2024-08-09.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW15_Tanjong_Pagar_MRT_Concourse_20201030_144006.jpg": "Name/code text detected: Tanjong P",
+    "https://commons.wikimedia.org/wiki/File:EW15_Tanjong_Pagar_MRT_Exit_A_20211118_141026.jpg": "Name/code text detected: Tanjong Pagar, EW15",
+    "https://commons.wikimedia.org/wiki/File:EW15_Tanjong_Pagar_MRT_Platform_A_20200918_151351.jpg": "Name/code text detected: Tanjong Pagar, EW15, EW15Tanjong Paar, 丹戎巴葛",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Tanjong_Rhu_MRT_Station_Exit_2_2024-06-23.jpg": "Name/code text detected:  Tanjong Rhu 园",
+    "https://commons.wikimedia.org/wiki/File:TE23_Tanjong_Rhu_MRT_Concourse_20240621_144903.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:TE23_Tanjong_Rhu_MRT_Platform_A_20240621_144832.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT18_Telok_Ayer_MRT_Platform_A_20210310_153742.jpg": "Name/code text detected: Telok Ayer",
+    "https://commons.wikimedia.org/wiki/File:DT18_Telok_Ayer_MRT_Exit_A_20210310_153139.jpg": "Name/code text detected: TelokAjei",
+    "https://commons.wikimedia.org/wiki/File:DT18_Telok_Ayer_MRT_concourse_20210310_153511.jpg": "Name/code text detected: TelokAyee",
+    "https://commons.wikimedia.org/wiki/File:CC28_Telok_Blangah_Exit_A.jpg": "Name/code text detected: CC28, TelokBlangah",
+    "https://commons.wikimedia.org/wiki/File:CC28_Telok_Blangah_MRT_Platform_A_20210426_172653.jpg": "Name/code text detected: Telok Blangah, 直落布兰雅",
+    "https://commons.wikimedia.org/wiki/File:EW17_Tiong_Bahru_MRT_Platform_A_20200918_172007.jpg": "Name/code text detected: Tiong Bahru, EW17",
+    "https://commons.wikimedia.org/wiki/File:NS19_Toa_Payoh_MRT_Platform_A_20210722_191006.jpg": "Name/code text detected: NS19, ToaPayoh",
+    "https://commons.wikimedia.org/wiki/File:NS19_Toa_Payoh_Exit_A.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NS19_Toa_Payoh_Concourse_20200825_184805.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW31_Tuas_Crescent_MRT_concourse_20210120_162302.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW31_Tuas_Crescent_MRT_platforms_20210120_144054.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW31_Tuas_Crescent_MRT_Exit_A_20210120_162414.jpg": "Name/code text detected: EW31, Tuas Crescent, TuasCrescent, 大士弯",
+    "https://commons.wikimedia.org/wiki/File:EW33_Tuas_Link_Concourse.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW33_Tuas_Link_MRT_Station_Platform_202412.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW32_Tuas_West_Road_MRT_concourse_20210120_155951.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW32_Tuas_West_Road_MRT_Platform_A_20210120_161049.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT27_Ubi_MRT.jpg": "Replacement station view reviewed with answer-bearing signs excluded",
+    "https://commons.wikimedia.org/wiki/File:DT27_Ubi_MRT_Platform_A.jpg": "Name/code text detected: i国乌美",
+    "https://commons.wikimedia.org/wiki/File:DT34_Upper_Changi_Exit_A.jpg": "Name/code text detected: DT34, Upper Changi",
+    "https://commons.wikimedia.org/wiki/File:DT34_Upper_Changi_MRT_Platform_B_20210418_155325.jpg": "Name/code text detected: Upper ChangiCT3A, 樟宜上段",
+    "https://commons.wikimedia.org/wiki/File:DT34_Upper_Changi_MRT_Concourse.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:TE8_Upper_Thomson_MRT_concourse_20210727_141146.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:TE8_Upper_Thomson_MRT_Platform_A_20211001_204353.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Entrance_to_Upper_Thomson_MRT_Station_with_Thomson_Plaza_in_background_-_2022-07-29.jpg": "Name/code text detected: THOMSON",
+    "https://commons.wikimedia.org/wiki/File:TE2_Woodlands_MRT_concourse_20201118_120416.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NS9_Woodlands_MRT_Platform_A_20201118_112356.jpg": "Name/code text detected: NS9",
+    "https://commons.wikimedia.org/wiki/File:Escalators_connecting_to_the_platforms_at_TE1_Woodlands_North_MRT_Station,_Concourse_Level.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:Exit_2_of_Woodlands_North_MRT_station_160521.jpg": "Name/code text detected: WoodlandsNorh",
+    "https://commons.wikimedia.org/wiki/File:TE3_Woodlands_South_MRT_concourse_20210611_174222.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:TE3_Woodlands_South_MRT_Platforms_20210611_173949.jpg": "Name/code text detected: WoodlandsSouth",
+    "https://commons.wikimedia.org/wiki/File:TE3_Woodlands_South_MRT_Exit_1_20210611_174346.jpg": "Name/code text detected: TE3, Woodlands South",
+    "https://commons.wikimedia.org/wiki/File:NE11_Woodleigh_Concourse_20200824_144028.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NE11_Woodleigh_Exit_B_20200830_111058.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NE11_Woodleigh_MRT_Platform_A_20200830_111622.jpg": "Name/code text detected: NE11, Woodleigh",
+    "https://commons.wikimedia.org/wiki/File:NS5_Yew_Tee_Exit_A_outside.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NS5_Yew_Tee_MRT_Station_Platform_202412.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NS15_Yio_Chu_Kang_Concourse_20200820_182615.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NS15_Yio_Chu_Kang_MRT_Platform.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NS13_Yishun_Concourse.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NS13_Yishun_C151B_Platform_B.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NS7_Kranji_Exterior.jpg": "Replaced with clearer station views",
+    "https://commons.wikimedia.org/wiki/File:DT23_Bendemeer_MRT_concourse_20201209_132000.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:CG2_Changi_Airport_MRT_concourse_20230601_214107.jpg": "Visual review passed",
+    "https://commons.wikimedia.org/wiki/File:CG2_Changi_Airport_MRT_concourse_20260418_193753.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:DT19_Chinatown_MRT_Concourse_20210101_154822.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:EW20_Commonwealth_MRT_platforms_20200805_202551.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:CC3_Esplanade_MRT_Concourse_20210503_152044.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:TE22_Gardens_by_the_Bay_MRT_linkway_20221111_141059.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:TE15_Great_World_MRT_Concourse_20221221_122102.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:TE16_Havelock_MRT_Concourse_20230113_110055.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:EW10_Kallang_MRT_Station_Exterior_202411.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:CC29_HarbourFront_MRT_Platform_A_20260712_130317.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:EW6_Kembangan_MRT_Exterior_(night)_20211211_214039.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:CC23_Kent_Ridge_MRT_Concourse_20210426_155600.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:CC27_Labrador_Park_MRT_Concourse_20260411_124716.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:TE24_Katong_Park_MRT_Platform_B_20240627_134009.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:EW11_Lavender_MRT_Concourse_20201017_153859.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:CC10_MacPherson_station_concourse_20200911_171814.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:NS28_Marina_South_Pier_MRT_concourse_20210224_131131.jpg": "Visual review passed",
+    "https://commons.wikimedia.org/wiki/File:Marine_Parade_MRT_Station.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:NS8_Marsiling_MRT_Station_exterior_202411.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:Mattar_artwork_at_platform.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:CC7_Mountbatten_MRT_station_concourse_(1).jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:TE12_Napier_MRT_Concourse_20221215_113142.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:CC16_Marymount_MRT_Exit_B_20201119_184919.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:NE10_Potong_Pasir_Concourse_20200830_170325.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:CC32_Prince_Edward_Road_MRT_model.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Punggol_Coast_MRT_Station_Concourse_2024-12-19_-_2.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:CC4_Promenade_MRT_Platform_B.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:TE19_Shenton_Way_MRT_Concourse_20220630_134229.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:Sengkang_MRT_Station.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:DT7_Sixth_Avenue_MRT_Platforms_20210118_132744.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:Tanjong_Katong_MRT_Station.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:EW32_Tuas_West_Road_MRT_concourse_infoboard_20210120_160113.jpg": "Prefer a useful station view without a fare-table close-up",
+    "https://commons.wikimedia.org/wiki/File:DT27_Ubi_station.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:CC28_Telok_Blangah_MRT_Platforms_20210426_172827.jpg": "Prefer a clearer or different station view",
+    "https://commons.wikimedia.org/wiki/File:MRT_Singapur_Tiong_Bahru_Station.JPG": "Prefer a clearer or different station view",
+    "https://commons.wikimedia.org/wiki/File:Yew_Tee_MRT_Station,_April_2021.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:NS10_Admiralty_MRT_Exterior_20201111_160526.jpg": "Near-duplicate view; prefer a different station angle",
+    "https://commons.wikimedia.org/wiki/File:NS16_Ang_Mo_Kio_exterior_20200805_202857.jpg": "Near-duplicate view; prefer a different station angle",
+    "https://commons.wikimedia.org/wiki/File:EW9_Aljunied_exterior_20200817_182119.jpg": "Near-duplicate view; prefer a different station angle",
+    "https://commons.wikimedia.org/wiki/File:CE1_DT16_Bayfront_MRT_Concourse_20201201_152103.jpg": "Near-duplicate view; prefer a different station angle",
+    "https://commons.wikimedia.org/wiki/File:NS17_CC15_Bishan_MRT_entrance_building_20201015_192559.jpg": "Near-duplicate view; prefer a different station angle",
+    "https://commons.wikimedia.org/wiki/File:NS2_Bukit_Batok_MRT_exterior_20210217_165003.jpg": "Near-duplicate view; prefer a different station angle",
+    "https://commons.wikimedia.org/wiki/File:NS12_Canberra_Exterior_with_C151b.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:TE7_Bright_Hill_MRT_Platforms_20210828_121018.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:Chinese_Garden_Station_concourse_10-11-2023.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:NS4_BP1_Choa_Chu_Kang_MRT_Exit_D_20200704_164418.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:NE6_Dhoby_Ghaut_MRT_concourse_(Exercise_Station_Guard)_20240806_125447.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:EW23_Clementi_MRT_Exterior_20211207_120431.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:EW23_Clementi_MRT_Exterior_20211207_120444.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Eunos_MRT_Station_Exterior_2026-09-25_-_2.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:EW22_Dover_MRT_station_exterior_20200918_131208.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:NE8_Farrer_Park_MRT_concourse_20201026_155337.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:EW30_Gul_Circle_MRT_concourse_20210120_163654.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:EW29_Joo_Koon_Mrt_Station_20240223.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:NS1_EW24_Jurong_East_MRT_exterior_20200918_135504.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:NS14_Khatib_MRT_Exterior_20210805_174738.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:EW1_Pasir_RIs_MRT_exterior_20240428_083503.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:DT13_Rochor_MRT_concourse_20201209_134007.jpg": "Prefer another station view",
+    "https://commons.wikimedia.org/wiki/File:CC13_Serangoon_MRT_Concourse_20211231_165429.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:EW2_Tampines_MRT_exterior_20200808_135103.jpg": "Enlarged close-up OCR detected an answer label",
+    "https://commons.wikimedia.org/wiki/File:EW9_Aljunied_concourse.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Beauty_World_Station_concourse_09-08-2025(3).jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Bedok_Reservoir_Station_concourse_15-05-2024(2).jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Bedok_Reservoir_Station_concourse_15-05-2024(3).jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT21_Bencoolen_MRT_Escalators_to_platforms_20201017_144744.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Bencoolen_Station_concourse_04-12-2024(2).jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Bencoolen_Station_concourse_04-12-2024(3).jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Bencoolen_Station_concourse_04-12-2024(4).jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Bencoolen_Station_concourse_2-12-2024(2).jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT23_Bendemeer_Platform_Escalator.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Bras_Basah_Station_concourse_03-12-2024(11).jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Bras_Basah_Station_concourse_03-12-2024(12).jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Bras_Basah_Station_concourse_03-12-2024(13).jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:TE7_Bright_Hill_MRT_Platform_B_20210828_121258.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:TE7_Bright_Hill_MRT_Platforms_20210828_120658.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:TE7_Bright_Hill_MRT_Platforms_20211105_193706.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:TE7_Bright_Hill_MRT_platforms_20210828_111826.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Bugis_Station_concourse_11-11-2023(2).jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT1_Bukit_Panjang_MRT_Concourse_20260617_143134.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC31_Cantonment_MRT_Exit_1_20260716_161736.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CG2_Changi_Airport_MRT_Concourse_20260418_193600.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:NE4_Chinatown_MRT_Platform_A_Alstom_Metropolis_C751A_(refurb)_MRT_interior_20220322_085031.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:EW25_Chinese_Garden_platform_and_roof.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:NS4_Choa_Chu_Kang_MRT.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:NS4_BP1_Choa_Chu_Kang_MRT_Exit_A_20211011_161503.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:EW13_NS25_City_Hall_MRT_concourse_20200918_170807.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:EW13_NS25_City_Hall_MRT_concourse_20220222_184037.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:EW13_NS25_City_Hall_MRT_concourse_20220222_184218.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:EW13_NS25_City_Hall_MRT_concourse_20220222_184456.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:EW23_Clementi_MRT_Exterior_20211207_120441.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Commonwealth_MRT_Station.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:EW20_Commonwealth_Platform_A_20200805_202422.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:EW20_Commonwealth_Platform_A_C151b.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:EW20_Commonwealth_Platform_B.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC3_Esplanade_MRT_Concourse_Artwork_20210503_151703.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC3_Esplanade_MRT_Concourse_Artwork_20210503_151713.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:TE15_Great_World_MRT_Concourse_20221117_154532.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:NE1_CC29_Harbourfront_MRT_Exit_E_and_Concourse_20211118_143400.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC29_HarbourFront_MRT_Platform_A_(Alstom_Metropolis_C851E)_20260417_175218.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC29_HarbourFront_MRT_Platform_A_(Alstom_Metropolis_C851E)_20260417_175234.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC29_HarbourFront_MRT_Platform_A_(Alstom_Metropolis_C851E)_20260417_175239.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC29_HarbourFront_MRT_Platform_A_(Alstom_Metropolis_C851E)_20260417_175248.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC29_HarbourFront_MRT_Platform_A_20260413_175807.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC29_HarbourFront_MRT_Platform_A_20260712_130307.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC29_HarbourFront_MRT_Platform_A_20260712_130324.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:TE16_Havelock_MRT_Concourse_20230113_110045.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT3_Hillview_Platforms_facing_lift.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Hillview_MRT_Station.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Katong_Park_MRT_Station_Lower_level.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Katong_Park_MRT_Station_Upper_level.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Katong_Park_MRT_Station_Exit_1_2024-09-24.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:TE24_Katong_Park_MRT_Platform_A_20240621_150159.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:TE24_Katong_Park_MRT_Platform_A_20240627_133833.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:TE24_Katong_Park_MRT_Platform_A_20240627_133909.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:TE24_Katong_Park_MRT_Platform_A_20240627_134201.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Marymount_MRT_Station.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC16_Marymount_MRT_Exit_A_20201119_184451.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC16_Marymount_MRT_Exit_A_20201119_184507.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC16_Marymount_MRT_Exit_A_20201119_184528.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC16_Marymount_MRT_Exit_A_20201119_185544.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC16_Marymount_MRT_Exit_A_20201119_185549.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC16_Marymount_MRT_Exit_A_20201119_185603.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC16_Marymount_MRT_Exit_B_20201119_184911.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC5_Nicoll_Highway_Exit_B_20200907_175942.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC5_Nicoll_Highway_Exit_B_20200907_180037.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC5_Nicoll_Highway_MRT_Exit_A_20200907_171756.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC5_Nicoll_Highway_MRT_Exit_A_20200907_180350.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC5_Nicoll_Highway_MRT_Exit_A_20200907_183107.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC5_Nicoll_Highway_MRT_Exit_A_20210423_122306.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC5_Nicoll_Highway_MRT_Exit_B_20200907_180202.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC5_Nicoll_Highway_MRT_Platform_A_20200907_180741.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:NS20_Novena_MRT_station_20220624_185407.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Concourse_20201213_152241.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Concourse_20201213_153621.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Concourse_20201213_153634.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Exit_A_20201213_152447.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Exit_A_20201213_152551.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Exit_A_20201213_152905.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Exit_A_20201213_152954.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Exit_A_20201213_154132.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Exit_B_20201213_153423.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Exit_B_20201213_153459.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Exit_B_20201213_153509.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Exit_B_20201213_153524.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Exit_B_20201213_165850.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Platform_B_20201213_154009.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:NS22_Orchard_MRT_concourse_lift_closed_20210331_140359.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:NS22_Orchard_MRT_concourse_lift_closed_20210331_140420.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT15_Promenade_MRT_station_Platform_C_20250315_145311.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT15_Promenade_MRT_station_Platform_C_20250315_145334.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:NE17_Punggol_MRT_Platform_and_Escalator.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT13_Rochor_MRT_concourse_20200906_132853.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:NE16_STC_Sengkang_MRT_station_concourse_level_20201020_080325.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:NE16_Sengkang_MRT_Platform_A_2020-07-21.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC13_Serangoon_MRT_concourse_20210214_174057.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT7_Sixth_Avenue_Exit_A_20180830_122149.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT7_Sixth_Avenue_Exit_B_20180830_122401.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT7_Sixth_Avenue_MRT_Platform_B_20210118_132750.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT7_Sixth_Avenue_MRT_Platforms_20210118_132557.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT7_Sixth_Avenue_MRT_Platforms_20210118_132618.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Stadium_MRT_station_110220.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT33_Tampines_East_station_lift_20200919_171329.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT33_Tampines_East_station.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT31_Tampines_West_station.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT31_Tampines_West_Exit_A_20200719131932.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT31_Tampines_West_Exit_A_20210418_160920.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT31_Tampines_West_MRT_Exit_A_20200719131547.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT31_Tampines_West_MRT_Platform_20200719131818.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT31_Tampines_West_MRT_Platforms_20210418_160339.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT31_Tampines_West_MRT_Platforms_20220122_220054.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT31_Tampines_West_station_Platform.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT8_Tan_Kah_Kee_Platform_A_Escalator.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT8_Tan_Kah_Kee_Platform_B_Escalator.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:TE25_Tanjong_Katong_MRT_Platform_A_escalators_20240627_134637.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Tanjong_Katong_MRT_Station_Exit_2_2024-06-03.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Tanjong_Katong_MRT_Station_Exit_3_2024-06-03_(1).jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC28_Telok_Blangah_MRT_Platform_A_20210426_172917.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC28_Telok_Blangah_MRT_Platform_A_20240120_192514.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC28_Telok_Blangah_MRT_Platform_A_20240120_192555.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC28_Telok_Blangah_MRT_Platform_B_(Alstom_Metropolis_C851E)_20260417_175821.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC28_Telok_Blangah_MRT_Platform_B_(closed)_20240120_192636.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC28_Telok_Blangah_MRT_Platform_B_20210426_172702.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:CC28_Telok_Blangah_MRT_Platform_B_20210426_172737.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:EW17_Tiong_Bahru_concourse_20200920_123356.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:EW17_Tiong_Bahru_concourse_20200920_123416.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:EW17_Tiong_Bahru_MRT_Alstom_Movia_R151_20230611_161251.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:EW17_Tiong_Bahru_MRT_Station_202409.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Tiong_Bahru_MRT.JPG": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Tiong_Bahru_MRT_2.JPG": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Tiong_Bahru_MRT_Station_202407.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Tiong_Bahru_MRT_Station_202407_3.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:EW17_Tiong_Bahru_MRT_Exit_A_20200918_145900.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:EW17_Tiong_Bahru_MRT_Exit_B_20200918_150211.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:EW17_Tiong_Bahru_MRT_Exit_B_20200918_150237.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:EW17_Tiong_Bahru_MRT_Platform_A_20200918_172037.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:EW17_Tiong_Bahru_MRT_Platform_A_20220429_181417.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT34_Upper_Changi_MRT_concourse_linkway_20210418_154537.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT34_Upper_Changi_station.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Upper_Changi_MRT_Station.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:DT34_Upper_Changi_Exit_E.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Woodlands_South_MRT_Station.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:TE3_Woodlands_South_MRT_Exit_1_20210611_174351.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Yew_Tee_MRT_Station.jpg": "Source OCR detected an answer-bearing name or station code",
+    "https://commons.wikimedia.org/wiki/File:Yew_Tee_MRT_Station_202407.jpg": "Source OCR detected an answer-bearing name or station code"
+  },
+  "approvedSources": {
+    "https://commons.wikimedia.org/wiki/File:NS10_Admiralty_Exterior.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW9_Aljunied_exterior_20200817_181956.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS16_Ang_Mo_Kio_MRT_exterior_20201105_132234.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CE1_DT16_Bayfront_MRT_Concourse_20201201_151855.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Beauty_World_Station_concourse_09-08-2025(1).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW5_Bedok_MRT_Exterior_20200808_131142.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Bendemeer_MRT_Station_Platforms_2026-03-17_-_1.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.43,
+        "y": 0,
+        "width": 0.27,
+        "height": 0.9
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS17_Bishan_MRT_Station_Exterior_202411.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Boon_Lay_Station_Platform_01.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Botanic_Gardens_Station_concourse_13-05-2024(1).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Bras_Basah_Station_concourse_03-12-2024(1).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:TE7_Bright_Hill_MRT_Platforms_20211105_193554.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Bukit_Batok_MRT_Station_Exterior_202411.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS3_Bukit_Gombak_MRT_Station_Exterior_202501.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Canberra_lower_concourse_viewed_from_escalator.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS12_Canberra_Exterior.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CC31_Cantonment_MRT_Concourse_20260716_162036.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:FTPRS_Exterior_-_2026.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CG2_Changi_Airport_MRT_Concourse_20260418_193550.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.26,
+        "y": 0.3,
+        "width": 0.37,
+        "height": 0.7
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CG2_Changi_Airport_MRT_Terminal_3_Entrance_(new_sigange)_20230601_190629.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.49,
+        "height": 0.86
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Chinatown_MRT_Station_Concourse_201401.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.3,
+        "y": 0,
+        "width": 0.7,
+        "height": 0.85
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW25_Chinese_Garden_MRT_Station_Exterior_202409.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS4_BP1_Choa_Chu_Kang_MRT-LRT_station_Exterior_202412.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Clementi_Station_concourse_07-08-2025(1).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW23_Clementi_MRT_Exterior_20211207_120249.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.5,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW20_Commonwealth_station_Exit_20200805_202645.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.54,
+        "y": 0.05,
+        "width": 0.46,
+        "height": 0.7
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW20_Commonwealth_MRT_Station_platform_202412.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.63,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Circle_Line_concourse,_Dhoby_Ghaut_MRT_Station,_Singapore_-_20090702.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW22_Dover_MRT_station_exterior_20200918_131157.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Esplanade_MRT_Station_Platforms_2026-04-03_-_1.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.47,
+        "y": 0,
+        "width": 0.43,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Eunos_MRT_Station_Exterior_2026-09-25_-_1.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CG1_Expo_MRT_Exterior_20201128_182134.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Farrer_Park_Station_concourse_11-11-2023(1).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:2010_SMRT_Thomson-East_Coast_Line_at_Gardens_by_the_Bay_Station_platform_14-05-2024(2).jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.53,
+        "width": 1,
+        "height": 0.47
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Great_World_MRT_Station_Platforms_2026-10-15.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.37,
+        "y": 0,
+        "width": 0.25,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW30_Gul_Circle_MRT_Exit_A_20210120_163831.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:HarbourFront_Station_concourse_04-12-2024(1).jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.16,
+        "y": 0.43,
+        "width": 0.7,
+        "height": 0.57
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE16_Havelock_MRT_Platforms_20230113_103946.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.35,
+        "y": 0,
+        "width": 0.3,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Joo_Koon_Station_Exterior_01.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS1_EW24_Jurong_East_MRT_exterior_20200918_134424.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW10_Kallang_MRT_Platform_A_20200817_130324.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.35,
+        "y": 0,
+        "width": 0.48,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Katong_Park_MRT_Station_Exit_1_2024-06-23.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.57,
+        "y": 0,
+        "width": 0.43,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW6_Kembangan_Concourse_20200808_165644.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.56,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC23_Kent_Ridge_MRT_Platform_A_20210426_155118.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.42,
+        "y": 0.48,
+        "width": 0.58,
+        "height": 0.52
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS14_Khatib_MRT_Exterior.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT6_King_Alber_Park_MRT_Exit_A.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CC27_Labrador_Park_MRT_Platform_A_(Alstom_Metropolis_C851E)_20260417_174652.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.5,
+        "width": 0.65,
+        "height": 0.5
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW11_Lavender_MRT_Platform_A_20201017_154939.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.48,
+        "width": 1,
+        "height": 0.52
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Lentor_MRT_Exit_July_2020.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CC14_Lorong_Chuan_MRT_Concourse_20211009_124938.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CC10_MacPherson_MRT_Platform_A_20210114_111951.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.3
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Long_corridor_with_someone_sitting_on_the_floor_in_the_distance_at_Marina_Bay_MRT_Station_Singapore.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS28_Marina_South_Pier_MRT_concourse_20210224_130956.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.2,
+        "y": 0,
+        "width": 0.8,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE26_Marine_Parade_MRT_Platform_A_20240621_150625.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.49,
+        "y": 0.44,
+        "width": 0.51,
+        "height": 0.56
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Marine_Terrace_Station_concourse_01-12-2024(1).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Marsiling_Station_platform_15-05-2024.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.44,
+        "width": 1,
+        "height": 0.56
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC16_Marymount_MRT_Platform_A_20201126_124413.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.65,
+        "y": 0.29,
+        "width": 0.35,
+        "height": 0.71
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Mattar_MRT_Station_Platforms_2026-03-17_-_1.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.35,
+        "y": 0,
+        "width": 0.3,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Maxwell_Station_concourse_14-05-2024(1).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Mountbatten_MRT_Station_Platforms_2026-04-03.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.3,
+        "y": 0.48,
+        "width": 0.7,
+        "height": 0.52
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Napier_MRT_Station_Platform_A,_July_2023.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.14,
+        "y": 0,
+        "width": 0.45,
+        "height": 0.7
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Platform_A_20201213_151947.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.51,
+        "y": 0.43,
+        "width": 0.49,
+        "height": 0.57
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Concourse_20201213_152231.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.43,
+        "width": 1,
+        "height": 0.57
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE13_Orchard_Boulevard_MRT_Concourse_20221111_104629.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Bicycles_in_Pasir_Panjang_Station_Exit_A_13-05-2024.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW1_Pasir_RIs_MRT_exterior_20240428_083500.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NE10_Potong_Pasir_MRT_Platform_A_20201201_165328.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.44,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Prince_Edward_Road_MRT_Station_Platform_A_2026-07-04_-_1.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.46,
+        "y": 0.32,
+        "width": 0.54,
+        "height": 0.68
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC4_Promenade_MRT_station_Platform_A_20250315_145137.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.59,
+        "width": 1,
+        "height": 0.41
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC4_Promenade_MRT_station_Platform_B_20250315_144912.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.42,
+        "y": 0,
+        "width": 0.58,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NE18_Punggol_Coast_MRT_Platform_A_20241213_152855.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.75,
+        "y": 0.56,
+        "width": 0.25,
+        "height": 0.44
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW19_Queenstown_station_exterior_20200805_201654.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW18_Redhill_MRT_Station_Exterior_202411.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Outside_view_of_Rochor_MRT_Station_and_Sim_Lim_Square,_Singapore_-_20160108.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT13_Rochor_Escalators_20200906_132757.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS11_Sembawang_MRT_Station_Exterior_202412.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NE16_Sengkang_MRT_station.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.55,
+        "y": 0.35,
+        "width": 0.35,
+        "height": 0.65
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NE12_CC13_Serangoon_MRT_Exit_A_20210908_155304.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:TE17_Shenton_Way_MRT_concourse_(June_2024).jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.31,
+        "y": 0.24,
+        "width": 0.27,
+        "height": 0.76
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW3_Simei_MRT_Station_Exterior_202501.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT7_Sixth_Avenue_Concourse.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.4,
+        "y": 0,
+        "width": 0.6,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT10_Stevens_MRT_concourse_to_lift_20200910_153054.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CC11_Tai_Seng_exterior.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW2_Tampines_MRT_Station_Exterior_202411.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT31_Tampines_West_Station.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.62,
+        "height": 0.58
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW4_Tanah_Merah_MRT_exterior_20251206_135234.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Tanjong_Katong_MRT_Station_Exit_1_2024-06-03.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.2,
+        "width": 0.4,
+        "height": 0.7
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC28_Telok_Blangah_Concourse.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.49,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW17_Tiong_Bahru_MRT_concourse_20200918_150338.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.6,
+        "y": 0,
+        "width": 0.4,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW17_Tiong_Bahru_MRT_Exit_A_20200918_145850_1.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.48,
+        "y": 0.43,
+        "width": 0.52,
+        "height": 0.57
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW33_Tuas_Link_MRT_exterior.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW32_Tuas_West_Road_MRT_exterior_Exit_A.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT27_Ubi_Exit_A.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.53,
+        "y": 0,
+        "width": 0.47,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS9_TE2_Woodlands_MRT_Exterior_1.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Lift_Lobby_at_TE1_Woodlands_North_MRT_Station,_Concourse_Level.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS5_Yew_Tee_Concourse_Ticketing.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.36,
+        "y": 0,
+        "width": 0.64,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS15_Yio_Chu_Kang_MRT_station_Exterior_202412.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS13_Yishun_Exterior_1.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CC12_Bartley_Platform_A_with_escalator.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CC12_Bartley_Platform_A_with_escalator_and_train.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Bayshore_Station_concourse_01-12-2024(10).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Bayshore_Station_concourse_01-12-2024(11).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT29_Bedok_North_MRT_concourse_linkway_20210228_161344.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT29_Bedok_North_MRT_concourse_linkway_20210228_161355.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT23_Bendemeer_MRT_concourse_20201209_131950.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.2,
+        "y": 0,
+        "width": 0.8,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Bedok_Reservoir_Station_lift_15-05-2024.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Bedok_Reservoir_Station_concourse_15-05-2024(4).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NE9_Boon_Keng_MRT_Concourse_20260406_181652.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.08,
+        "y": 0,
+        "width": 0.92,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NE9_Boon_Keng_MRT_Concourse_20260406_181658.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.52,
+        "y": 0.1,
+        "width": 0.48,
+        "height": 0.8
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS18_Braddell_MRT_vent_shafts_20210910_135950.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS18_Braddell_Concourse_20200724_180643.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.55,
+        "y": 0,
+        "width": 0.45,
+        "height": 0.6
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NE15_Buangkok_MRT_concourse.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.38,
+        "height": 0.65
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NE15_Buangkok_MRT_Concourse.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.05,
+        "width": 0.5,
+        "height": 0.8
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Bencoolen_Station_concourse_2-12-2024(1).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Bencoolen_Station_concourse_2-12-2024(3).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Bukit_Panjang_MRT_LRT_Station_(1).jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.65
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Bukit_Panjang_MRT_LRT_Station_(2).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW21_Buona_Vista_Exterior.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.2,
+        "width": 1,
+        "height": 0.46
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW21_CC22_Buona_Vista_Exterior.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.2,
+        "width": 1,
+        "height": 0.46
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Bugis_Station_concourse_11-11-2023(1).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Bugis_Station_concourse_11-11-2023(4).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT2_Cashew_MRT_concourse_20210118_141551.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.52,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT2_Cashew_MRT_concourse_20210118_142119.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.55,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC17_TE9_Caldecott_MRT_concourse_linkway_20210302_180853.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.76,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC17_TE9_Caldecott_MRT_concourse_linkway_20210302_180947.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.38,
+        "y": 0,
+        "width": 0.62,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Escalator_to_Downtown_Line_Platform_C_of_Chinatown_MRT_Station.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NE5_Clarke_Quay_MRT_Concourse_20201101_143943.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.45,
+        "y": 0,
+        "width": 0.55,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NE5_Clarke_Quay_MRT_Concourse_20201101_144024.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Dakota_MRT_interior.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.25,
+        "y": 0,
+        "width": 0.75,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC8_Dakota_MRT_Platforms_amd_Escalators_20201107_152938.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.3,
+        "y": 0,
+        "width": 0.7,
+        "height": 0.83
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT17_Downtown_MRT_Concourse_20211118_132647.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.5,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT17_Downtown_MRT_Concourse_and_Art_20211118_132544.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW13_NS25_City_Hall_MRT_concourse_20220222_184122.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.52,
+        "height": 0.85
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW13_NS25_City_Hall_MRT_concourse_20220222_184640.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.55,
+        "y": 0,
+        "width": 0.45,
+        "height": 0.85
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC20_Farrer_Road_MRT_Exit_A_lift_20200918_124115.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CC20_Farrer_Road_MRT_concourse_20210426_180125.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.76,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT20_Fort_Canning_MRT_concourse_20210228_163810.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT20_Fort_Canning_MRT_concourse_20210228_164309.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CC3_Esplanade_MRT_Concourse_20210503_151722.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.48
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT24_Geylang_Bahru_MRT_lift_to_street_20200911_111907.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT24_Geylang_Bahru_MRT_concourse_200911_111837_1.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.44,
+        "y": 0,
+        "width": 0.56,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE22_Gardens_by_the_Bay_MRT_linkway_20221111_141221.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.25,
+        "y": 0,
+        "width": 0.75,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE15_Great_World_MRT_Concourse_20261017_102423.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.5,
+        "y": 0,
+        "width": 0.5,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE16_Havelock_MRT_Concourse_20230113_110027.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CC25_Haw_Par_Villa_Platform_B_with_artwork_in_background.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.5,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC25_Haw_Par_Villa_MRT_Concourse_20220926_152314.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.52,
+        "y": 0,
+        "width": 0.48,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Interior_of_Holland_Village_MRT_Station_-_20111008.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.15,
+        "y": 0,
+        "width": 0.85,
+        "height": 0.8
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Holland_Village_Station_to_Exit_C_lift_13-05-2024.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Hillview_MRT_station,_Singapore_(2025)_-_img_01.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.15,
+        "y": 0,
+        "width": 0.7,
+        "height": 0.74
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Hillview_MRT_station,_Singapore_(2025)_-_img_02.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.05,
+        "y": 0,
+        "width": 0.95,
+        "height": 0.76
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NE14_Hougang_MRT_Concourse_20200830_163607_1.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NE14_Hougang_MRT_Concourse_20200830_164005_1.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.1,
+        "y": 0,
+        "width": 0.9,
+        "height": 0.7
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT4_Hume_MRT_Concourse_20250303_133322.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.78
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT4_Hume_MRT_Concourse_20250303_133424.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.6,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT22_Jalan_Besar_MRT_escalators_20201209_132659.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT22_Jalan_Besar_MRT_escalators_20201209_132725.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT28_Kaki_Bukit_MRT_Vent_Shaft_20201024_130107_1.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT28_Kaki_Bukit_MRT_concourse_20201024_125338.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW10_Kallang_MRT_Station_Exterior_202411_2.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CC29_HarbourFront_MRT_Platform_A_20260712_130457.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.12,
+        "y": 0.51,
+        "width": 0.88,
+        "height": 0.49
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW6_Kembangan_MRT_Exterior_(night)_20211211_214018.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CC23_Kent_Ridge_MRT_Concourse_20210426_155612.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.55,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC30_Keppel_MRT_Concourse_20260712_125543.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.75
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC30_Keppel_MRT_Concourse_20260712_125611.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NE13_Kovan_MRT_concourse_20201226_222619.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NE13_Kovan_MRT_concourse_20201226_222814.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.53,
+        "y": 0,
+        "width": 0.47,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW26_Lakeside_MRT_Exterior_20230214_101454.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Lakeside_Station_concourse_10-11-2023(1).jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.55,
+        "y": 0,
+        "width": 0.45,
+        "height": 0.9
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Labrador_Park_Station_concourse_12-11-2023(1).jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.61,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE24_Katong_Park_MRT_Platform_A_20240627_133727.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.12,
+        "y": 0.4,
+        "width": 0.62,
+        "height": 0.6
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW11_Lavender_MRT_Concourse_20201017_153858.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.62,
+        "y": 0,
+        "width": 0.38,
+        "height": 0.9
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT26_MacPherson_MRT_Concourse.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.48,
+        "y": 0,
+        "width": 0.52,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Little_India_Station_concourse_07-08-2025(2).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Little_India_Station_concourse_07-08-2025(3).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS28_Marina_South_Pier_MRT_concourse_20210224_131055.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.8,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Marine_Parade_MRT_Station_Bike_Parking_2024-06-23.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS8_Marsiling_MRT_Station_Exterior_202412.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT25_Mattar_MRT_Concourse_20211122_131221.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.3,
+        "y": 0.5,
+        "width": 0.65,
+        "height": 0.5
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE6_Mayflower_MRT_concourse_20210727_124819.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.47,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE6_Mayflower_MRT_concourse_20210727_124923.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.55,
+        "width": 0.7,
+        "height": 0.45
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC7_Mountbatten_MRT_station_concourse.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.5,
+        "y": 0.5,
+        "width": 0.5,
+        "height": 0.5
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE12_Napier_MRT_Concourse_20221111_103351.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.35,
+        "y": 0,
+        "width": 0.53,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT11_Newton_MRT_concourse_and_artwork_20210325_181553.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT11_Newton_MRT_concourse_20201209_135402.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.5,
+        "y": 0,
+        "width": 0.5,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS20_Novena_Concourse_20200825_184645.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.36,
+        "y": 0.4,
+        "width": 0.64,
+        "height": 0.6
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Novena_MRT.JPG": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.3,
+        "y": 0.08,
+        "width": 0.4,
+        "height": 0.92
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC16_Marymount_MRT_station.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.28,
+        "y": 0,
+        "width": 0.5,
+        "height": 0.58
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS22_TE14_Orchard_MRT_Concourse_20230721_131935.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.63,
+        "y": 0,
+        "width": 0.37,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS22_TE14_Orchard_MRT_Concourse_20230721_132042.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.08,
+        "y": 0,
+        "width": 0.5,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC5_Nicoll_Highway_MRT_Concourse_20200907_180503.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.43,
+        "y": 0,
+        "width": 0.57,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC5_Nicoll_Highway_MRT_Platform_A_20210423_121559.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.6,
+        "y": 0,
+        "width": 0.4,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC9_Paya_Lebar_MRT_Concourse_20251202_142904.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CC9_Paya_Lebar_MRT_Concourse_20251202_142919.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.57,
+        "width": 1,
+        "height": 0.43
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Pioneer_Station_concourse_05-12-2024(1).jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.64,
+        "y": 0.4,
+        "width": 0.36,
+        "height": 0.6
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Pioneer_Station_concourse_05-12-2024(2).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW16_Outram_Park_MRT_concourse_with_future_linkway_to_TEL_20220215_183054.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW16_Outram_Park_MRT_concourse_with_future_linkway_to_TEL_20220215_184626.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NE10_Potong_Pasir_MRT_concourse_with_security_facilities_20220223_184613.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.42,
+        "y": 0,
+        "width": 0.58,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Prince_Edward_Road_MRT_Station_Concourse_2026-07-04_-_2.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NE18_Punggol_Coast_MRT_Concourse_20241213_153547.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.56,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NE17_Punggol_MRT_concourse_artwork_20201223_132448.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.45,
+        "width": 1,
+        "height": 0.55
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NE17_PTC_Punggol_MRT_Exterior_20201223_130630.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.65
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS26_EW14_Raffles_Place_MRT_Concourse_and_artwork_20211219_144310.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS25_EW14_Raffles_Place_MRT_Concourse_20220708_133640.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:TE19_Shenton_Way_MRT_Concourse_20220630_134056.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.67,
+        "y": 0,
+        "width": 0.33,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NE16_Sengkang_MRT_Platform_A_20200721_121628_1.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.64,
+        "width": 1,
+        "height": 0.36
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS23_Somerset_MRT_Station_-_Interior_(Pre-Christmas_Peak).jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.4,
+        "width": 1,
+        "height": 0.6
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS23_Somerset_MRT_concourse_20201209_141106.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.72,
+        "y": 0,
+        "width": 0.28,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE28_Siglap_MRT_SCDF_Blast_Doors_20240621_194250.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:TE28_Siglap_MRT_SCDF_Blast_Doors_20240621_194303.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:TE4_Springleaf_MRT_Concourse_20210727_131538.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.68
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE4_Springleaf_MRT_Concourse_20210727_132446.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CC6_Stadium_MRT_concourse_(evening)_20210102_212359.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.22,
+        "y": 0,
+        "width": 0.56,
+        "height": 0.5
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC6_Stadium_MRT_Exit_B_concourse_20201007_142842.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT7_Sixth_Avenue_Exit_A_-_1.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.8,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT33_Tampines_East_MRT_concourse_20260301_144341.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.56,
+        "y": 0,
+        "width": 0.44,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT33_Tampines_East_station_20200919_171549.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.3,
+        "y": 0,
+        "width": 0.21,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT8_Tan_Kah_Kee_MRT_concourse.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.05,
+        "y": 0.5,
+        "width": 0.95,
+        "height": 0.5
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT8_Tan_Kah_Kee_MRT_concourse_20250219_193101.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.64,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Tanjong_Katong_MRT_Station_Exit_3_2024-06-03_(2).jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.74,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT31_Tampines_West_MRT_Exit_B_20210418_160815.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.2,
+        "y": 0,
+        "width": 0.8,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW15_Tanjong_Pagar_MRT_Concourse_20211118_140821.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.3,
+        "y": 0.49,
+        "width": 0.7,
+        "height": 0.51
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW15_Tanjong_Pagar_MRT_Concourse_20211118_141304.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.47,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Escalator_heading_towards_Platform_A_at_Telok_Ayer_MRT_Station.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT18_Telok_Ayer_MRT_concourse_20210310_153612.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.34,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE23_Tanjong_Rhu_MRT_Concourse_20240621_145302.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.22,
+        "y": 0,
+        "width": 0.78,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Tanjong_Rhu_MRT_Station.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.17,
+        "y": 0,
+        "width": 0.36,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Toa_Payoh_platform_escalators_May_2022.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS19_Toa_Payoh_Concourse_20200825_184829.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.73,
+        "y": 0,
+        "width": 0.27,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW31_Tuas_Crescent_MRT_escalator_20210120_162220.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW31_Tuas_Crescent_MRT_concourse_20210120_162316.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.59,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW32_Tuas_West_Road_MRT_concourse_20210120_160915.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.1,
+        "y": 0,
+        "width": 0.54,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT27_Ubi_MRT_Art_in_Transit.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CC28_Telok_Blangah_MRT_Platforms_20210426_172835.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.41,
+        "y": 0,
+        "width": 0.21,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE8_Upper_Thomson_MRT_concourse_20210727_141245.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.5,
+        "width": 1,
+        "height": 0.5
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE8_Upper_Thomson_MRT_concourse_20210727_141605.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.06,
+        "y": 0,
+        "width": 0.45,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT34_Upper_Changi_MRT_concourse_20210418_155140.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.48,
+        "y": 0,
+        "width": 0.52,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT34_Upper_Changi_MRT_Exit_B_20210418_153049.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.65,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NE11_Woodleigh_MRT_security_check_equipment_at_concourse_20211118_125508.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.24,
+        "y": 0,
+        "width": 0.4,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NE11_Woodleigh_MRT_security_check_equipment_at_concourse_20211118_125520.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:TE3_Woodlands_South_MRT_Exit_1_20210611_174420.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.6,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE3_Woodlands_South_MRT_Exit_1_20210611_174442.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.68,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Yew_Tee_MRT_Station_viewed_from_apartment_block_784_-_panoramio.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.13,
+        "y": 0,
+        "width": 0.87,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS10_Admiralty_MRT_Exterior_20201111_160519.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.3,
+        "y": 0.2,
+        "width": 0.7,
+        "height": 0.75
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS16_Ang_Mo_Kio_exterior_20200805_202913.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Aljunied_MRT.JPG": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CE1_DT16_Bayfront_MRT_Concourse_20201201_152123.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.45,
+        "y": 0,
+        "width": 0.55,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW5_Bedok_MRT_Exterior_20201017_161449.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW5_Bedok_MRT_Exterior_20201017_175955.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Beauty_World_Station_concourse_09-08-2025(2).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Beauty_World_Station_concourse_09-08-2025(4).jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.54,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS17_CC15_Bishan_MRT_entrance_building_20201015_192546.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Boon_Lay_Station_Exterior_02.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW27_Boon_Lay_MRT_Station_Exterior_202412.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT9_Botanic_Gardens_MRT_Concourse_20240201_084616.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Botanic_Gardens_MRT_Station.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.25,
+        "y": 0,
+        "width": 0.5,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS2_Bukit_Batok_MRT_exterior_20210217_164853.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS3_Bukit_Gombak_Escalator_and_Platform.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS3_Bukit_Gombak_MRT_station_exterior_20210217_162052.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS12_Canberra_MRT_Station_Exterior_202501.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.62
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE7_Bright_Hill_MRT_platforms_20210828_111907.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Bras_Basah_Station_concourse_03-12-2024(10).jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.4,
+        "height": 0.8
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Bras_Basah_Station_concourse_03-12-2024(14).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Chinese_Garden_Station_concourse_11-08-2025(1).jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.05,
+        "width": 0.42,
+        "height": 0.75
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC31_Cantonment_MRT_Concourse_20260716_162311.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.28,
+        "y": 0,
+        "width": 0.72,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC31_Cantonment_MRT_Exit_1_20260716_161806.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.4,
+        "y": 0,
+        "width": 0.6,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS4_BP1_Choa_Chu_Kang_MRT_Exit_D_20211011_155430.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.46,
+        "y": 0,
+        "width": 0.54,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NE6_Dhoby_Ghaut_MRT_concourse_20240806_123956.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.02,
+        "y": 0,
+        "width": 0.98,
+        "height": 0.58
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW7_Eunos_MRT_Exterior_20200808_125234.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW22_Dover_MRT_station_exterior_20200918_180918.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CG1_Expo_MRT_exterior_night_shot_20201107_220922.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CG1_Expo_MRT_exterior_night_shot_20201107_221123.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NE8_Farrer_Park_MRT_concourse_20201026_155332.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.5,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW30_Gul_Circle_MRT_concourse_20210120_163708.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.45,
+        "y": 0,
+        "width": 0.55,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Joo_Koon_MRT_Station_Exit_C_(via_Linkway)_towards_FairPrice_Hub.JPG": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS1_EW24_Jurong_East_MRT_exterior_20200918_135605.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT6_King_Albert_Park_MRT_linkway_(with_CRL_settlement_markers)_20260304_174431.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT6_King_Albert_Park_MRT_Concourse_20220926_110545.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.4,
+        "y": 0,
+        "width": 0.6,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS14_Khatib_MRT_Exterior_20210805_174644.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS7_Kranji_MRT_Exterior_20201118_123317.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS7_Kranji_MRT_Exterior_20201118_123448.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.88,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE5_Lentor_MRT_linkway_20210727_101331.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:TE5_Lentor_MRT_concourse_20210727_101212.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.58,
+        "y": 0,
+        "width": 0.42,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Marina_Bay_concourse_towards_escalators.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.3,
+        "y": 0,
+        "width": 0.7,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Marina_Bay_Station_interchange_concourse_01-12-2024(1).jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.85,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE27_Marine_Terrace_MRT_Escalator_20240708_102138.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Marine_Terrace_Station_concourse_01-12-2024(10).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:CC14_Lorong_Chuan_MRT_Concourse_20260210_183357.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.53,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC14_Lorong_Chuan_MRT_Concourse_20260210_183427.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.43,
+        "y": 0,
+        "width": 0.57,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:Maxwell_Station_concourse_14-05-2024(10).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:Maxwell_Station_concourse_14-05-2024(12).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:TE13_Orchard_Boulevard_MRT_Concourse_20221111_104716.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.2,
+        "y": 0,
+        "width": 0.8,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:TE13_Orchard_Boulevard_MRT_Concourse_20221111_104931.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.45,
+        "y": 0,
+        "width": 0.55,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC26_Pasir_Panjang_MRT_Concourse_20211207_125222.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.59,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC26_Pasir_Panjang_MRT_Concourse_20211207_125328.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW19_Queenstown_station_exterior_20200805_201730.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW19_Queenstown_MRT_Station_Exterior_202412.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW1_Pasir_RIs_MRT_exterior_20240428_083726.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW18_Redhill_MRT_Station_Exterior_view_202411.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS18_Redhill_exterior_20200805_193310.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS11_Sembawang_MRT_exterior_20200728_182009.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS11_Sembawang_MRT_exterior_20200728_183234.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:DT13_Rochor_MRT_concourse_20200906_132833.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.39,
+        "y": 0,
+        "width": 0.61,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC13_Serangoon_MRT_concourse_20210214_174140.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.53,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW3_Simei_MRT_exterior_20200222_193733.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.76
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW3_Simei_exterior_20200808_163504.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.7
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC11_Tai_Seng_Concourse_20200719132338.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.52,
+        "y": 0,
+        "width": 0.4,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:CC11_Tai_Seng_MRT_station_concourse_20210203_143315.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.6,
+        "y": 0,
+        "width": 0.4,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT10_Stevens_MRT_lift_concourse_20200910_152202.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.43,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:DT10_Stevens_Exit_B_exterior_20200910_144819.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.44,
+        "y": 0,
+        "width": 0.56,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW2_Tampines_MRT_exterior_20200808_134812.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.63
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:EW33_Tuas_Link_MRT_exterior_(1).jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW33_Tuas_Link_MRT_exterior_20220403_141704.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW4_Tanah_Merah_MRT_exterior_20251206_135244.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:EW4_CG_Tanah_Merah_MRT_concourse_20260201_133238.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.28,
+        "y": 0,
+        "width": 0.72,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS9_TE2_Woodlands_MRT_Exterior_20201118_113836.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS9_TE2_Woodlands_MRT_Exterior_20201118_113912.jpg": {
+      "reviewedAt": "2026-10-25"
+    },
+    "https://commons.wikimedia.org/wiki/File:NS15_Yio_Chu_Kang_exterior_1.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.6,
+        "y": 0,
+        "width": 0.4,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS15_Yio_Chu_Kang_exterior_2.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.6,
+        "y": 0,
+        "width": 0.4,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:View_of_TE1_Woodlands_North_MRT_Station_with_Escalators,_Lifts_and_Gantries.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 0.65,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:View_of_TE1_Woodlands_North_MRT_Station_with_Escalators.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0.25,
+        "y": 0,
+        "width": 0.75,
+        "height": 1
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS13_Yishun_MRT_exterior_20201006_180911.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.18,
+        "width": 1,
+        "height": 0.43
+      }
+    },
+    "https://commons.wikimedia.org/wiki/File:NS13_Yishun_MRT_exterior_20201006_181224.jpg": {
+      "reviewedAt": "2026-10-25",
+      "crop": {
+        "x": 0,
+        "y": 0.18,
+        "width": 1,
+        "height": 0.43
+      }
+    }
+  },
+  "nameReview": {
+    "date": "2026-10-25",
+    "totalReviewed": 868,
+    "kept": 323,
+    "removed": 545,
+    "method": "Local English/Chinese OCR and enlarged text checks, individual visual review, and a second OCR/visual pass on the displayed natural crops. Only prescribed reviewed crops are permitted."
+  },
+  "uncroppedExcludedSources": {
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Bendemeer_MRT_Station_Platforms_2026-03-17_-_1.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CG2_Changi_Airport_MRT_Concourse_20260418_193550.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CG2_Changi_Airport_MRT_Terminal_3_Entrance_(new_sigange)_20230601_190629.jpg": "Name/code text detected: Changi Airport",
+    "https://commons.wikimedia.org/wiki/File:Chinatown_MRT_Station_Concourse_201401.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW20_Commonwealth_station_Exit_20200805_202645.jpg": "Name/code text detected: commonweaitr, Commonwealth",
+    "https://commons.wikimedia.org/wiki/File:EW20_Commonwealth_MRT_Station_platform_202412.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Esplanade_MRT_Station_Platforms_2026-04-03_-_1.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:2010_SMRT_Thomson-East_Coast_Line_at_Gardens_by_the_Bay_Station_platform_14-05-2024(2).jpg": "Name/code text detected: Gardensby theBay, TE22, 滨海湾花园&nuμLL",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Great_World_MRT_Station_Platforms_2026-10-15.jpg": "Name/code text detected: TE15",
+    "https://commons.wikimedia.org/wiki/File:HarbourFront_Station_concourse_04-12-2024(1).jpg": "Name/code text detected: CableCar/HarbourFrontCentre→",
+    "https://commons.wikimedia.org/wiki/File:TE16_Havelock_MRT_Platforms_20230113_103946.jpg": "Name/code text detected: Havelock, 合乐0de, 合乐spdienl",
+    "https://commons.wikimedia.org/wiki/File:EW10_Kallang_MRT_Platform_A_20200817_130324.jpg": "Name/code text detected: EW10, Kallang, 加冷",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Katong_Park_MRT_Station_Exit_1_2024-06-23.jpg": "Name/code text detected: Katong Park",
+    "https://commons.wikimedia.org/wiki/File:EW6_Kembangan_Concourse_20200808_165644.jpg": "Name/code text detected: EW6Kemba",
+    "https://commons.wikimedia.org/wiki/File:CC23_Kent_Ridge_MRT_Platform_A_20210426_155118.jpg": "Name/code text detected: Kent Ridge, 肯特岗, CC24",
+    "https://commons.wikimedia.org/wiki/File:CC27_Labrador_Park_MRT_Platform_A_(Alstom_Metropolis_C851E)_20260417_174652.jpg": "Name/code text detected: LabradorPark",
+    "https://commons.wikimedia.org/wiki/File:EW11_Lavender_MRT_Platform_A_20201017_154939.jpg": "Name/code text detected: Lavender, EW11",
+    "https://commons.wikimedia.org/wiki/File:CC10_MacPherson_MRT_Platform_A_20210114_111951.jpg": "Name/code text detected: MacPherson, CC10",
+    "https://commons.wikimedia.org/wiki/File:NS28_Marina_South_Pier_MRT_concourse_20210224_130956.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:TE26_Marine_Parade_MRT_Platform_A_20240621_150625.jpg": "Name/code text detected: TE26, Marine Parade, 马林百列unugj",
+    "https://commons.wikimedia.org/wiki/File:Marsiling_Station_platform_15-05-2024.jpg": "Name/code text detected: Marsiling, NS8, 马西岭",
+    "https://commons.wikimedia.org/wiki/File:CC16_Marymount_MRT_Platform_A_20201126_124413.jpg": "Name/code text detected: Marymount, CC16",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Mattar_MRT_Station_Platforms_2026-03-17_-_1.jpg": "Name/code text detected: DT25, Mattar",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Mountbatten_MRT_Station_Platforms_2026-04-03.jpg": "Name/code text detected: Mountbatten",
+    "https://commons.wikimedia.org/wiki/File:Napier_MRT_Station_Platform_A,_July_2023.jpg": "Name/code text detected: Napier, 纳比雅Ciang, 纳比雅Ginud",
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Platform_A_20201213_151947.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC23_one-north_MRT_Concourse_20201213_152231.jpg": "Name/code text detected: CC23, one-north",
+    "https://commons.wikimedia.org/wiki/File:NE10_Potong_Pasir_MRT_Platform_A_20201201_165328.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Prince_Edward_Road_MRT_Station_Platform_A_2026-07-04_-_1.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:CC4_Promenade_MRT_station_Platform_A_20250315_145137.jpg": "Name/code text detected: Promenade, 宝门廊",
+    "https://commons.wikimedia.org/wiki/File:CC4_Promenade_MRT_station_Platform_B_20250315_144912.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:NE18_Punggol_Coast_MRT_Platform_A_20241213_152855.jpg": "Name/code text detected: Punggol Coast, NE18, 榜鹅海岸QumG GL, Pungol Coast",
+    "https://commons.wikimedia.org/wiki/File:NE16_Sengkang_MRT_station.jpg": "Name/code text detected: NE16",
+    "https://commons.wikimedia.org/wiki/File:TE17_Shenton_Way_MRT_concourse_(June_2024).jpg": "Name/code text detected: TE19",
+    "https://commons.wikimedia.org/wiki/File:DT7_Sixth_Avenue_Concourse.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:DT31_Tampines_West_Station.jpg": "Name/code text detected: Tampines West, 淡滨尼西",
+    "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Tanjong_Katong_MRT_Station_Exit_1_2024-06-03.jpg": "Name/code text detected: Tanjong Katong",
+    "https://commons.wikimedia.org/wiki/File:CC28_Telok_Blangah_Concourse.jpg": "Name/code text detected: TelokEhgah",
+    "https://commons.wikimedia.org/wiki/File:EW17_Tiong_Bahru_MRT_concourse_20200918_150338.jpg": "Visual review: station label or uncertain small signs",
+    "https://commons.wikimedia.org/wiki/File:EW17_Tiong_Bahru_MRT_Exit_A_20200918_145850_1.jpg": "Name/code text detected: EW17 Tiong Bahru",
+    "https://commons.wikimedia.org/wiki/File:DT27_Ubi_Exit_A.jpg": "Name/code text detected:  ubi (, DT27",
+    "https://commons.wikimedia.org/wiki/File:NS5_Yew_Tee_Concourse_Ticketing.jpg": "Visual review: station label or uncertain small signs"
+  }
+}

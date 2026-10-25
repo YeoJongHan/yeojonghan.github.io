@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Guess Singapore MRT stations from real photos. A new daily challenge, plus an endless photo run.">
+  <meta name="theme-color" content="#f3f5f3">
+  <title>MRT Photo Quiz · Daily & Endless</title>
+  <link rel="stylesheet" href="static/mrt-photo.css">
+  <script src="static/mrt-photo-core.js" defer></script>
+  <script src="static/mrt-photo-game.js" defer></script>
+</head>
+<body>
+  <header class="photo-header"><a href="sgmrts.html">← Map quiz</a><span>SG MRT <span class="header-slash">/</span> Photo quiz</span><a href="../projects.html" class="portfolio-link">Projects ↗</a></header>
+  <main class="photo-main">
+    <div class="photo-heading"><div><p class="eyebrow">A DIFFERENT WAY TO KNOW YOUR CITY</p><h1>Know your station<span>?</span></h1></div><div class="mode-switch" role="group" aria-label="Photo game mode"><button id="mode-daily" data-mode="daily" aria-pressed="true" type="button">Daily</button><button id="mode-endless" data-mode="endless" aria-pressed="false" type="button">Endless</button></div></div>
+    <div class="load-error" id="load-error" role="alert" hidden><p>The photo collection could not load.</p><button id="retry-catalog" type="button">Try again</button></div>
+    <p class="initial-loading" id="initial-loading" role="status">Loading the station photo collection…</p>
+    <div class="photo-layout" id="photo-layout" hidden>
+      <figure class="photo-figure">
+        <div class="photo-frame"><div class="photo-window" id="photo-window"><img id="station-photo" alt="A Singapore MRT station to identify" decoding="async" hidden></div><div class="photo-loading" id="photo-loading" role="status">Loading photo…</div><div class="image-error" id="image-error" role="alert" hidden><p>This photo could not load.</p><button type="button" id="retry-image">Retry photo</button></div></div>
+        <figcaption class="photo-credit"><span id="photo-author"></span><span id="photo-view-note" hidden>Cropped view</span><a id="photo-license" target="_blank" rel="noopener noreferrer"></a><a id="photo-source" target="_blank" rel="noopener noreferrer">Source ↗</a></figcaption>
+      </figure>
+      <section class="guess-panel" aria-labelledby="question-title">
+        <div class="round-meta"><span id="round-label"></span><span id="round-count"></span></div>
+        <h2 id="question-title">Which MRT station is this?</h2>
+        <!-- <p class="round-rules" id="round-rules"></p> -->
+        <form id="guess-form" autocomplete="off">
+          <label for="station-guess">Station name</label>
+          <div class="combobox-wrap"><input id="station-guess" type="text" placeholder="Start typing a station…" role="combobox" aria-autocomplete="list" aria-controls="station-options" aria-expanded="false" aria-describedby="guess-help" spellcheck="false" autocomplete="off"><ul id="station-options" role="listbox" aria-label="Matching MRT stations" hidden></ul></div>
+          <p id="guess-help" class="guess-help">Type a name, then choose a station from the list.</p>
+          <div class="guess-actions"><button class="primary-button" id="submit-guess" type="submit" disabled>Submit guess</button><button class="secondary-button" id="skip-photo" type="button" hidden>Skip photo</button></div>
+        </form>
+        <p id="guess-status" class="guess-status" role="status" aria-live="polite" aria-atomic="true"></p>
+        <div class="station-reveal" id="station-reveal" hidden><span class="eyebrow" id="reveal-label"></span><h3 id="answer-name"></h3><p id="answer-code"></p></div>
+        <button class="primary-button next-button" id="next-photo" type="button" hidden>Next photo →</button>
+        <ol id="guess-history" class="guess-history" aria-label="Your daily guesses"></ol>
+        <div class="run-summary" id="run-summary" hidden><div><strong id="summary-correct"></strong><span>correct</span></div><div><strong id="summary-wrong"></strong><span>incorrect</span></div><div><strong id="summary-skipped"></strong><span>skipped</span></div></div>
+        <button class="primary-button next-button" id="restart-endless" type="button" hidden>Play another run</button>
+        <p class="mode-footnote" id="mode-footnote"></p>
+      </section>
+    </div>
+  </main>
+  <footer class="photo-footer"><span id="save-note"></span><span>Daily resets at 00:00 Singapore time.</span></footer>
+  <noscript><p class="noscript-note">Enable JavaScript to play the photo quiz. Images and game data are hosted locally.</p></noscript>
+</body>
+</html>

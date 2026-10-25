@@ -5,6 +5,7 @@ button, input { font: inherit; }
 button:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid #235c7b; outline-offset: 3px; }
 body.page-sgmrts { overflow: hidden; }
 #map { background: #dfe8eb; }
+.photo-mode-link { display:block; margin:8px 0 12px; color:#196650; font-size:12px; line-height:1.5; text-decoration:underline; text-underline-offset:3px; }
 .map-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 12px; border-top: 1px solid #e1e5e4; padding-top: 12px; }
 .map-tools label { display: flex; align-items: center; gap: 6px; font-size: 12px; cursor: pointer; }
 .map-tools input { accent-color: #1976d2; width: 16px; height: 16px; }

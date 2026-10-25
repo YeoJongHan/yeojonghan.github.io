@@ -1,0 +1,75 @@
+MRT PHOTO QUIZ — LOCAL PHOTO COLLECTION
+
+Real station photographs were downloaded from Wikimedia Commons on 2026-10-25.
+The machine-readable manifest.json lists every local filename, station, creator,
+source file page, original image URL, and individual photo licence. The game
+shows the creator, licence link, and source link beneath each photograph.
+Licences remain with the photographers and are independent of the site code.
+
+Only CC BY, CC BY-SA, CC0, and public-domain JPEG photographs are accepted by
+the collection builder. Images are Wikimedia-generated resized previews, with
+no creative edits to the original files. Some views use the reviewed natural
+crops recorded in manifest.json; the page clips the original image to that
+rectangle at every screen size. No Google Maps or Street View imagery has been copied.
+See each image's credit.licenseUrl and credit.sourceUrl in manifest.json for
+the applicable licence and source details. All image files are served locally;
+there is no Wikimedia, Google Maps, or other image API call during gameplay.
+
+Station-name review (2026-10-25):
+The curated pool contains 323 photos covering all 146 MRT stations, with at
+least two different source photographs per station. It includes 225 newly
+sourced photographs, retained clean views, and cropped replacement views from
+the earlier collection. All selected views were visually checked for visible
+station names and codes. Local English/Chinese OCR and enlarged text checks
+helped screen the sources; all 173 prescribed crops received another OCR pass
+and visual check of the displayed region. Name-bearing photographs are either
+excluded or permitted only with their reviewed crop. Name clues in directional
+signs, artwork, and nearby building names were also considered.
+
+name-review.json records decisions for 868 source candidates, including sources
+rejected by OCR before visual selection. curation.json approves each active
+source and, where needed, its exact crop. Original image files and their
+attributions are preserved. Cropped views are labelled beneath the photo.
+
+Add more photos reproducibly:
+  pip install -r scripts/mrt-photo-requirements.txt
+  python scripts/build-mrt-photos.py --per-station 3
+Existing selections are retained, and completed download batches are saved so
+the builder can resume. The first pass fills missing stations; the next pass
+adds alternate views, preferring platforms, concourses, entrances and exteriors.
+Pillow is used only to reject visually similar photos. Original downloaded
+photographs are not edited. No API keys are required. An optional --station
+slug restricts the run; --limit sets an approximate total cap if explicitly used.
+Without --limit every station is processed. The current reviewed pool is
+protected by curation.json's approvedSources list: only individually reviewed
+sources may enter the game, and prescribed crops are reapplied on rebuild.
+A rebuild cannot automatically refill removed
+photos with unreviewed ones. Inspect any proposed new source for visible names
+and station codes, then add it to approvedSources before collecting it.
+Reviewed exclusions and station-specific date cutoffs are retained in
+curation.json, so rebuilding does not bring unsuitable photos back.
+
+To add your own permitted image manually, place a JPEG, PNG or WebP here and
+add a manifest.photos entry with a unique id, a stationId from manifest.stations,
+its local src (static/mrt-photos/filename.jpg), dimensions, and credit metadata
+(title, author, licence label, HTTPS licence link and source link). More than
+one image can refer to the same station; daily scheduling still avoids repeating
+that station on consecutive days, and endless includes every image.
+Manual additions also need an approvedSources entry and name-review.json entry;
+the collection checks reject sources that have not passed this review.
+For a cropped view, also record crop: {x, y, width, height} as fractions of
+the original image (top-left origin), and put the exact same crop in its
+approvedSources and name-review entries. Crops must stay inside the image.
+
+Daily selection uses Singapore calendar dates and a date-seeded shuffle of
+station IDs. A station is used once per shuffle cycle. At each cycle boundary,
+the first two entries are swapped if needed to prevent yesterday's station
+from appearing again. If a station has several photos, a station-specific seed
+and daily-cycle counter rotate through the views on successive appearances.
+Updating the photo pool changes the schedule;
+keep a deployed manifest stable during a daily challenge.
+
+Endless shuffles every photo into a non-repeating run. One submitted answer or
+skip resolves each photo; Next advances it. The final score includes every
+photo, with separate correct, incorrect and skipped counts. Progress is saved
+on the device, separately from the daily challenge.
