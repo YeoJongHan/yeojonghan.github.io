@@ -1,162 +1,91 @@
-<!DOCTYPE HTML>
-
-<html>
-
+<!doctype html>
+<html lang="en" class="projects-page">
 <head>
-    <title>Jong Han's Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script src="assets/js/include.js"></script>
-    <style>
-        .projects-hero {
-            padding-top: 6rem;
-            padding-bottom: 2rem;
-            background: linear-gradient(135deg, rgba(0,0,0,0.05), rgba(0,0,0,0));
-            min-height: 100vh;
-        }
-
-        .projects-title {
-            font-weight: 800;
-            letter-spacing: 0.3px;
-        }
-
-        .projects-subtitle {
-            opacity: 0.85;
-        }
-
-        .projects-grid .project-card {
-            aspect-ratio: 1 / 1;
-            border-radius: 16px;
-            background: #fff;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            border: 1px solid rgba(0,0,0,0.06);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            gap: .6rem;
-            color: inherit;
-            transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
-        }
-
-        .projects-grid .project-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 16px 35px rgba(61,126,255,0.25);
-            border-color: rgba(61,126,255,0.5);
-        }
-
-        .projects-grid .project-card:focus { outline: 3px solid rgba(61,126,255,0.6); outline-offset: 2px; }
-
-        .projects-grid .project-icon {
-            font-size: 2.2rem;
-            color: #3d7eff;
-        }
-
-        .projects-grid .project-name {
-            font-weight: 700;
-            letter-spacing: .2px;
-        }
-
-        .reveal-up { opacity: 0; transform: translateY(14px); }
-        .reveal-up.revealed { opacity: 1; transform: translateY(0); transition: opacity 380ms ease, transform 380ms ease; }
-
-        @media (max-width: 576px) {
-            .projects-hero { padding-top: 5rem; }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Games, tools, and small experiments by Yeo Jong Han.">
+  <meta name="theme-color" content="#101010">
+  <meta name="color-scheme" content="dark">
+  <title>Projects · Yeo Jong Han</title>
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/projects.css">
+  <script src="assets/js/home.js" defer></script>
 </head>
+<body>
+  <a class="skip-link" href="#projects">Skip to projects</a>
+  <div class="experience">
+    <div class="scene projects-scene">
+      <div class="grain" aria-hidden="true"></div>
 
-<body class="is-preload">
-    <div data-include="header.html"></div>
+      <header class="header">
+        <a class="signature" href="index.html" aria-label="Yeo Jong Han, home">YJH.</a>
+        <nav aria-label="Main navigation">
+          <a href="index.html">Home <span aria-hidden="true">↗</span></a>
+          <a href="https://ctf.jonghan.xyz">CTF <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
 
+      <div class="field" aria-hidden="true"><canvas id="line-field"></canvas></div>
+      <div class="ambient-light" aria-hidden="true"></div>
 
+      <main class="projects-main" id="projects" tabindex="-1">
+        <section class="projects-intro" aria-labelledby="projects-title">
+          <p class="intro">Selected work</p>
+          <h1 id="projects-title">Projects<span>.</span></h1>
+          <p class="projects-note">Small experiments.<br>Games, tools, and things in between.</p>
+        </section>
 
-    <article id="top" class="wrapper style1 projects-hero">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="mb-4 text-center reveal-up">
-                        <h1 class="projects-title">Projects</h1>
-                        <p class="projects-subtitle">Some side quests completed on my free time - games, tools, and fun builds</p>
-                    </div>
-
-                    <div class="reveal-up">
-                        <div id="projectsGrid" class="projects-grid row g-3" role="list" aria-label="Projects grid">
-                        </div>
-                    </div>
+        <section class="projects-work" aria-label="Project list">
+          <div class="projects-label" aria-hidden="true"><span>A few side quests</span><span>02 projects</span></div>
+          <ol class="project-list">
+            <li>
+              <a class="project-link" href="projects/sgmrts.html" aria-labelledby="mrt-title" aria-describedby="mrt-copy">
+                <span class="project-number" aria-hidden="true">01</span>
+                <div class="project-copy">
+                  <p class="project-kind">Game · Singapore</p>
+                  <h2 id="mrt-title">SG MRT<br>Stations Quiz</h2>
+                  <p class="project-description" id="mrt-copy">How well do you know the network?</p>
                 </div>
-            </div>
+                <svg class="project-drawing network-drawing" viewBox="0 0 112 104" fill="none" aria-hidden="true">
+                  <path class="drawing-faint" d="M10 20h92M10 52h92M10 84h92M24 8v88M56 8v88M88 8v88"/>
+                  <path class="drawing-route" d="M8 84h24l48-64h24"/>
+                  <path class="drawing-route route-secondary" d="M24 8v28l32 32v28"/>
+                  <g class="drawing-stations"><circle cx="24" cy="28" r="3"/><circle cx="24" cy="84" r="3"/><circle cx="56" cy="52" r="4"/><circle cx="56" cy="84" r="3"/><circle cx="88" cy="20" r="3"/></g>
+                </svg>
+                <span class="project-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a class="project-link" href="projects/msp430dis.html" aria-labelledby="msp-title" aria-describedby="msp-copy">
+                <span class="project-number" aria-hidden="true">02</span>
+                <div class="project-copy">
+                  <p class="project-kind">Tool · In progress</p>
+                  <h2 id="msp-title">MSP430<span class="project-title-detail">Disassembler / Assembler</span></h2>
+                  <p class="project-description" id="msp-copy">Between assembly and bytecode.</p>
+                </div>
+                <svg class="project-drawing code-drawing" viewBox="0 0 112 104" fill="none" aria-hidden="true">
+                  <path class="drawing-faint" d="M8 25h96M8 52h96M8 79h96"/>
+                  <path class="drawing-route route-secondary" d="M24 11H8v82h16M88 11h16v82H88"/>
+                  <path class="drawing-block" d="M29 19h34v16H29zM47 44h34v16H47zM29 69h34v16H29z"/>
+                  <path class="drawing-route" d="M63 27h9v17M47 52h-9v17"/>
+                  <path class="drawing-ticks" d="M36 27h8m5 0h7M54 52h8m5 0h7M36 77h8m5 0h7"/>
+                </svg>
+                <span class="project-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+          </ol>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="socials">
+          <a href="https://github.com/YeoJongHan" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/yeo-jong-han-7010311b2/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:yeojonghan@hotmail.com">Email</a>
         </div>
-    </article>
-
-    <footer>
-    </footer>
-
-    <script>
-        const PROJECTS = [
-            {
-                id: 'sgmrts',
-                title: 'SG MRT Stations Quiz',
-                href: 'projects/sgmrts.html',
-                icon: 'fa fa-subway'
-            },
-            {
-                id: 'msp430dis',
-                title: 'MSP430 Disassembler/Assembler',
-                href: 'projects/msp430dis.html',
-                icon: 'fa fa-desktop'
-            }
-        ];
-
-        const grid = document.getElementById('projectsGrid');
-
-        function renderGrid(items) {
-            grid.innerHTML = '';
-            items.forEach((p, i) => {
-                const col = document.createElement('div');
-                col.className = 'col-6 col-lg-3';
-
-                const a = document.createElement('a');
-                a.href = p.href;
-                a.className = 'project-card text-decoration-none d-flex flex-column justify-content-center align-items-center reveal-up';
-                a.style.transitionDelay = (i * 40) + 'ms';
-                a.setAttribute('role', 'link');
-                a.setAttribute('aria-label', `${p.title} - open project`);
-
-                a.innerHTML = `
-                    <div class="project-icon"><i class="${p.icon}" aria-hidden="true"></i></div>
-                    <div class="project-name">${p.title}</div>
-                `;
-
-                col.appendChild(a);
-                grid.appendChild(col);
-            });
-            reveal();
-        }
-
-        function reveal() {
-            const io = new IntersectionObserver((entries, obs) => {
-                entries.forEach(e => {
-                    if (e.isIntersecting) {
-                        e.target.classList.add('revealed');
-                        obs.unobserve(e.target);
-                    }
-                });
-            }, { threshold: 0.08 });
-            document.querySelectorAll('.reveal-up').forEach(el => io.observe(el));
-        }
-
-        renderGrid(PROJECTS);
-    </script>
-
-
+        <div class="footer-end"><a class="meanwhile" href="QnJvd25pZSAg.html" aria-label="Meanwhile, a little more about my life">Meanwhile…</a></div>
+      </footer>
+    </div>
+  </div>
 </body>
-
 </html>
