@@ -1,92 +1,145 @@
-<!DOCTYPE HTML>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yeo Jong Han. Information Security student, Singapore.">
+  <meta name="theme-color" content="#101010">
+  <meta name="color-scheme" content="dark">
+  <title>Yeo Jong Han</title>
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/pixel-pets.css">
+  <script src="assets/js/home.js" defer></script>
+  <script src="assets/js/dog-catalog.js" defer></script>
+  <script src="assets/js/cat-catalog.js" defer></script>
+  <script src="assets/js/dog-game.js" defer></script>
+  <script src="assets/js/mythic-sprites.js" defer></script>
+  <script src="assets/js/pet-sprites.js" defer></script>
+  <script src="assets/js/dog-art.js" defer></script>
+  <script src="assets/js/cat-art.js" defer></script>
+  <script src="assets/js/pixel-pets.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#identity">Skip to introduction</a>
+  <main class="experience">
+    <div class="scene">
+      <div class="grain" aria-hidden="true"></div>
 
-<html>
-	<head>
-		<title>Jong Han's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	</head>
-	<body class="is-preload">
-		<header class="header">
-			<nav class="nav navbar navbar-expand-lg fixed-top">
-				<div class="container-fluid">
-				  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					  <i class="fa fa-bars" aria-hidden="true"></i>
-					</button>
+      <header class="header">
+        <a class="signature" href="index.html" aria-label="Yeo Jong Han, home">YJH.</a>
+        <nav aria-label="Main navigation">
+          <a href="projects.html">Projects <span aria-hidden="true">↗</span></a>
+          <a href="https://ctf.jonghan.xyz">CTF <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
 
-				 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-					  <li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="index.html">Home</a>
-					  </li>
-					  <li class="nav-item">
-						<a class="nav-link" href="https://ctf.jonghan.xyz">CTF Writeups</a>
-					  </li>
-					<li class="nav-item">
-						<a class="nav-link" href="projects.html">Projects</a>
-					</li>
-					  <li class="nav-item">
-						<a class="nav-link" href="QnJvd25pZSAg.html" id="shhhhhh">Meanwhile...</a>
-					  </li>
-					</ul>
-				  </div>
-				</div>
-			</nav>
-		</header>
-		
-		<article id="top" class="wrapper style1">
-			<div class="container">
-				<div class="row d-flex justify-content-center">
-					<div class="col-lg-auto col-md-6 col-sm-12">
+      <div class="field" aria-hidden="true">
+        <canvas id="line-field"></canvas>
+      </div>
+      <div class="ambient-light" aria-hidden="true"></div>
 
-					</div>
-					
-					<div class="col-lg-6 col-md-6 col-sm-12 brief_me">
-						<header>
-							<h1>Hi! I'm <span><strong>Yeo Jong Han</strong></span>.<h1>
-						</header>
-						<p>Currently a student studying <b>Information Security</b> in Singapore.</p>
-						<div>
-							<a style="text-decoration:none;" target="_blank" class="icon brands" href="assets/misc/YeoJongHan_Resume.pdf" download="YeoJongHan_Resume.pdf"><button type="button" class="btn btn-dark">Download Resume</button></a>
-							<br><br>
-							<a href="https://github.com/YeoJongHan" target="_blank"><i class="fab fa-github" style='font-size:50px;color:black;'></i></a>&nbsp;&nbsp;&nbsp;
-							<a href="https://www.linkedin.com/in/yeo-jong-han-7010311b2/" target="_blank"><i class="fab fa-linkedin-square" style='font-size:50px;color:black;'></i></a>&nbsp;&nbsp;&nbsp;
-							<a href="mailto:yeojonghan@hotmail.com" target="_blank"><i class="fa fa-envelope" style='font-size:50px;color:black;'></i></a>&nbsp;&nbsp;&nbsp;
-						</div>
-					</div>
-				</div>
-			</div>
-		</article>
-		
-		<article id="aboutme">
-			<div class="container">
-				<div class="row d-flex justify-content-center">
-					<img id="worker" src="images/wip/dig1.png">
-					<h3 style="text-align: center;" id="workinprogress">Work In Progress.</h3>
-				</div>
-			</div>
-		</article>
-		
-		<footer>
-		</footer>
-		
-	<script>
-		var i = 2;
-		
-		var t = setInterval(function(){
-			document.getElementById('workinprogress').innerHTML = 'Work In Progress'+'.'.repeat(i);
-			document.getElementById('worker').src = 'images/wip/dig'+i.toString()+'.png';
-			if (i >=3){
-				i=1;
-			}else{
-				i+=1;
-			}
-		},1000);
-	</script>
+      <section class="identity" id="identity" aria-labelledby="name">
+        <p class="intro">Information Security · Singapore</p>
+        <h1 id="name">Yeo<br> Jong Han<span>.</span></h1>
+        <a class="resume" href="assets/misc/YeoJongHan_Resume.pdf" download>Resume <span aria-hidden="true">↓</span></a>
+      </section>
 
-	</body>
+      <section class="pet-roller" aria-labelledby="game-title" hidden>
+        <header class="game-header">
+          <div><span class="game-kicker">A LITTLE SIDE QUEST</span><h2 id="game-title"><span class="club-name">Good Dog Club</span><span class="club-star">✦</span></h2></div>
+          <div class="coin-wallet" aria-label="Coin balance"><span class="coin-icon" aria-hidden="true">✧</span><span class="coin-balance">30</span><span class="wallet-unit">coins</span></div>
+        </header>
+        <div class="species-switch" role="group" aria-label="Choose which animal to roll for" hidden><span class="species-label">Roll for</span><button class="finish-option" type="button" aria-haspopup="dialog" hidden><span class="finish-label">Finish game</span><span class="finish-price">20,000 coins</span></button><div><button type="button" data-roll-species="dogs" aria-pressed="true">Dogs</button><button type="button" data-roll-species="cats" aria-pressed="false">Cats</button></div></div>
+        <div class="game-toolbar">
+          <button class="collection-open" type="button" aria-haspopup="dialog">Collection <span class="collection-count">1 / 120</span> <span aria-hidden="true">↗</span></button>
+          <button class="shop-open" type="button" aria-haspopup="dialog" hidden>Upgrades ↗</button>
+          <details class="game-odds"><summary>Odds & rules</summary><div class="odds-panel">
+            <p class="game-rules">Every roll is free. Discover a new dog for bonus coins; duplicates earn coins too.</p>
+            <div class="odds-list"></div>
+            <p>Every 20 rolls without an Epic+ guarantees one. At maximum luck (level 10), this becomes a Legendary+ guarantee every 20 rolls without one. Every 80 rolls without a Legendary+ also guarantees one.</p>
+            <p class="featured-rules">Lunar Wolf is featured: twice the weight of another dog within the Legendary pool.</p>
+            <p>New Secret-tier discoveries have a longer, special capsule opening. Duplicate secrets open at normal speed.</p>
+            <p>Discover every dog and cat, including all secrets, to unlock the game ending for 20,000 coins.</p>
+          </div></details>
+        </div>
+        <div class="pet-stage" data-rarity="common" aria-busy="false">
+          <span class="stage-grain" aria-hidden="true"></span>
+          <span class="stage-label">THE COMPANION CAPSULE</span>
+          <div class="reveal-rays" aria-hidden="true"></div>
+          <div class="secret-aura" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <div class="secret-beam" aria-hidden="true"></div>
+          <div class="secret-shockwave" aria-hidden="true"></div>
+          <div class="pet-particles" aria-hidden="true"></div>
+          <span class="pet-platform" aria-hidden="true"></span>
+          <div class="pet-sprite"></div>
+          <div class="roll-capsule" aria-hidden="true">
+            <svg viewBox="0 0 80 100" fill="none">
+              <g class="capsule-top"><path d="M10 51V40a30 30 0 0 1 60 0v11z" fill="#c9c8c2" stroke="#efeee5" stroke-width="2"/><path d="M22 27c4-7 10-10 17-10" stroke="#fff" stroke-opacity=".55" stroke-width="4" stroke-linecap="round"/></g>
+              <g class="capsule-bottom"><path d="M10 51h60v16a30 30 0 0 1-60 0z" fill="#424344" stroke="#b8b9b2" stroke-width="2"/></g>
+              <g class="capsule-band"><path d="M10 51h60" stroke="#efeee5" stroke-width="3"/><rect x="29" y="41" width="22" height="20" rx="4" fill="#e8e5d7" stroke="#77776f" stroke-width="2"/><path d="M38 47h4v8h-4zm-2 2h8v4h-8z" fill="#73746f"/></g>
+              <path class="capsule-crack" d="M11 51h15l5-4 6 8 7-7 6 3h19" stroke="#fff0d4" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="discovery-badge" hidden>NEW DISCOVERY</span>
+        </div>
+        <div class="pet-caption"><span class="rarity-badge">Common</span><h3 class="pet-breed">Pembroke Welsh Corgi</h3><p class="pet-reward">Your starter companion. +30 coins.</p></div>
+        <button class="pet-roll" type="button"><span class="roll-symbol" aria-hidden="true">✦</span><span class="roll-label">Roll a dog</span><span class="roll-timing">FREE · 1.8s</span></button>
+        <div class="pity-line"><span class="pity-label">Epic+ in 20 rolls</span><span class="roll-total">0 rolls</span></div>
+        <div class="pity-track" aria-hidden="true"><span></span></div>
+        <div class="game-upgrades">
+          <div class="upgrade-card"><div><span class="upgrade-title">✧ Lucky charm <small class="luck-level">Lv. 0 / 10</small></span><span class="luck-effect">7.0% Epic+</span></div><button type="button" data-upgrade="luck"><span class="upgrade-price">60</span> <span aria-hidden="true">✧</span></button></div>
+          <div class="upgrade-card"><div><span class="upgrade-title">↯ Quick paws <small class="speed-level">Lv. 0 / 8</small></span><span class="speed-effect">1.80s per roll</span></div><button type="button" data-upgrade="speed"><span class="upgrade-price">40</span> <span aria-hidden="true">✧</span></button></div>
+        </div>
+        <button class="rebirth-option" type="button" hidden><span>✦ Rebirth to cats</span><span>10,000 coins</span></button>
+        <div class="game-footnote"><span class="save-status">Saved on this device</span><span class="secret-count">0 / 8 secrets found</span></div>
+        <span class="pet-announcement" role="status" aria-live="polite" aria-atomic="true"></span>
+      </section>
+
+      <footer class="footer">
+        <div class="socials">
+          <a href="https://github.com/YeoJongHan" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/yeo-jong-han/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:yeojonghan@hotmail.com">Email</a>
+        </div>
+        <div class="footer-end">
+          <a class="meanwhile" href="QnJvd25pZSAg.html" aria-label="Meanwhile, a little more about my life">Meanwhile…</a>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <dialog class="collection-dialog" aria-labelledby="collection-title">
+    <div class="collection-heading"><div><span class="game-kicker">YOUR LITTLE PACK</span><h2 id="collection-title">The dog album</h2><p class="album-progress"></p></div><button class="collection-close" type="button" aria-label="Close collection" autofocus>×</button></div>
+    <div class="collection-filters"><select class="collection-chapter" aria-label="Choose collection" hidden><option value="dogs">Dogs</option><option value="cats">Cats</option></select><input class="collection-search" type="search" placeholder="Find a dog…" aria-label="Search dog collection"><select class="collection-rarity" aria-label="Filter by rarity"><option value="all">All rarities</option></select><button class="owned-filter" type="button" aria-pressed="false">Found only</button></div>
+    <div class="collection-grid"></div>
+    <div class="collection-pagination"><button class="collection-previous" type="button">← Previous</button><span class="collection-page"></span><button class="collection-next" type="button">Next →</button></div>
+  </dialog>
+  <dialog class="upgrade-dialog" aria-labelledby="upgrade-title">
+    <div class="collection-heading"><div><span class="game-kicker">A LITTLE EXTRA LUCK</span><h2 id="upgrade-title">Upgrades</h2><p class="shop-balance"></p></div><button class="shop-close collection-close" type="button" aria-label="Close upgrades" autofocus>×</button></div>
+    <div class="upgrade-host"></div>
+  </dialog>
+  <dialog class="rebirth-dialog" aria-labelledby="rebirth-title">
+    <span class="game-kicker">FINAL SECRET DOG FOUND</span><h2 id="rebirth-title">A new chapter. Cats.</h2>
+    <p>Unlocking cats costs <strong>10,000 coins</strong>. Your dog collection and upgrades stay yours, and any remaining coins carry over.</p>
+    <p>Cats start with their own luck, speed, and pity. Once unlocked, you can freely switch between rolling dogs and cats.</p>
+    <p class="rebirth-balance"></p>
+    <div class="rebirth-actions"><button class="rebirth-cancel" type="button" autofocus>Not yet</button><button class="rebirth-confirm" type="button">Rebirth · 10,000 coins</button></div>
+  </dialog>
+  <dialog class="completion-dialog" aria-labelledby="completion-title" aria-describedby="completion-copy completion-balance">
+    <div class="completion-art" aria-hidden="true"></div>
+    <span class="game-kicker">EVERY COMPANION DISCOVERED</span>
+    <h2 id="completion-title">The whole pack, together.</h2>
+    <p class="completion-total"></p>
+    <p id="completion-copy">Every breed. Every secret. One very good collection. Finish your adventure for <strong>20,000 coins</strong>.</p>
+    <p id="completion-balance"></p>
+    <div class="completion-actions"><button class="completion-close" type="button" autofocus>Keep playing</button><button class="completion-confirm" type="button">Finish · 20,000 coins</button></div>
+  </dialog>
+  <dialog class="level-unlock-dialog" aria-labelledby="level-unlock-title" aria-describedby="level-unlock-copy level-unlock-balance">
+    <div class="level-unlock-art" aria-hidden="true"></div>
+    <span class="game-kicker">✦ NEW LEVEL UNLOCKED ✦</span>
+    <h2 id="level-unlock-title">Cat chapter unlocked!</h2>
+    <p id="level-unlock-copy">You discovered Origami Oracle and opened the next chapter. Rebirth for <strong>10,000 coins</strong> to start collecting cats.</p>
+    <p id="level-unlock-balance"></p>
+    <div class="level-unlock-actions"><button class="level-unlock-continue" type="button" autofocus>Keep collecting</button><button class="level-unlock-rebirth" type="button">Rebirth to cats ↗</button></div>
+  </dialog>
+</body>
 </html>
